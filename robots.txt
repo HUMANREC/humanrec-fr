@@ -1,0 +1,20 @@
+# robots.txt pour humanrec.fr
+
+User-agent: *
+Allow: /
+
+# Bloquer les fichiers inutiles
+Disallow: /admin/
+Disallow: /*.pdf$
+
+# Sitemap
+Sitemap: https://humanrec.fr/sitemap.xml
+Sitemap: https://humanrec.fr/video-sitemap.xml
+
+# Crawl-delay (optionnel)
+Crawl-delay: 1
+
+# Règles spécifiques pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

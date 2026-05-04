@@ -1,0 +1,37 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+metadata:
+  title: "Blog HUMAN REC"
+  subtitle: "Production audiovisuelle Avignon Vaucluse"
+  language: "fr"
+  url: "https://humanrec.fr/"
+  feedUrl: "https://humanrec.fr/feed.xml"
+  author:
+    name: "HUMAN REC"
+    email: "contact@humanrec.fr"
+---<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ metadata.title }}</title>
+    <subtitle>{{ metadata.subtitle }}</subtitle>
+    <link href="{{ metadata.feedUrl }}" rel="self"/>
+    <link href="{{ metadata.url }}"/>
+    <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+    <id>{{ metadata.url }}</id>
+    <author>
+        <name>{{ metadata.author.name }}</name>
+        <email>{{ metadata.author.email }}</email>
+    </author>
+    {%- for post in collections.posts | reverse %}
+    {% set absolutePostUrl %}{{ metadata.url }}{{ post.url | trim('/') }}/{% endset %}
+    <entry>
+        <title>{{ post.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ (post.data.lastmod or post.date) | dateToRfc3339 }}</updated>
+        <published>{{ post.date | dateToRfc3339 }}</published>
+        <id>{{ absolutePostUrl }}</id>
+        <summary>{{ post.data.description }}</summary>
+        <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}</content>
+    </entry>
+    {%- endfor %}
+</feed>

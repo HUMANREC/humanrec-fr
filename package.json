@@ -1,0 +1,18 @@
+{
+  "name": "humanrec-fr",
+  "version": "1.0.0",
+  "description": "Site officiel HUMAN REC — production audiovisuelle Avignon Vaucluse",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --port=8080",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

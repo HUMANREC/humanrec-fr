@@ -1,0 +1,171 @@
+{% extends "base.njk" %}
+
+{% set isBlog = true %}
+{% set canonical = "https://humanrec.fr/blog/" + slug + "/" %}
+{% set pageTitle = title + " | Blog HUMAN REC" %}
+{% set ogType = "article" %}
+{% set ogImage = "https://humanrec.fr" + image %}
+
+{# Map catégorie → slug URL #}
+{% set categorySlugMap = {
+    "Film publicitaire": "film-publicitaire",
+    "Vidéo corporate": "video-corporate",
+    "Captation événementielle": "captation-evenementielle",
+    "Photographie": "photographie",
+    "Général": "general"
+} %}
+{% set categorySlug = categorySlugMap[category] %}
+
+{% block extraHead %}
+    {# Schema.org BlogPosting + BreadcrumbList #}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "@id": "{{ canonical }}#article",
+                "isPartOf": { "@id": "https://humanrec.fr/blog/#blog" },
+                "mainEntityOfPage": "{{ canonical }}",
+                "headline": {{ title | dump | safe }},
+                "name": {{ title | dump | safe }},
+                "description": {{ description | dump | safe }},
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "{{ ogImage }}",
+                    "width": 1200,
+                    "height": 630
+                },
+                "url": "{{ canonical }}",
+                "datePublished": "{{ date | dateISO }}",
+                "dateModified": "{{ (lastmod or date) | dateISO }}",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://humanrec.fr/#organization",
+                    "name": "HUMAN REC",
+                    "url": "https://humanrec.fr"
+                },
+                "publisher": {
+                    "@id": "https://humanrec.fr/#organization"
+                },
+                "keywords": "{{ focus_keyword }}, {{ tags | join(', ') }}",
+                "articleSection": "{{ category }}",
+                "inLanguage": "fr-FR"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://humanrec.fr/" },
+                    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://humanrec.fr/blog/" },
+                    { "@type": "ListItem", "position": 3, "name": "{{ category }}", "item": "https://humanrec.fr/blog/categorie/{{ categorySlug }}/" },
+                    { "@type": "ListItem", "position": 4, "name": {{ title | dump | safe }}, "item": "{{ canonical }}" }
+                ]
+            }
+            {%- if faqSchema %},
+            {
+                "@type": "FAQPage",
+                "mainEntity": {{ faqSchema | safe }}
+            }
+            {%- endif %}
+        ]
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <article class="blog-article">
+
+        <!-- HERO IMAGE -->
+        <header class="article-hero">
+            <img src="{{ image }}" alt="{{ image_alt or title }}"
+                 width="1200" height="630"
+                 loading="eager" fetchpriority="high" decoding="async">
+        </header>
+
+        <!-- BREADCRUMB + META -->
+        <div class="article-meta-wrap">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="/">Accueil</a>
+                <span aria-hidden="true">›</span>
+                <a href="/blog/">Blog</a>
+                <span aria-hidden="true">›</span>
+                <a href="/blog/categorie/{{ categorySlug }}/">{{ category }}</a>
+                <span aria-hidden="true">›</span>
+                <span aria-current="page">{{ title }}</span>
+            </nav>
+
+            <div class="article-meta">
+                <time datetime="{{ date | dateISO }}">{{ date | dateFR }}</time>
+                <span class="meta-sep">·</span>
+                <span class="reading-time">{{ content | readingTime }} min de lecture</span>
+                <span class="meta-sep">·</span>
+                <a class="article-category" href="/blog/categorie/{{ categorySlug }}/">{{ category }}</a>
+            </div>
+        </div>
+
+        <!-- TITRE + EXTRAIT -->
+        <div class="article-title-wrap">
+            <h1>{{ title }}</h1>
+            <p class="article-lede">{{ description }}</p>
+
+            {% if tags and tags.length %}
+            <ul class="article-tags" aria-label="Tags">
+                {% for tag in tags %}<li>{{ tag }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+        <!-- CORPS DE L'ARTICLE -->
+        <div class="article-body">
+            {{ content | safe }}
+        </div>
+
+        <!-- BLOC AUTEUR -->
+        <aside class="article-author">
+            <div class="author-avatar" aria-hidden="true">
+                <img src="/images/logo.webp" alt="" loading="lazy">
+            </div>
+            <div class="author-bio">
+                <strong>HUMAN REC</strong>
+                <p>Studio de production audiovisuelle à Avignon. On filme le vrai, pas le parfait. Films publicitaires, vidéos corporate, captation événementielle dans tout le Vaucluse.</p>
+                <a href="/qui-sommes-nous" class="author-link">Qui se cache derrière HUMAN REC →</a>
+            </div>
+        </aside>
+
+        <!-- CTA CONTACT -->
+        <section class="article-cta">
+            <h2>Un projet en tête ?</h2>
+            <p>On en discute en 15 minutes au téléphone. Pas de devis avant d'avoir compris ce que vous cherchez vraiment à faire.</p>
+            <a href="/#contact" class="btn btn-primary">Parlons de votre projet</a>
+        </section>
+
+        <!-- ARTICLES SIMILAIRES -->
+        {% set categoryKey = "posts_" + ({"Film publicitaire": "film_publicitaire", "Vidéo corporate": "video_corporate", "Captation événementielle": "captation_evenementielle", "Photographie": "photographie", "Général": "general"})[category] %}
+        {% set similarPosts = collections[categoryKey] %}
+        {% if similarPosts and similarPosts.length > 1 %}
+        <section class="article-related">
+            <h2>Dans la même catégorie</h2>
+            <div class="related-grid">
+                {% set count = 0 %}
+                {% for post in similarPosts %}
+                    {% if post.url != page.url and count < 3 %}
+                    <article class="related-card">
+                        <a href="{{ post.url }}">
+                            <img src="{{ post.data.image }}" alt="{{ post.data.image_alt or post.data.title }}"
+                                 width="600" height="315" loading="lazy" decoding="async">
+                            <div class="related-card-body">
+                                <span class="related-cat">{{ post.data.category }}</span>
+                                <h3>{{ post.data.title }}</h3>
+                                <time datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFR }}</time>
+                            </div>
+                        </a>
+                    </article>
+                    {% set count = count + 1 %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+    </article>
+{% endblock %}

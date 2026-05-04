@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Photos | HUMAN REC - Avignon</title>
+    <meta name="description"
+        content="Découvrez nos photos d'événements et l'envers du décor de nos tournages. La photographie est une option exclusive réservée à nos clients vidéo.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://humanrec.fr/photos">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Photos | HUMAN REC">
+    <meta property="og:description"
+        content="Galerie photo HUMAN REC. Photographies cinématographiques d'événements, portraits et reportages corporate. Avignon & Vaucluse.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://humanrec.fr/photos">
+    <meta property="og:image" content="https://humanrec.fr/images/og-image.webp">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photos | HUMAN REC">
+    <meta name="twitter:description" content="Galerie photo HUMAN REC. Photographies cinématographiques d'événements, portraits et reportages corporate.">
+    <meta name="twitter:image" content="https://humanrec.fr/images/og-image.webp">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="global.min.css">
+    <style>
+        /* ========== HERO PHOTOS ========== */
+        .photos-hero {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 200px 5% 80px;
+            /* Ajusté pour le breadcrumb */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photos-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(230, 57, 70, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(230, 57, 70, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Pellicule décorative */
+        .film-holes {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+
+        .film-holes.left {
+            left: 20px;
+        }
+
+        .film-holes.right {
+            right: 20px;
+        }
+
+        .film-hole {
+            width: 20px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 3px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .photos-hero h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            letter-spacing: 0.05em;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .photos-hero h1 span {
+            color: var(--red);
+        }
+
+        .photos-hero p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Compteur de photos */
+        .photo-counter {
+            position: absolute;
+            bottom: 30px;
+            right: 5%;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 4rem;
+            color: rgba(230, 57, 70, 0.1);
+            line-height: 1;
+        }
+
+        .photo-counter span {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ========== FILTRES ========== */
+        .filters-section {
+            padding: 0 5%;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 80px;
+            z-index: 50;
+            background: linear-gradient(to bottom, var(--black) 0%, var(--black) 80%, transparent 100%);
+            padding-bottom: 20px;
+        }
+
+        .filters-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .filter-btn {
+            padding: 15px 35px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--gray);
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--red);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--red);
+            color: var(--white);
+        }
+
+        .filter-btn:hover::before {
+            transform: scaleX(1);
+        }
+
+        .filter-btn.active {
+            background: var(--red);
+            border-color: var(--red);
+            color: var(--white);
+        }
+
+        .filter-btn.active::before {
+            display: none;
+        }
+
+        /* Compteur dans les boutons */
+        .filter-count {
+            font-size: 0.7rem;
+            opacity: 0.6;
+            margin-left: 8px;
+        }
+
+        /* ========== GALERIE MASONRY ========== */
+        .gallery-section {
+            padding: 0 5% 100px;
+        }
+
+        .gallery-grid {
+            columns: 4;
+            column-gap: 15px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .gallery-item:nth-child(1) {
+            animation-delay: 0.02s;
+        }
+
+        .gallery-item:nth-child(2) {
+            animation-delay: 0.04s;
+        }
+
+        .gallery-item:nth-child(3) {
+            animation-delay: 0.06s;
+        }
+
+        .gallery-item:nth-child(4) {
+            animation-delay: 0.08s;
+        }
+
+        .gallery-item:nth-child(5) {
+            animation-delay: 0.1s;
+        }
+
+        .gallery-item:nth-child(6) {
+            animation-delay: 0.12s;
+        }
+
+        .gallery-item:nth-child(7) {
+            animation-delay: 0.14s;
+        }
+
+        .gallery-item:nth-child(8) {
+            animation-delay: 0.16s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-item.hidden {
+            display: none;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(20%);
+            transition: all 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid transparent;
+            transition: border-color 0.3s ease;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .gallery-item:hover::before {
+            border-color: var(--red);
+        }
+
+        /* Overlay avec infos */
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, transparent 50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-category {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 5px;
+        }
+
+        .gallery-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.03em;
+        }
+
+        /* Icône zoom */
+        .gallery-zoom {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            width: 50px;
+            height: 50px;
+            background: rgba(230, 57, 70, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .gallery-item:hover .gallery-zoom {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .gallery-zoom svg {
+            width: 22px;
+            height: 22px;
+            color: var(--white);
+        }
+
+        /* Numéro de photo style planche contact */
+        .gallery-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 3px 8px;
+            z-index: 4;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .gallery-item:hover .gallery-number {
+            opacity: 1;
+        }
+
+        /* ========== LIGHTBOX ========== */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.97);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.4s ease;
+        }
+
+        .lightbox.active .lightbox-content img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 20;
+        }
+
+        .lightbox-close:hover {
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 20;
+        }
+
+        .lightbox-nav:hover {
+            border-color: var(--red);
+            background: var(--red);
+        }
+
+        .lightbox-nav svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .lightbox-prev {
+            left: -80px;
+        }
+
+        .lightbox-next {
+            right: -80px;
+        }
+
+        .lightbox-info {
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 20;
+        }
+
+        .lightbox-info .category {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--red);
+        }
+
+        .lightbox-info .title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.2em;
+            z-index: 20;
+        }
+
+        /* ========== CONTACT CTA ========== */
+        .photos-cta {
+            padding: 80px 5%;
+            background: var(--gray-dark);
+            text-align: center;
+        }
+
+        .photos-cta h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
+        }
+
+        .photos-cta h2 span {
+            color: var(--red);
+        }
+
+        .photos-cta p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 35px;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: 'Inter', sans-serif;
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            background: var(--red-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(230, 57, 70, 0.3);
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-photos">
+        <a href="./" class="logo">
+            <span class="logo-dot"></span>
+            <img src="images/logo.webp" alt="HUMAN REC" class="logo-img">
+        </a>
+        <ul class="nav-menu">
+            <li><a href="services/">Services</a></li>
+            <li><a href="/#portfolio">Réalisations</a></li>
+            <li><a href="/blog/">Blog</a></li><li><a href="/blog/">Blog</a><a href="qui-sommes-nous">L'équipe</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="tel:+33783832507" class="nav-phone">07 83 83 25 07</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="./">Accueil</a>
+        <a href="services/">Services</a>
+        <a href="/#portfolio">Réalisations</a>
+        <a href="qui-sommes-nous">L'équipe</a>
+        <a href="/#contact">Contact</a>
+        <a href="tel:+33783832507" class="mobile-phone-link"
+            style="color: var(--red); font-weight: 600; margin-top: 20px;">📞 07 83 83 25 07</a>
+    </div>
+
+    <main>
+
+        <!-- Fil d'Ariane -->
+        <div class="breadcrumb">
+            <ol class="breadcrumb-list">
+                <li><a href="./">Accueil</a></li>
+                <li><a href="/#portfolio">Réalisations</a></li>
+                <li><span class="current">Photos</span></li>
+            </ol>
+        </div>
+
+        <!-- Hero -->
+        <section class="photos-hero">
+            <!-- Pellicules décoratives -->
+            <div class="film-holes left">
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+            </div>
+            <div class="film-holes right">
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+                <div class="film-hole"></div>
+            </div>
+
+            <div class="section-label">Galerie</div>
+            <h1>NOS <span>IMAGES</span></h1>
+            <p>Plongez dans l'énergie de nos événements, concerts et soirées. Chaque image capture un moment unique.</p>
+
+            <div class="photo-counter">
+                <span>TOTAL</span> 49
+            </div>
+        </section>
+
+        <!-- Contexte éditorial SEO — photographie événementielle Avignon -->
+        <section class="photos-intro">
+            <div class="photos-intro-inner">
+                <h2 class="section-title">La photo, l'autre versant du métier</h2>
+                <p>HUMAN REC ne se limite pas à la vidéo. La photographie événementielle fait partie du même geste : capter ce qui se passe vraiment, sans le mettre en scène. À Avignon et dans tout le Vaucluse, on couvre les soirées d'entreprise, les concerts, les festivals, les inaugurations, les conférences professionnelles, les lancements produit. Partout où il y a une énergie à conserver, on apporte un appareil et un œil.</p>
+                <p>Notre approche photo reprend le parti pris du studio : on ne cherche pas la pose parfaite, on cherche le geste juste. Le rire qui démarre, la main qui hésite, le regard qui se croise. Le reportage photo d'événement est un travail d'observation, pas de mise en scène. Notre matériel — boîtiers Lumix et Leica, optiques fixes, flashs débrayables — sert un seul objectif : ne pas être vu pendant qu'on capte ce qui compte.</p>
+                <p>Pour un <a href="/services/captation-evenementielle-avignon">aftermovie événement</a>, la photo et la vidéo se complètent. Pendant que la caméra suit le mouvement, l'appareil photo isole les visages, les détails, les expressions. À la fin de la soirée, vous repartez avec deux livrables : un film qui raconte la dynamique de la soirée, et une banque de 200 à 400 photos que vous pouvez utiliser sur les réseaux sociaux, dans la newsletter, dans la presse interne, sur le site web. Une seule équipe, deux supports, un seul regard cohérent.</p>
+                <p>On intervient sur Avignon, Orange, Carpentras, Cavaillon, L'Isle-sur-la-Sorgue, Pertuis, et sur toute la région PACA pour les événements importants. Pour les besoins ponctuels — portrait corporate, photo produit, reportage backstage — la formule est la même : un brief court, un tournage léger, une livraison rapide.</p>
+            </div>
+        </section>
+
+        <!-- Filtres -->
+        <section class="filters-section">
+            <div class="filters-container">
+                <button class="filter-btn active" data-filter="all">
+                    Toutes <span class="filter-count">(49)</span>
+                </button>
+                <button class="filter-btn" data-filter="evenement">
+                    Événement <span class="filter-count">(27)</span>
+                </button>
+                <button class="filter-btn" data-filter="concert">
+                    Concert <span class="filter-count">(13)</span>
+                </button>
+                <button class="filter-btn" data-filter="soiree">
+                    Soirée <span class="filter-count">(9)</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Galerie -->
+        <section class="gallery-section">
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- ========== ÉVÉNEMENT - DELICE SHOW (9 photos) ========== -->
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">001</span>
+                    <img src="images/photos/DeliceShow-Circe1.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">002</span>
+                    <img src="images/photos/DeliceShow-Circe2.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">003</span>
+                    <img src="images/photos/DeliceShow-Circe3.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">004</span>
+                    <img src="images/photos/DeliceShow-Circe4.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">005</span>
+                    <img src="images/photos/DeliceShow-Circe5.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">006</span>
+                    <img src="images/photos/DeliceShow-Circe6.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">007</span>
+                    <img src="images/photos/DeliceShow-Circe7.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">008</span>
+                    <img src="images/photos/DeliceShow-Circe8.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">009</span>
+                    <img src="images/photos/DeliceShow-Circe9.webp" alt="Delice Show Circe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- ========== ÉVÉNEMENT - WALIBI (18 photos) ========== -->
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">010</span>
+                    <img src="images/photos/WALIBI 1.webp"
+                        alt="Spectacle sur glace Walibi - Patineuse en costume sous les projecteurs" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">011</span>
+                    <img src="images/photos/WALIBI 2.webp"
+                        alt="Ice Show Walibi - Duo de patineurs artistiques sur la patinoire illuminée" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">012</span>
+                    <img src="images/photos/WALIBI 3.webp"
+                        alt="Spectacle Walibi - Acrobates aériens avec jeux de lumières colorées" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">013</span>
+                    <img src="images/photos/WALIBI 4.webp" alt="Show Walibi - Danseurs illuminés sur scène spectaculaire"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">014</span>
+                    <img src="images/photos/WALIBI 5.webp"
+                        alt="Captation événementielle Walibi - Artiste en action dans décor féérique" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">015</span>
+                    <img src="images/photos/WALIBI 6.webp"
+                        alt="Spectacle événementiel Walibi - Performers sur glace vus d'en haut" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">016</span>
+                    <img src="images/photos/WALIBI 7.webp"
+                        alt="Ice Show Walibi - Finale du spectacle avec ensemble de patineurs" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">017</span>
+                    <img src="images/photos/WALIBI 8.webp"
+                        alt="Walibi événementiel - Effets pyrotechniques et laser sur la scène" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">018</span>
+                    <img src="images/photos/WALIBI 9.webp"
+                        alt="Captation spectacle Walibi - Chorégraphie synchronisée sous éclairage bleu" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">019</span>
+                    <img src="images/photos/WALIBI 10.webp"
+                        alt="Spectacle nocturne Walibi - Artiste principal sous les feux de la rampe" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">020</span>
+                    <img src="images/photos/WALIBI 11.webp"
+                        alt="Show événementiel Walibi - Silhouettes de danseurs en contre-jour" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">021</span>
+                    <img src="images/photos/WALIBI 12.webp"
+                        alt="Walibi Ice Show - Grand final avec confettis et public en liesse" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">022</span>
+                    <img src="images/photos/WALIBI 13.webp"
+                        alt="Captation live Walibi - Mascotte et performers interagissant avec la foule" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">023</span>
+                    <img src="images/photos/WALIBI 14.webp"
+                        alt="Événement Walibi - Vue panoramique du spectacle avec décor hivernal" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">024</span>
+                    <img src="images/photos/WALIBI 15.webp"
+                        alt="Ice Show Walibi - Patineuse exécutant une figure artistique" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">025</span>
+                    <img src="images/photos/WALIBI 16.webp"
+                        alt="Spectacle Walibi - Mise en scène féerique avec neige artificielle" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">026</span>
+                    <img src="images/photos/WALIBI 17.webp"
+                        alt="Walibi événement - Tableau final du spectacle avec éclairage dramatique" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">027</span>
+                    <img src="images/photos/WALIBI 18.webp"
+                        alt="Captation événement Walibi - Scène complète vue depuis les gradins" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- ========== CONCERT - WIB (7 photos) ========== -->
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">028</span>
+                    <img src="images/photos/WIB1.webp" alt="Concert WIB - Artiste sur scène éclairé par jeux de lumières"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">029</span>
+                    <img src="images/photos/WIB2.webp"
+                        alt="Concert WIB - Musicien en pleine performance sous spots colorés" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">030</span>
+                    <img src="images/photos/WIB3.webp" alt="Concert WIB - Vue d'ensemble de la scène avec public"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">031</span>
+                    <img src="images/photos/WIB4.webp" alt="Concert WIB - Chanteur au micro devant la foule en délire"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">032</span>
+                    <img src="images/photos/WIB5.webp"
+                        alt="Concert WIB - Ambiance électrique avec lumières stroboscopiques" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">033</span>
+                    <img src="images/photos/WIB6.webp" alt="Concert WIB - Groupe en action vu depuis le public"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">034</span>
+                    <img src="images/photos/WIB7.webp" alt="Concert WIB - Finale du concert avec fumée et projecteurs"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- ========== CONCERT - NAPS (6 photos) ========== -->
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">035</span>
+                    <img src="images/photos/NAPS 1.webp"
+                        alt="Concert NAPS - Rappeur sur scène devant la foule en ébullition" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">036</span>
+                    <img src="images/photos/NAPS 2.webp" alt="Concert NAPS - Artiste interagissant avec le premier rang"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">037</span>
+                    <img src="images/photos/NAPS 3.webp"
+                        alt="Concert NAPS - Performance live avec jeux de lumières rouges" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">038</span>
+                    <img src="images/photos/NAPS 4.webp" alt="Concert NAPS - Vue panoramique de la scène et du public"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">039</span>
+                    <img src="images/photos/NAPS 5.webp" alt="Concert NAPS - Rappeur en gros plan micro en main"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">040</span>
+                    <img src="images/photos/NAPS 6.webp" alt="Concert NAPS - Moment fort du show avec foule en liesse"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- ========== SOIRÉE (9 photos) ========== -->
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">041</span>
+                    <img src="images/photos/Soiree 1.webp" alt="Soirée privée - DJ aux platines avec éclairage ambiance"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">042</span>
+                    <img src="images/photos/Soiree 2.webp"
+                        alt="Ambiance soirée événementielle - Invités sur la piste de danse" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">043</span>
+                    <img src="images/photos/Soiree 3.webp" alt="Soirée corporate - Décor élégant avec éclairage tamisé"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">044</span>
+                    <img src="images/photos/Soiree 4.webp" alt="Ambiance nocturne - Bar lounge avec lumières colorées"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">045</span>
+                    <img src="images/photos/Soiree 5.webp" alt="Soirée privée - Performances live et animation"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">046</span>
+                    <img src="images/photos/Soiree 6.webp" alt="Événement nocturne - Cocktail avec ambiance festive"
+                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">047</span>
+                    <img src="images/photos/Soiree 7.webp" alt="Soirée gala - Invités en tenue de soirée" loading="lazy"
+                        draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">048</span>
+                    <img src="images/photos/Soiree 8.webp"
+                        alt="Ambiance soirée VIP - Décoration scintillante et convives" loading="lazy" draggable="false"
+                        oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">049</span>
+                    <img src="images/photos/Soiree 9.webp"
+                        alt="Soirée événement - Fin de soirée avec lumières d'ambiance" loading="lazy" draggable="false"
+                        oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Ambiance nocturne</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-counter"><span id="currentIndex">1</span> / <span id="totalImages">49</span></span>
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightboxClose">×</button>
+                <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
+                <img src="" alt="" id="lightboxImage" draggable="false" oncontextmenu="return false;">
+                <button class="lightbox-nav lightbox-next" id="lightboxNext">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+                <div class="lightbox-info">
+                    <span class="category" id="lightboxCategory"></span>
+                    <span class="title" id="lightboxTitle"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <section class="photos-cta">
+            <h2>Uniquement pour nos <span>clients vidéo</span></h2>
+            <p>La photographie d'événement et de plateau est une <strong>option exclusive</strong> réservée à nos
+                clients
+                vidéo.<br>
+                Assurez une cohérence visuelle parfaite entre vos films et vos campagnes ou albums photos.</p>
+            <a href="/#contact" class="btn">
+                Discuter de votre projet
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-simple">
+        <p>© 2026 HUMAN REC — Production Audiovisuelle <a href="./">Avignon & Vaucluse</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ========== PROTECTION DES IMAGES ==========
+
+        // 1. Désactiver le clic droit sur les images et la lightbox
+        document.addEventListener('contextmenu', function (e) {
+            if (e.target.tagName === 'IMG' ||
+                e.target.closest('.gallery-item') ||
+                e.target.closest('.lightbox-content')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // 2. Bloquer le glisser-déposer des images
+        document.addEventListener('dragstart', function (e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // 3. Bloquer les raccourcis clavier de sauvegarde
+        document.addEventListener('keydown', function (e) {
+            // Ctrl+S, Ctrl+Shift+S
+            if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U (code source) - optionnel, peut gêner les développeurs
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // 4. Protection tactile mobile (long press)
+        let touchTimer;
+        document.addEventListener('touchstart', function (e) {
+            if (e.target.tagName === 'IMG' || e.target.closest('.gallery-item')) {
+                touchTimer = setTimeout(function () {
+                    e.preventDefault();
+                }, 500);
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchend', function () {
+            clearTimeout(touchTimer);
+        });
+
+        // ========== FILTRES ==========
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+
+                galleryItems.forEach((item, index) => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.classList.remove('hidden');
+                        item.style.animation = 'none';
+                        item.offsetHeight;
+                        item.style.animation = `fadeInUp 0.6s ease ${index * 0.02}s forwards`;
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // ========== LIGHTBOX ==========
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCategory = document.getElementById('lightboxCategory');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const currentIndexEl = document.getElementById('currentIndex');
+        const totalImagesEl = document.getElementById('totalImages');
+
+        let currentImages = [];
+        let currentIndex = 0;
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function (e) {
+                // Empêcher le clic si c'est sur l'image directement (protection)
+                if (e.target.tagName === 'IMG') {
+                    e.stopPropagation();
+                }
+                currentImages = Array.from(document.querySelectorAll('.gallery-item:not(.hidden)'));
+                currentIndex = currentImages.indexOf(this);
+                openLightbox();
+            });
+        });
+
+        function openLightbox() {
+            const item = currentImages[currentIndex];
+            const img = item.querySelector('img');
+            const category = item.querySelector('.gallery-category').textContent;
+            const title = item.querySelector('.gallery-title').textContent;
+
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightboxCategory.textContent = category;
+            lightboxTitle.textContent = title;
+            currentIndexEl.textContent = currentIndex + 1;
+            totalImagesEl.textContent = currentImages.length;
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % currentImages.length;
+            openLightbox();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            openLightbox();
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxNext.addEventListener('click', nextImage);
+        lightboxPrev.addEventListener('click', prevImage);
+
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+
+        // Swipe mobile pour lightbox
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        lightbox.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? nextImage() : prevImage();
+            }
+        }, { passive: true });
+    </script>
+
+    <!-- JavaScript Menu Mobile -->
+    <script>
+        // Menu Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', function () {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Fermer le menu quand on clique sur un lien
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function () {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

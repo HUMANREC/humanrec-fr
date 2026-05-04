@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+    <!-- ========================================== -->
+    <!-- VIDEO SITEMAP - HUMAN REC                  -->
+    <!-- Production Audiovisuelle Avignon Vaucluse  -->
+    <!-- Dernière mise à jour : 2026-04-28          -->
+    <!-- ========================================== -->
+
+    <!-- 1. ZEROD - Film Promotionnel Triathlon -->
+    <url>
+        <loc>https://humanrec.fr/projets/Film-promotionnel-Zerod</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet1.png</video:thumbnail_loc>
+            <video:title>Film Promotionnel Z3ROD - Triathlon</video:title>
+            <video:description>Film publicitaire réalisé pour Z3ROD, marque française de triathlon reconnue à l'international. Pensée pour refléter les valeurs de performance, d'endurance et d'élégance sportive de la marque. Tournage sur 3 jours par HUMAN REC, production audiovisuelle Avignon.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/ZEROD.mp4</video:content_loc>
+            <video:duration>30</video:duration>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>film publicitaire</video:tag>
+            <video:tag>triathlon</video:tag>
+            <video:tag>Z3ROD</video:tag>
+            <video:tag>production vidéo Avignon</video:tag>
+            <video:tag>sport</video:tag>
+            <video:category>Sports</video:category>
+        </video:video>
+    </url>
+
+    <!-- 2. DELICE SHOW - Version Courte (Le Show) -->
+    <url>
+        <loc>https://humanrec.fr/projets/Film-Evenementiel-DeliceShow</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet5.png</video:thumbnail_loc>
+            <video:title>Delice Show - Le Show (Version Courte)</video:title>
+            <video:description>Captation événementielle d'une soirée privée au Circe organisée par Delice Show. Version courte mettant en valeur les moments forts du show. Production HUMAN REC, vidéaste événementiel Vaucluse.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/Circe-30sec-4k.mp4</video:content_loc>
+            <video:duration>45</video:duration>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>captation événementielle</video:tag>
+            <video:tag>soirée privée</video:tag>
+            <video:tag>Delice Show</video:tag>
+            <video:tag>vidéo événement Avignon</video:tag>
+            <video:category>Entertainment</video:category>
+        </video:video>
+        
+        <!-- Version Longue (Préparation + Show) -->
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet5bis.jpg</video:thumbnail_loc>
+            <video:title>Delice Show - Préparation + Show (Version Complète)</video:title>
+            <video:description>Version longue de la captation événementielle Delice Show, incluant les coulisses, la préparation et le show complet. Une immersion dans l'univers élégant de Delice Show. Production HUMAN REC Avignon.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/Circe-1min-4k.mp4</video:content_loc>
+            <video:duration>120</video:duration>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>captation événementielle</video:tag>
+            <video:tag>coulisses</video:tag>
+            <video:tag>making of</video:tag>
+            <video:tag>Delice Show</video:tag>
+            <video:category>Entertainment</video:category>
+        </video:video>
+    </url>
+
+    <!-- 3. GAME OF PROD - Forever Living 2024 -->
+    <url>
+        <loc>https://humanrec.fr/projets/Film-Evenementiel-Game-Of-Prod</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet4.jpg</video:thumbnail_loc>
+            <video:title>Game of Prod - Event is Coming (Forever Living 2024)</video:title>
+            <video:description>Captation événementielle complète pour Game of Prod. Sur une journée entière, notre équipe a capté l'énergie et les moments forts de l'événement Forever Living 2024. Film percutant et promotionnel par HUMAN REC.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/GOP-ForeverLiving2024-ok.mp4</video:content_loc>
+            <video:duration>60</video:duration>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>captation événementielle</video:tag>
+            <video:tag>Game of Prod</video:tag>
+            <video:tag>Forever Living</video:tag>
+            <video:tag>aftermovie</video:tag>
+            <video:tag>vidéaste Vaucluse</video:tag>
+            <video:category>Entertainment</video:category>
+        </video:video>
+    </url>
+
+    <!-- 4. ATHLETIC FITNESS CLUB - Film Publicitaire -->
+    <url>
+        <loc>https://humanrec.fr/projets/Film-institutionnel-Athletic-Fitness-Club</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet3.jpg</video:thumbnail_loc>
+            <video:title>Film Publicitaire Athletic Fitness Club</video:title>
+            <video:description>Film publicitaire réalisé pour Athletic Fitness Club, salle de sport dans le Vaucluse. Un film authentique, énergique et fidèle à l'esprit du club, conçu pour renforcer son image et attirer de nouveaux adhérents. Tournage sur 2 jours par HUMAN REC.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/Atlhetics%20Fitness%20Club.mp4</video:content_loc>
+            <video:duration>60</video:duration>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>film publicitaire</video:tag>
+            <video:tag>salle de sport</video:tag>
+            <video:tag>fitness</video:tag>
+            <video:tag>vidéo corporate</video:tag>
+            <video:tag>production vidéo Vaucluse</video:tag>
+            <video:category>Sports</video:category>
+        </video:video>
+    </url>
+
+    <!-- 5. LA MAIZON - Maison d'hôtes Provence -->
+    <url>
+        <loc>https://humanrec.fr/projets/Film-Promotionnel-La-Maizon</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet2.png</video:thumbnail_loc>
+            <video:title>Film Publicitaire La Maizon - Maison d'hôtes de Provence</video:title>
+            <video:description>Film publicitaire pour La Maizon, maison d'hôtes de charme au cœur du Vaucluse. Approche cinématographique mettant en scène des instants de vie et moments de convivialité pour permettre aux visiteurs de se projeter dans l'expérience. Production HUMAN REC Avignon.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/La%20Maizon%20V1.mp4</video:content_loc>
+            <video:duration>60</video:duration>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>film publicitaire</video:tag>
+            <video:tag>maison d'hôtes</video:tag>
+            <video:tag>Provence</video:tag>
+            <video:tag>tourisme</video:tag>
+            <video:tag>hébergement</video:tag>
+            <video:tag>vidéo immobilier</video:tag>
+            <video:category>Travel</video:category>
+        </video:video>
+    </url>
+
+    <!-- 6. ICE SHOW BY DELICE SHOW - Walibi Belgique -->
+    <url>
+        <loc>https://humanrec.fr/projets/Film-Evenementiel-IceShow</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/WALIBI-MINIA_1.10.1.jpg</video:thumbnail_loc>
+            <video:title>Ice Show by Delice Show - Walibi Belgique</video:title>
+            <video:description>Captation événementielle du Ice Show par Delice Show au parc Walibi en Belgique. HUMAN REC a suivi les équipes pour immortaliser ce spectacle sur glace unique. Production audiovisuelle Avignon.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/WalibiV1.mp4</video:content_loc>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>captation événementielle</video:tag>
+            <video:tag>ice show</video:tag>
+            <video:tag>Delice Show</video:tag>
+            <video:tag>Walibi</video:tag>
+            <video:tag>Belgique</video:tag>
+            <video:tag>spectacle sur glace</video:tag>
+            <video:category>Entertainment</video:category>
+        </video:video>
+        
+        <!-- Tournée France 2025 -->
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/Minia-Tournee.jpg</video:thumbnail_loc>
+            <video:title>Ice Show by Delice Show - Tournée France 2025</video:title>
+            <video:description>Captation de la tournée Ice Show par Delice Show à travers la France durant les fêtes de Noël. HUMAN REC a accompagné les équipes dans plusieurs villes pour capturer l'énergie de chaque représentation. Production HUMAN REC Avignon.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/DeliceShow-Tournee2025V2.mp4</video:content_loc>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>captation événementielle</video:tag>
+            <video:tag>ice show</video:tag>
+            <video:tag>tournée France</video:tag>
+            <video:tag>Delice Show</video:tag>
+            <video:tag>Noël</video:tag>
+            <video:tag>production vidéo Avignon</video:tag>
+            <video:category>Entertainment</video:category>
+        </video:video>
+    </url>
+
+    <!-- 7. FILM ARTISTIQUE - Grace is a violence you cannot see -->
+    <url>
+        <loc>https://humanrec.fr/projets/Film-Artistique</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/Minia-FilmArtistique.jpg</video:thumbnail_loc>
+            <video:title>Grace is a violence you cannot see</video:title>
+            <video:description>Projet artistique unique par HUMAN REC. Une exploration visuelle et sonore, avec un travail approfondi sur la colorimétrie et le montage rythmique. Une œuvre d'art vidéo.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/Grace%20is%20a%20violence%20you%20cannot%20see..mp4</video:content_loc>
+            <video:duration>60</video:duration>
+            <video:publication_date>2026-04-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>film artistique</video:tag>
+            <video:tag>art et essai</video:tag>
+            <video:tag>création vidéo</video:tag>
+            <video:tag>HUMAN REC</video:tag>
+            <video:category>Arts</video:category>
+        </video:video>
+    </url>
+
+</urlset>

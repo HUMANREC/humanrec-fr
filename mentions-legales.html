@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales | HUMAN REC</title>
+    <meta name="description" content="Mentions légales du site HUMAN REC, production audiovisuelle.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://humanrec.fr/mentions-legales">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="global.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.8;
+        }
+
+        a {
+            color: var(--red);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.15em;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 12px 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--white);
+            color: var(--black);
+            opacity: 1;
+        }
+
+        .back-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Hero */
+        .legal-hero {
+            padding: 150px 5% 80px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .legal-hero .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+
+        .legal-hero .tag::before,
+        .legal-hero .tag::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .legal-hero h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            letter-spacing: 0.05em;
+        }
+
+        /* Content */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 5%;
+        }
+
+        .legal-content h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 0.05em;
+            color: var(--white);
+            margin: 50px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content h2 .num {
+            color: var(--red);
+            margin-right: 10px;
+        }
+
+        .legal-content h3 {
+            font-size: 1.1rem;
+            color: var(--red);
+            margin: 30px 0 10px;
+            font-weight: 500;
+        }
+
+        .legal-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .legal-content ul {
+            color: var(--gray);
+            margin: 15px 0 15px 20px;
+        }
+
+        .legal-content li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .legal-content strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .info-block {
+            background: var(--gray-dark);
+            border-left: 3px solid var(--red);
+            padding: 25px 30px;
+            margin: 25px 0;
+        }
+
+        .info-block p {
+            margin-bottom: 8px;
+        }
+
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .update-date {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 5%;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--gray-dark);
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--red);
+            margin: 0 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            .back-btn span {
+                display: none;
+            }
+
+            .back-btn {
+                padding: 10px;
+            }
+
+            .legal-hero {
+                padding: 120px 5% 60px;
+            }
+
+            .legal-content {
+                padding: 50px 5%;
+            }
+
+            .legal-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .info-block {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="./" class="logo">
+            <span class="logo-dot"></span>
+            <img src="images/logo.webp" alt="HUMAN REC" class="logo-img">
+        </a>
+        <a href="./" class="back-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Retour à l'accueil</span>
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="legal-hero">
+        <div class="tag">Informations légales</div>
+        <h1>Mentions Légales</h1>
+    </section>
+
+    <!-- Content -->
+    <main class="legal-content">
+
+        <h2><span class="num">1.</span> Éditeur du site</h2>
+        <p>Le site <strong>humanrec.fr</strong> est édité par :</p>
+        <div class="info-block">
+            <p><strong>HUMAN REC</strong></p>
+            <p>Forme juridique : Auto-entrepreneur</p>
+            <p>Siège social : 885 route du pont de Crillon, 84410 Crillon le Brave</p>
+            <p>SIRET : 991 413 907 00015</p>
+        </div>
+
+        <h3>Directeur de la publication</h3>
+        <div class="info-block">
+            <p><strong>Sacha Preschesmisky</strong></p>
+            <p>Email : <a href="mailto:contact@humanrec.fr">contact@humanrec.fr</a></p>
+            <p>Téléphone : <a href="tel:+33783832507">07 83 83 25 07</a></p>
+        </div>
+
+        <h2><span class="num">2.</span> Hébergement</h2>
+        <p>Le site est hébergé par :</p>
+        <div class="info-block">
+            <p><strong>Netlify, Inc.</strong></p>
+            <p>2325 3rd Street, Suite 296</p>
+            <p>San Francisco, California 94107</p>
+            <p>United States</p>
+            <p>Site web : <a href="https://www.netlify.com" target="_blank" rel="noopener">www.netlify.com</a></p>
+        </div>
+
+        <h2><span class="num">3.</span> Propriété intellectuelle</h2>
+        <p>
+            L'ensemble du contenu de ce site (textes, images, vidéos, logos, graphismes, icônes, sons, logiciels, etc.)
+            est la propriété exclusive de HUMAN REC ou de ses partenaires et est protégé par les lois françaises et
+            internationales relatives à la propriété intellectuelle.
+        </p>
+        <p>
+            Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments
+            du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de
+            HUMAN REC.
+        </p>
+        <p>
+            Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée
+            comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et
+            suivants du Code de Propriété Intellectuelle.
+        </p>
+
+        <h2><span class="num">4.</span> Limitation de responsabilité</h2>
+        <p>
+            HUMAN REC s'efforce d'assurer au mieux de ses possibilités l'exactitude et la mise à jour des informations
+            diffusées sur ce site. Toutefois, HUMAN REC ne peut garantir l'exactitude, la précision ou l'exhaustivité
+            des informations mises à disposition sur ce site.
+        </p>
+        <p>En conséquence, HUMAN REC décline toute responsabilité :</p>
+        <ul>
+            <li>Pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur le site
+            </li>
+            <li>Pour tous dommages résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des
+                informations mises à disposition sur le site</li>
+            <li>Et plus généralement pour tous dommages, directs ou indirects, quelles qu'en soient les causes,
+                origines, natures ou conséquences</li>
+        </ul>
+
+        <h2><span class="num">5.</span> Liens hypertextes</h2>
+        <p>
+            Le site peut contenir des liens hypertextes vers d'autres sites internet. HUMAN REC n'exerce aucun contrôle
+            sur ces sites et décline toute responsabilité quant à leur contenu ou aux éventuelles collectes de données
+            qu'ils pourraient effectuer.
+        </p>
+
+        <h2><span class="num">6.</span> Cookies</h2>
+        <p>
+            Le site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic.
+            Pour plus d'informations sur l'utilisation des cookies et vos droits, veuillez consulter notre
+            <a href="politique-confidentialite">Politique de confidentialité</a>.
+        </p>
+
+        <h2><span class="num">7.</span> Droit applicable</h2>
+        <p>
+            Les présentes mentions légales sont régies par le droit français. En cas de litige, et après tentative
+            de résolution amiable, les tribunaux français seront seuls compétents.
+        </p>
+
+        <h2><span class="num">8.</span> Contact</h2>
+        <p>Pour toute question concernant ces mentions légales, vous pouvez nous contacter :</p>
+        <ul>
+            <li>Par email : <a href="mailto:contact@humanrec.fr">contact@humanrec.fr</a></li>
+            <li>Par téléphone : <a href="tel:+33783832507">07 83 83 25 07</a></li>
+            <li>Par courrier : 885 route du pont de Crillon, 84410 Crillon le Brave</li>
+        </ul>
+
+        <div class="update-date">
+            <p>Dernière mise à jour : <strong>20 janvier 2026</strong></p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 HUMAN REC. Tous droits réservés.
+            <a href="./">Accueil</a>
+            <a href="politique-confidentialite">Confidentialité</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

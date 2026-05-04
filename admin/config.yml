@@ -1,0 +1,115 @@
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+
+# Workflow éditorial : draft → review → publish
+publish_mode: editorial_workflow
+
+# Stockage des images uploadées via le CMS
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+# Localisation interface FR
+locale: "fr"
+
+# Slug par défaut : minuscule, accents normalisés, tirets
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+site_url: https://humanrec.fr
+display_url: https://humanrec.fr
+logo_url: https://humanrec.fr/images/logo.webp
+
+collections:
+  - name: "posts"
+    label: "Articles de blog"
+    label_singular: "Article"
+    folder: "content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} ({{category}}) — {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - label: "Titre"
+        name: "title"
+        widget: "string"
+        hint: "Titre principal de l'article — apparaît en H1 et dans le SERP Google. Vise 50-65 caractères."
+
+      - label: "Slug URL"
+        name: "slug"
+        widget: "string"
+        hint: "Mots-clés séparés par tirets, sans accents. Ex : combien-coute-film-entreprise-avignon-2026"
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', "Minuscules, chiffres et tirets uniquement (pas d'espace ni d'accent)"]
+
+      - label: "Date de publication"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        default: ""
+
+      - label: "Date de mise à jour"
+        name: "lastmod"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+        hint: "Renseigner si vous modifiez l'article après publication. Améliore le signal de fraîcheur Google."
+
+      - label: "Catégorie"
+        name: "category"
+        widget: "select"
+        options:
+          - "Film publicitaire"
+          - "Vidéo corporate"
+          - "Captation événementielle"
+          - "Photographie"
+          - "Général"
+        hint: "Une seule catégorie par article (silo SEO). Choisissez celle vers laquelle l'article doit envoyer du PageRank."
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["Guide"]
+        hint: "Étiquettes libres pour le filtrage. Exemples : Guide, Tarifs, Coulisses, Étude de cas, Tournage, Drone."
+
+      - label: "Image header"
+        name: "image"
+        widget: "image"
+        hint: "1200x630 minimum, JPG ou WebP, < 300 KB. Affichée en hero de l'article et en partage social."
+        media_folder: "/images/blog"
+
+      - label: "Texte alternatif image"
+        name: "image_alt"
+        widget: "string"
+        hint: "Description de l'image pour l'accessibilité et le SEO. 1 phrase descriptive."
+
+      - label: "Méta description SEO"
+        name: "description"
+        widget: "text"
+        pattern: ['^.{50,170}$', "Idéalement 120-160 caractères pour ne pas être tronqué dans le SERP"]
+        hint: "155 caractères max. Apparaît sous le titre dans Google. Doit donner envie de cliquer."
+
+      - label: "Mot-clé principal"
+        name: "focus_keyword"
+        widget: "string"
+        hint: "Le mot-clé prioritaire que l'article doit cibler. Ex : prix film entreprise avignon. Aide à rester focus pendant l'écriture."
+
+      - label: "Brouillon"
+        name: "draft"
+        widget: "boolean"
+        default: true
+        hint: "Si coché, l'article ne sera pas publié sur le site (utile pour travailler en plusieurs sessions)."
+
+      - label: "Contenu"
+        name: "body"
+        widget: "markdown"
+        hint: "Markdown supporté. Pour les liens internes, utilisez le format /services/film-publicitaire-avignon — sans https://"

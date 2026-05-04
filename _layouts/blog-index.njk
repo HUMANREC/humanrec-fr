@@ -1,0 +1,81 @@
+{% extends "base.njk" %}
+
+{% set isBlog = true %}
+{% set canonical = "https://humanrec.fr/blog/" %}
+{% set pageTitle = "Blog HUMAN REC — Production audiovisuelle Avignon Vaucluse" %}
+{% set description = "Notre regard sur la production audiovisuelle. Guides pratiques, tarifs, coulisses de tournage et études de cas. Pour comprendre ce qu'il y a derrière une bonne vidéo." %}
+
+{% block extraHead %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Blog",
+                "@id": "https://humanrec.fr/blog/#blog",
+                "url": "https://humanrec.fr/blog/",
+                "name": "Blog HUMAN REC",
+                "description": {{ description | dump | safe }},
+                "publisher": { "@id": "https://humanrec.fr/#organization" },
+                "inLanguage": "fr-FR"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://humanrec.fr/" },
+                    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://humanrec.fr/blog/" }
+                ]
+            }
+        ]
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section class="blog-index-hero">
+        <div class="section-label">Le blog</div>
+        <h1>Notre regard sur la <span>production audiovisuelle</span></h1>
+        <p class="lead">Guides pratiques, tarifs, coulisses de tournage, études de cas. Pour comprendre ce qu'il y a derrière une bonne vidéo, et choisir le format qui correspond vraiment à votre besoin.</p>
+    </section>
+
+    <!-- Filtres catégorie -->
+    <nav class="blog-categories" aria-label="Filtrer par catégorie">
+        <a href="/blog/" class="cat-pill active">Tout voir</a>
+        <a href="/blog/categorie/film-publicitaire/" class="cat-pill">Film publicitaire</a>
+        <a href="/blog/categorie/video-corporate/" class="cat-pill">Vidéo corporate</a>
+        <a href="/blog/categorie/captation-evenementielle/" class="cat-pill">Captation événementielle</a>
+        <a href="/blog/categorie/photographie/" class="cat-pill">Photographie</a>
+    </nav>
+
+    <!-- Grid articles -->
+    {% if collections.posts and collections.posts.length %}
+    <section class="blog-grid-section">
+        <div class="blog-grid">
+            {% for post in collections.posts %}
+            <article class="blog-card">
+                <a href="{{ post.url }}">
+                    <div class="blog-card-image">
+                        <img src="{{ post.data.image }}" alt="{{ post.data.image_alt or post.data.title }}"
+                             width="600" height="338" loading="lazy" decoding="async">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-cat">{{ post.data.category }}</span>
+                        <h2>{{ post.data.title }}</h2>
+                        <p class="blog-card-excerpt">{{ post.data.description | excerpt(140) }}</p>
+                        <div class="blog-card-meta">
+                            <time datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFR }}</time>
+                            <span class="meta-sep">·</span>
+                            <span>{{ post.templateContent | readingTime }} min</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% else %}
+    <section class="blog-empty">
+        <p>Le premier article arrive bientôt. En attendant, jetez un œil à <a href="/#portfolio">nos réalisations</a>.</p>
+    </section>
+    {% endif %}
+{% endblock %}

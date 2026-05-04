@@ -1,0 +1,35 @@
+---
+pagination:
+  data: categories
+  size: 1
+  alias: cat
+permalink: "/blog/categorie/{{ cat.slug }}/index.html"
+layout: blog-category.njk
+eleventyExcludeFromCollections: true
+categories:
+  - slug: "film-publicitaire"
+    label: "Film publicitaire"
+    collectionKey: "posts_film_publicitaire"
+    description: "Spots publicitaires, films de marque, vidéos commerciales. Nos articles sur le format publicitaire à Avignon et dans le Vaucluse."
+  - slug: "video-corporate"
+    label: "Vidéo corporate"
+    collectionKey: "posts_video_corporate"
+    description: "Films institutionnels, interviews dirigeants, vidéos d'entreprise. Tout sur la production audiovisuelle BtoB en Vaucluse."
+  - slug: "captation-evenementielle"
+    label: "Captation événementielle"
+    collectionKey: "posts_captation_evenementielle"
+    description: "Aftermovies, captations multi-caméras, live streaming. Comment immortaliser un événement professionnel en Provence."
+  - slug: "photographie"
+    label: "Photographie"
+    collectionKey: "posts_photographie"
+    description: "Reportage photo événementiel, portrait corporate, photo produit. Notre approche de l'image fixe."
+  - slug: "general"
+    label: "Général"
+    collectionKey: "posts_general"
+    description: "Articles transverses sur le métier de la production audiovisuelle, les choix éditoriaux, et les coulisses du studio."
+---
+
+{% set categorySlug = cat.slug %}
+{% set categoryLabel = cat.label %}
+{% set categoryCollectionKey = cat.collectionKey %}
+{% set categoryDescription = cat.description %}

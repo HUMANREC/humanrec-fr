@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hôtel Le Mirador Spa — Production HUMAN REC</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.min.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── NAVIGATION ── */
+        .priv-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--white);
+        }
+
+        .back-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover svg {
+            transform: translateX(-4px);
+        }
+
+        /* ── MAIN ── */
+        .priv-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 64px 5% 80px;
+            text-align: center;
+        }
+
+        .priv-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .priv-label::before,
+        .priv-label::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .priv-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .priv-subtitle {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 56px;
+        }
+
+        /* ── VIDEO ── */
+        .video-wrap {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06);
+            margin-bottom: 56px;
+            position: relative;
+        }
+
+        .video-wrap video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Trait décoratif cinéma */
+        .video-wrap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--red);
+            z-index: 1;
+        }
+
+        /* ── CTA ── */
+        .priv-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .priv-cta-note {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+            letter-spacing: 0.05em;
+        }
+
+        /* ── FOOTER ── */
+        .priv-footer {
+            text-align: center;
+            padding: 28px 5%;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 480px) {
+            .video-wrap {
+                max-width: 100%;
+                border-radius: 0;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            }
+
+            .priv-main {
+                padding: 48px 0 64px;
+            }
+
+            .priv-title {
+                padding: 0 5%;
+            }
+
+            .priv-subtitle {
+                padding: 0 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="priv-nav">
+        <a href="/" class="logo" aria-label="HUMAN REC - Retour à l'accueil">
+            <span class="logo-dot"></span>
+            <img src="images/logo.webp" alt="HUMAN REC" class="logo-img" width="120" height="40">
+        </a>
+        <a href="/" class="back-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Retour à l'accueil
+        </a>
+    </nav>
+
+    <main class="priv-main">
+
+        <p class="priv-label">Lifestyle &nbsp;·&nbsp; Réseaux sociaux</p>
+        <h1 class="priv-title">Hôtel Le Mirador Spa</h1>
+        <p class="priv-subtitle">Suisse &nbsp;·&nbsp; Production HUMAN REC</p>
+
+        <div class="video-wrap">
+            <video
+                src="videos/HOTEL Le mirador.mp4"
+                controls
+                playsinline
+                preload="metadata"
+                poster="images/short4.webp">
+            </video>
+        </div>
+
+        <div class="priv-cta">
+            <a href="/#contact" class="btn">
+                Discutons de votre projet
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+            <p class="priv-cta-note">Devis gratuit · Réponse sous 24h</p>
+        </div>
+
+    </main>
+
+    <footer class="priv-footer">
+        <p>© 2026 HUMAN REC — Production audiovisuelle Vaucluse</p>
+    </footer>
+
+</body>
+
+</html>

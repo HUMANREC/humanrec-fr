@@ -1,0 +1,88 @@
+{% extends "base.njk" %}
+
+{% set isBlog = true %}
+{% set canonical = "https://humanrec.fr/blog/categorie/" + cat.slug + "/" %}
+{% set pageTitle = "Articles " + cat.label + " | Blog HUMAN REC" %}
+{% set description = "Tous nos articles sur " + cat.label | lower + ". Guides pratiques, tarifs, études de cas. HUMAN REC, production audiovisuelle Avignon Vaucluse." %}
+
+{# Récupération de la bonne collection selon le slug #}
+{% if cat.slug == "film-publicitaire" %}{% set posts = collections.posts_film_publicitaire %}
+{% elif cat.slug == "video-corporate" %}{% set posts = collections.posts_video_corporate %}
+{% elif cat.slug == "captation-evenementielle" %}{% set posts = collections.posts_captation_evenementielle %}
+{% elif cat.slug == "photographie" %}{% set posts = collections.posts_photographie %}
+{% else %}{% set posts = collections.posts_general %}
+{% endif %}
+
+{% block extraHead %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": "{{ canonical }}",
+                "url": "{{ canonical }}",
+                "name": {{ pageTitle | dump | safe }},
+                "description": {{ description | dump | safe }},
+                "isPartOf": { "@id": "https://humanrec.fr/blog/#blog" },
+                "inLanguage": "fr-FR"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://humanrec.fr/" },
+                    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://humanrec.fr/blog/" },
+                    { "@type": "ListItem", "position": 3, "name": "{{ cat.label }}", "item": "{{ canonical }}" }
+                ]
+            }
+        ]
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section class="blog-index-hero">
+        <div class="section-label">Catégorie</div>
+        <h1>{{ cat.label }}</h1>
+        <p class="lead">{{ cat.description }}</p>
+    </section>
+
+    <nav class="blog-categories" aria-label="Filtrer par catégorie">
+        <a href="/blog/" class="cat-pill">Tout voir</a>
+        <a href="/blog/categorie/film-publicitaire/" class="cat-pill {% if cat.slug == 'film-publicitaire' %}active{% endif %}">Film publicitaire</a>
+        <a href="/blog/categorie/video-corporate/" class="cat-pill {% if cat.slug == 'video-corporate' %}active{% endif %}">Vidéo corporate</a>
+        <a href="/blog/categorie/captation-evenementielle/" class="cat-pill {% if cat.slug == 'captation-evenementielle' %}active{% endif %}">Captation événementielle</a>
+        <a href="/blog/categorie/photographie/" class="cat-pill {% if cat.slug == 'photographie' %}active{% endif %}">Photographie</a>
+    </nav>
+
+    {% if posts and posts.length %}
+    <section class="blog-grid-section">
+        <div class="blog-grid">
+            {% for post in posts %}
+            <article class="blog-card">
+                <a href="{{ post.url }}">
+                    <div class="blog-card-image">
+                        <img src="{{ post.data.image }}" alt="{{ post.data.image_alt or post.data.title }}"
+                             width="600" height="338" loading="lazy" decoding="async">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-cat">{{ post.data.category }}</span>
+                        <h2>{{ post.data.title }}</h2>
+                        <p class="blog-card-excerpt">{{ post.data.description | excerpt(140) }}</p>
+                        <div class="blog-card-meta">
+                            <time datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateFR }}</time>
+                            <span class="meta-sep">·</span>
+                            <span>{{ post.templateContent | readingTime }} min</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% else %}
+    <section class="blog-empty">
+        <p>Pas encore d'article dans cette catégorie. <a href="/blog/">Voir tous les articles</a>.</p>
+    </section>
+    {% endif %}
+{% endblock %}

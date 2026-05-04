@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui sommes-nous | HUMAN REC - Production Audiovisuelle Avignon</title>
+    <meta name="description"
+        content="Sacha Preschesmisky, réalisateur formé au cinéma, fonde HUMAN REC avec une conviction : une image sans émotion est une image qu'on oublie. Studio basé en Vaucluse.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://humanrec.fr/qui-sommes-nous">
+    <meta property="og:title" content="Qui sommes-nous | HUMAN REC">
+    <meta property="og:description" content="Sacha Preschesmisky, réalisateur formé au cinéma, fonde HUMAN REC avec une conviction : c'est l'humain dans l'image qui transmet l'émotion.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://humanrec.fr/qui-sommes-nous">
+    <meta property="og:image" content="https://humanrec.fr/images/team/fondateurs.webp">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="HUMAN REC">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Qui sommes-nous | HUMAN REC">
+    <meta name="twitter:description" content="C'est l'humain dans l'image qui transmet l'émotion. La conviction de départ de HUMAN REC.">
+    <meta name="twitter:image" content="https://humanrec.fr/images/team/fondateurs.webp">
+
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://humanrec.fr/"},
+            {"@type": "ListItem", "position": 2, "name": "Qui sommes-nous", "item": "https://humanrec.fr/qui-sommes-nous"}
+        ]
+    }
+    </script>
+
+    <!-- Schema.org AboutPage + Person -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "Qui sommes-nous - HUMAN REC",
+        "url": "https://humanrec.fr/qui-sommes-nous",
+        "description": "Sacha Preschesmisky, réalisateur formé au cinéma, fonde HUMAN REC avec une conviction : c'est l'humain dans l'image qui transmet l'émotion.",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Sacha Preschesmisky",
+            "jobTitle": "Réalisateur, Fondateur de HUMAN REC",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "HUMAN REC",
+                "url": "https://humanrec.fr"
+            },
+            "sameAs": [
+                "https://www.instagram.com/sachasky_/",
+                "https://www.linkedin.com/in/sacha-preschesmisky-034081266/"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Avignon",
+                "addressRegion": "Vaucluse",
+                "addressCountry": "FR"
+            }
+        }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="global.min.css">
+    <style>
+        .logo {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--red);
+        }
+
+        /* HERO SECTION */
+        .about-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 180px 5% 120px;
+            /* Ajusté pour le breadcrumb */
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(230, 57, 70, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(230, 57, 70, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Lignes décoratives animées */
+        .hero-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .hero-line {
+            position: absolute;
+            background: linear-gradient(to bottom, transparent, var(--red), transparent);
+            width: 1px;
+            height: 200px;
+            opacity: 0.3;
+            animation: lineFall 8s linear infinite;
+        }
+
+        .hero-line:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .hero-line:nth-child(2) {
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .hero-line:nth-child(3) {
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        .hero-line:nth-child(4) {
+            left: 75%;
+            animation-delay: 1s;
+        }
+
+        .hero-line:nth-child(5) {
+            left: 90%;
+            animation-delay: 3s;
+        }
+
+        @keyframes lineFall {
+            0% {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.3;
+            }
+
+            90% {
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 30px;
+        }
+
+        .hero-tag::before {
+            content: '';
+            width: 50px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .about-hero h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.95;
+            letter-spacing: 0.02em;
+            margin-bottom: 30px;
+        }
+
+        .about-hero h1 .outline {
+            -webkit-text-stroke: 2px var(--white);
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-hero h1 .red {
+            color: var(--red);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .hero-description strong {
+            color: var(--white);
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .scroll-indicator::after {
+            content: '';
+            width: 1px;
+            height: 50px;
+            background: linear-gradient(to bottom, var(--red), transparent);
+            animation: scrollPulse 2s ease infinite;
+        }
+
+        @keyframes scrollPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                height: 50px;
+            }
+
+            50% {
+                opacity: 0.5;
+                height: 30px;
+            }
+        }
+
+        /* ORIGIN STORY SECTION */
+        .origin-section {
+            padding: 120px 5%;
+            position: relative;
+        }
+
+        .origin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .origin-image {
+            position: relative;
+        }
+
+        .origin-image img {
+            width: 100%;
+            height: auto;
+            filter: grayscale(30%);
+            transition: filter 0.5s ease;
+        }
+
+        .origin-image:hover img {
+            filter: grayscale(0%);
+        }
+
+        .origin-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--red);
+            z-index: -1;
+        }
+
+        .origin-image::after {
+            content: 'DEPUIS 2019';
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            background: var(--red);
+            padding: 15px 25px;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+        }
+
+        .origin-content h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: 0.02em;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .origin-content h2 span {
+            color: var(--red);
+        }
+
+        .origin-text {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .origin-text strong {
+            color: var(--white);
+        }
+
+        .origin-quote {
+            border-left: 3px solid var(--red);
+            padding-left: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            color: var(--white);
+            font-size: 1.15rem;
+        }
+
+        /* FONDATEURS SECTION */
+        .founders-section {
+            padding: 120px 5%;
+            background: var(--gray-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founders-section::before {
+            content: 'FONDATEURS';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(8rem, 20vw, 20rem);
+            color: rgba(255, 255, 255, 0.02);
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+
+        .section-header .tag::before,
+        .section-header .tag::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .section-header h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            letter-spacing: 0.02em;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-card {
+            position: relative;
+            background: var(--black);
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .founder-image {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(50%);
+            transition: all 0.5s ease;
+        }
+
+        .founder-card:hover .founder-image img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .founder-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to top, var(--black) 0%, transparent 100%);
+        }
+
+        .founder-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 4rem;
+            color: rgba(230, 57, 70, 0.3);
+            line-height: 1;
+            z-index: 2;
+        }
+
+        .founder-info {
+            padding: 30px;
+            position: relative;
+        }
+
+        .founder-role {
+            display: inline-block;
+            background: var(--red);
+            padding: 8px 15px;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .founder-name {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+        }
+
+        .founder-bio {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .founder-socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .founder-socials a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .founder-socials a:hover {
+            border-color: var(--red);
+            background: var(--red);
+        }
+
+        .founder-socials svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* COLLECTIF SECTION */
+        .collectif-section {
+            padding: 120px 5%;
+            position: relative;
+        }
+
+        .collectif-intro {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            text-align: center;
+        }
+
+        .collectif-intro h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 25px;
+        }
+
+        .collectif-intro h2 span {
+            color: var(--red);
+        }
+
+        .collectif-intro p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .collectif-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .collectif-member {
+            position: relative;
+            background: var(--gray-dark);
+            padding: 40px 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .collectif-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--red);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .collectif-member:hover {
+            border-color: var(--red);
+            transform: translateY(-5px);
+        }
+
+        .collectif-member:hover::before {
+            transform: scaleX(1);
+        }
+
+        .member-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(230, 57, 70, 0.2);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.8rem;
+            color: var(--red);
+            border: 2px solid rgba(230, 57, 70, 0.3);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(30%);
+            transition: all 0.4s ease;
+        }
+
+        .collectif-member:hover .member-avatar {
+            border-color: var(--red);
+            transform: scale(1.1);
+        }
+
+        .collectif-member:hover .member-avatar img {
+            filter: grayscale(0%);
+        }
+
+        .member-name {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .member-role {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--red);
+        }
+
+        .member-status {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        /* VALEURS SECTION */
+        .values-section {
+            padding: 120px 5%;
+            background: var(--gray-dark);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            padding: 50px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .value-card:hover {
+            border-color: var(--red);
+            background: rgba(230, 57, 70, 0.05);
+        }
+
+        .value-number {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 4rem;
+            color: rgba(230, 57, 70, 0.2);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* CTA SECTION */
+        .about-cta {
+            padding: 120px 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230, 57, 70, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .about-cta h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-cta h2 span {
+            color: var(--red);
+        }
+
+        .about-cta p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 45px;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: 'Inter', sans-serif;
+            background: var(--red);
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn:hover {
+            background: var(--red-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn svg {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="./" class="logo">
+            <span class="logo-dot"></span>
+            <img src="images/logo.webp" alt="HUMAN REC" class="logo-img">
+        </a>
+        <ul class="nav-menu">
+            <li><a href="services/">Services</a></li>
+            <li><a href="/#portfolio">Réalisations</a></li>
+            <li><a href="/blog/">Blog</a></li><li><a href="/blog/">Blog</a><a href="qui-sommes-nous">L'équipe</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="tel:+33783832507" class="nav-phone">07 83 83 25 07</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="./">Accueil</a>
+        <a href="services/">Services</a>
+        <a href="/#portfolio">Réalisations</a>
+        <a href="qui-sommes-nous">L'équipe</a>
+        <a href="/#contact">Contact</a>
+        <a href="tel:+33783832507" class="mobile-phone-link"
+            style="color: var(--red); font-weight: 600; margin-top: 20px;">📞 07 83 83 25 07</a>
+    </div>
+
+    <main>
+
+        <!-- Fil d'Ariane -->
+        <div class="breadcrumb">
+            <ol class="breadcrumb-list">
+                <li><a href="./">Accueil</a></li>
+                <li><span class="current">L'équipe</span></li>
+            </ol>
+        </div>
+
+        <!-- HERO -->
+        <section class="about-hero">
+            <div class="hero-lines">
+                <div class="hero-line"></div>
+                <div class="hero-line"></div>
+                <div class="hero-line"></div>
+                <div class="hero-line"></div>
+                <div class="hero-line"></div>
+            </div>
+
+            <div class="about-hero-content">
+                <div class="hero-tag fade-in">Notre histoire</div>
+                <h1 class="fade-in delay-1">
+                    PLUS QU'UN<br>
+                    <span class="outline">COLLECTIF,</span><br>UNE
+                    <span class="red">ÉQUIPE</span>
+                </h1>
+                <p class="hero-description fade-in delay-2">
+                    Ce sont les humains dans l'image qui transmettent l'émotion.
+                    C'est la conviction de départ, et elle n'a pas changé.
+                </p>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Découvrir</span>
+            </div>
+        </section>
+
+        <!-- ORIGIN STORY -->
+        <section class="origin-section">
+            <div class="origin-grid">
+                <div class="origin-image fade-in">
+                    <!-- Remplace par votre photo ensemble -->
+                    <img src="images/team/fondateurs.webp" alt="Sacha et Rémi - Fondateurs HUMAN REC" width="600"
+                        height="400" loading="lazy" decoding="async">
+                </div>
+                <div class="origin-content fade-in delay-1">
+                    <h2>L'exigence du <span>réel.</span></h2>
+                    <p class="origin-text">
+                        <strong>HUMAN REC</strong> est né d'une conviction simple : c'est l'humain dans l'image qui transmet l'émotion.
+                        Pas les effets, pas la perfection technique. Le vrai regard d'un vrai visage, filmé avec intention.
+                    </p>
+                    <p class="origin-text">
+                        On commence par écouter. Votre métier, vos gens, ce qui fait battre votre entreprise.
+                        On cherche l'<strong>ADN</strong> avant de chercher le plan.
+                    </p>
+                    <p class="origin-text">
+                        Formés au cinéma, on s'appuie sur un <strong>réseau de professionnels</strong> qu'on active selon la nature du projet.
+                        Un brief simple : on est seul du début à la fin. Un projet ambitieux : on assemble l'équipe qu'il faut.
+                    </p>
+                    <p class="origin-text">
+                        Ce qui compte, c'est que chaque projet ait exactement ce qu'il lui faut, ni plus, ni moins.
+                        Et que ce qu'on livre <em>reste.</em>
+                    </p>
+                    <blockquote class="origin-quote" style="margin-top: 2rem;">
+                        "On ne cherche pas la perfection.<br>On cherche ce qui reste."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- FONDATEURS -->
+        <section class="founders-section">
+            <div class="section-header">
+                <div class="tag">Les visages derrière la caméra</div>
+                <h2>Les Fondateurs</h2>
+            </div>
+
+            <div class="founders-grid">
+                <!-- SACHA -->
+                <div class="founder-card fade-in">
+                    <div class="founder-image">
+                        <span class="founder-number">01</span>
+                        <!-- Remplace par ta photo -->
+                        <img src="images/team/sacha.webp" alt="Sacha Preschesmisky - Fondateur HUMAN REC" width="300"
+                            height="400" loading="lazy" decoding="async">
+                    </div>
+                    <div class="founder-info">
+                        <span class="founder-role">Fondateur & Réalisateur</span>
+                        <h3 class="founder-name">Sacha Preschesmisky</h3>
+                        <p class="founder-bio">
+                            Réalisateur formé aux études de cinéma, il a une conviction : c'est l'imperfection qui est souvent plus vraie que la perfection, et c'est dans les visages qu'on cherche l'émotion, pas dans les effets.
+                            Il s'appuie sur un réseau de professionnels qu'il mobilise quand le projet le demande, pour apporter la bonne compétence au bon moment.
+                        </p>
+                        <div class="founder-socials">
+                            <a href="https://www.instagram.com/sachasky_/" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sacha-preschesmisky-034081266/" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RÉMI -->
+                <div class="founder-card fade-in delay-1">
+                    <div class="founder-image">
+                        <span class="founder-number">02</span>
+                        <!-- Remplace par la photo de Rémi -->
+                        <img src="images/team/remi.webp" alt="Rémi Blanc - Co-fondateur HUMAN REC" width="300"
+                            height="400" loading="lazy" decoding="async">
+                    </div>
+                    <div class="founder-info">
+                        <span class="founder-role">Co-fondateur & Communication</span>
+                        <h3 class="founder-name">Rémi Blanc</h3>
+                        <p class="founder-bio">
+                            Complice de la première heure, Rémi est celui avec qui HUMAN REC a pris forme.
+                            Il assure le lien entre la vision créative et les clients, de la première conversation jusqu'à la livraison.
+                        </p>
+                        <div class="founder-socials">
+                            <a href="https://www.instagram.com/remi.b21/" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rémiblanc/" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LE COLLECTIF -->
+        <section class="collectif-section">
+            <div class="collectif-intro fade-in">
+                <h2>Notre <span>Équipe</span></h2>
+                <p>
+                    Le cinéma construit des réseaux. On fait appel aux bons professionnels au bon moment : monteurs, étalonneurs, scénaristes, machinistes.
+                    Pas pour grossir l'équipe par défaut. Pour que chaque projet ait exactement ce qu'il lui faut.
+                </p>
+            </div>
+
+            <div class="collectif-grid">
+                <!-- Membre 1 -->
+                <div class="collectif-member fade-in">
+                    <div class="member-avatar">
+                        <!-- Remplace par la photo du membre -->
+                        <img src="images/team/membre1.webp" alt="Membre collectif" width="80" height="80" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <h4 class="member-name">Héliad Lebodo</h4>
+                    <span class="member-role">Monteur / Étalonneur</span>
+                </div>
+
+                <!-- Membre 2 -->
+                <div class="collectif-member fade-in delay-1">
+                    <div class="member-avatar">
+                        <img src="images/team/membre2.webp" alt="Membre collectif" width="80" height="80" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <h4 class="member-name">Eliott Tarran</h4>
+                    <span class="member-role">Réalisateur</span>
+                </div>
+
+                <!-- Membre 3 -->
+                <div class="collectif-member fade-in delay-2">
+                    <div class="member-avatar">
+                        <img src="images/team/membre3.webp" alt="Membre collectif" width="80" height="80" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <h4 class="member-name">Sébastien Conca</h4>
+                    <span class="member-role">Scénariste / Réalisateur</span>
+                </div>
+
+                <!-- Membre 4 -->
+                <div class="collectif-member fade-in delay-3">
+                    <div class="member-avatar">
+                        <img src="images/team/membre4.webp" alt="Membre collectif" width="80" height="80" loading="lazy"
+                            decoding="async">
+                    </div>
+                    <h4 class="member-name">Alexandre Caillet</h4>
+                    <span class="member-role">Chargé de prod</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOS VALEURS -->
+        <section class="values-section">
+            <div class="section-header">
+                <div class="tag">Ce qui nous anime</div>
+                <h2>Nos Valeurs</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card fade-in">
+                    <div class="value-number">01</div>
+                    <h3>Authenticité</h3>
+                    <p>
+                        Une image sans émotion est une image qu'on oublie. On filme ce qui est vrai, ce dans quoi votre client se reconnaît.
+                    </p>
+                </div>
+
+                <div class="value-card fade-in delay-1">
+                    <div class="value-number">02</div>
+                    <h3>Le Regard</h3>
+                    <p>
+                        On choisit ce qu'on laisse exister dans le cadre. Matériel cinéma, optiques Leica, drone. Pas pour impressionner : pour avoir les moyens de tout essayer.
+                    </p>
+                </div>
+
+                <div class="value-card fade-in delay-2">
+                    <div class="value-number">03</div>
+                    <h3>Proximité</h3>
+                    <p>
+                        On travaille avec vous, pas pour vous. Ce qui rend votre projet unique, c'est vous. Notre travail, c'est de le capter.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="about-cta">
+            <h2 class="fade-in">Envie de <span>travailler ensemble</span> ?</h2>
+            <p class="fade-in delay-1">Vous avez quelque chose à dire. On a un regard pour le mettre en image.</p>
+            <a href="/#contact" class="btn fade-in delay-2">
+                Discutons-en
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="project-footer">
+        <div class="footer-content">
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="./">Accueil</a></li>
+                        <li><a href="/#portfolio">Réalisations</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                        <li><a href="qui-sommes-nous">L'équipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="services/film-publicitaire-avignon">Films Publicitaires</a></li>
+                        <li><a href="services/video-corporate-vaucluse">Vidéos Corporate</a></li>
+                        <li><a href="services/captation-evenementielle-avignon">Captation Événementielle</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Projets</h4>
+                    <ul>
+                        <li><a href="projets/Film-promotionnel-Zerod">Z3ROD - Triathlon</a></li>
+                        <li><a href="projets/Film-Promotionnel-La-Maizon">La Maizon</a></li>
+                        <li><a href="projets/Film-institutionnel-Athletic-Fitness-Club">Athletic Fitness Club</a></li>
+                        <li><a href="projets/Film-Evenementiel-DeliceShow">Delice Show</a></li>
+                        <li><a href="projets/Film-Evenementiel-IceShow">Ice Show</a></li>
+                        <li><a href="projets/Film-Evenementiel-Game-Of-Prod">Game of Prod</a></li>
+                        <li><a href="projets/Film-Artistique">Film Artistique</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 HUMAN REC. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Animations au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Parallax léger sur le hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.about-hero-content');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
+            }
+        });
+
+        // Menu Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', function () {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Fermer le menu quand on clique sur un lien
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function () {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

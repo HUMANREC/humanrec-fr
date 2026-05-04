@@ -1,0 +1,6 @@
+{
+  "layout": "article.njk",
+  "permalink": "/blog/{{ slug }}/",
+  "isBlog": true,
+  "tags": []
+}

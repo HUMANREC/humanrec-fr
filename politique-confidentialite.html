@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité | HUMAN REC</title>
+    <meta name="description"
+        content="Politique de confidentialité et protection des données personnelles de HUMAN REC.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://humanrec.fr/politique-confidentialite">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="global.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.8;
+        }
+
+        a {
+            color: var(--red);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.15em;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 12px 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--white);
+            color: var(--black);
+            opacity: 1;
+        }
+
+        .back-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Hero */
+        .legal-hero {
+            padding: 150px 5% 80px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .legal-hero .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+
+        .legal-hero .tag::before,
+        .legal-hero .tag::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .legal-hero h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        .legal-hero .intro {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        /* Content */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 5%;
+        }
+
+        .legal-content h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 0.05em;
+            color: var(--white);
+            margin: 50px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content h2 .num {
+            color: var(--red);
+            margin-right: 10px;
+        }
+
+        .legal-content h3 {
+            font-size: 1.1rem;
+            color: var(--red);
+            margin: 30px 0 10px;
+            font-weight: 500;
+        }
+
+        .legal-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .legal-content ul {
+            color: var(--gray);
+            margin: 15px 0 15px 20px;
+        }
+
+        .legal-content li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .legal-content strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .info-block {
+            background: var(--gray-dark);
+            border-left: 3px solid var(--red);
+            padding: 25px 30px;
+            margin: 25px 0;
+        }
+
+        .info-block p {
+            margin-bottom: 8px;
+        }
+
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-box {
+            background: rgba(230, 57, 70, 0.1);
+            border: 1px solid rgba(230, 57, 70, 0.3);
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box p {
+            color: var(--white);
+            margin: 0;
+        }
+
+        /* Table */
+        .data-table {
+            width: 100%;
+            margin: 25px 0;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .data-table th {
+            background: var(--gray-dark);
+            color: var(--white);
+            font-weight: 500;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .data-table td {
+            color: var(--gray);
+        }
+
+        .data-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Rights list */
+        .rights-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        .rights-list li {
+            background: var(--gray-dark);
+            padding: 20px;
+            border-left: 3px solid var(--red);
+            margin: 0;
+        }
+
+        .rights-list strong {
+            display: block;
+            color: var(--white);
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .rights-list span {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        .update-date {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 5%;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--gray-dark);
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--red);
+            margin: 0 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            .back-btn span {
+                display: none;
+            }
+
+            .back-btn {
+                padding: 10px;
+            }
+
+            .legal-hero {
+                padding: 120px 5% 60px;
+            }
+
+            .legal-content {
+                padding: 50px 5%;
+            }
+
+            .legal-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .info-block,
+            .highlight-box {
+                padding: 20px;
+            }
+
+            .data-table {
+                font-size: 0.8rem;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px 8px;
+            }
+
+            .rights-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="./" class="logo">
+            <span class="logo-dot"></span>
+            <img src="images/logo.webp" alt="HUMAN REC" class="logo-img">
+        </a>
+        <a href="./" class="back-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Retour à l'accueil</span>
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="legal-hero">
+        <div class="tag">Protection des données</div>
+        <h1>Politique de Confidentialité</h1>
+        <p class="intro">
+            HUMAN REC s'engage à protéger la vie privée des utilisateurs de son site.
+            Cette politique explique comment nous collectons, utilisons et protégeons vos données
+            personnelles conformément au Règlement Général sur la Protection des Données (RGPD).
+        </p>
+    </section>
+
+    <!-- Content -->
+    <main class="legal-content">
+
+        <h2><span class="num">1.</span> Responsable du traitement</h2>
+        <p>Le responsable du traitement des données personnelles est :</p>
+        <div class="info-block">
+            <p><strong>HUMAN REC</strong></p>
+            <p>885 route du pont de Crillon, 84410 Crillon-le-Brave</p>
+            <p>Email : <a href="mailto:contact@humanrec.fr">contact@humanrec.fr</a></p>
+            <p>Téléphone : <a href="tel:+33783832507">07 83 83 25 07</a></p>
+        </div>
+
+        <h2><span class="num">2.</span> Données collectées</h2>
+        <p>Nous collectons les données suivantes :</p>
+
+        <h3>2.1 Données fournies volontairement</h3>
+        <p>Lorsque vous utilisez notre formulaire de contact :</p>
+        <ul>
+            <li>Nom et prénom</li>
+            <li>Adresse email</li>
+            <li>Numéro de téléphone (optionnel)</li>
+            <li>Sujet de votre demande</li>
+            <li>Contenu de votre message</li>
+        </ul>
+
+        <h3>2.2 Données collectées automatiquement</h3>
+        <p>Lors de votre navigation sur notre site :</p>
+        <ul>
+            <li>Adresse IP (anonymisée)</li>
+            <li>Type de navigateur et version</li>
+            <li>Système d'exploitation</li>
+            <li>Pages visitées et durée de visite</li>
+            <li>Source de trafic (d'où vous venez)</li>
+        </ul>
+
+        <h2><span class="num">3.</span> Finalités du traitement</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Finalité</th>
+                    <th>Base légale</th>
+                    <th>Durée de conservation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Répondre à vos demandes de contact</td>
+                    <td>Consentement</td>
+                    <td>3 ans après le dernier contact</td>
+                </tr>
+                <tr>
+                    <td>Établir un devis ou une proposition</td>
+                    <td>Mesures précontractuelles</td>
+                    <td>3 ans après le dernier contact</td>
+                </tr>
+                <tr>
+                    <td>Améliorer notre site web</td>
+                    <td>Intérêt légitime</td>
+                    <td>13 mois (cookies analytics)</td>
+                </tr>
+                <tr>
+                    <td>Respecter nos obligations légales</td>
+                    <td>Obligation légale</td>
+                    <td>Durée légale applicable</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2><span class="num">4.</span> Cookies</h2>
+        <p>Notre site utilise des cookies pour améliorer votre expérience :</p>
+
+        <h3>4.1 Cookies essentiels</h3>
+        <p>
+            Nécessaires au fonctionnement du site (mémorisation de vos préférences de cookies).
+            Ces cookies ne nécessitent pas votre consentement.
+        </p>
+
+        <h3>4.2 Cookies analytiques (optionnels)</h3>
+        <p>
+            Nous utilisons Google Analytics pour comprendre comment les visiteurs utilisent notre site.
+            Ces cookies sont déposés uniquement avec votre consentement.
+        </p>
+
+        <h3>4.3 Gestion des cookies</h3>
+        <p>
+            Vous pouvez modifier vos préférences de cookies à tout moment via le bandeau cookies
+            qui s'affiche lors de votre première visite, ou en configurant votre navigateur.
+        </p>
+
+        <h2><span class="num">5.</span> Partage des données</h2>
+        <p>Vos données personnelles peuvent être partagées avec :</p>
+        <ul>
+            <li><strong>Netlify</strong> : hébergement sécurisé du site</li>
+            <li><strong>Formspree</strong> : gestion des formulaires de contact</li>
+            <li><strong>Google Analytics</strong> : analyse du trafic (si vous avez accepté les cookies)</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>
+                <strong>🔒 Nous ne vendons jamais vos données personnelles à des tiers.</strong><br>
+                Nous ne partageons vos données qu'avec des prestataires de confiance, dans le cadre strict de leurs
+                missions.
+            </p>
+        </div>
+
+        <h2><span class="num">6.</span> Sécurité des données</h2>
+        <p>Nous mettons en œuvre des mesures de sécurité appropriées :</p>
+        <ul>
+            <li>Connexion HTTPS (chiffrement SSL/TLS)</li>
+            <li>Accès restreint aux données personnelles</li>
+            <li>Hébergement sécurisé sur Netlify</li>
+            <li>Mises à jour régulières de sécurité</li>
+        </ul>
+
+        <h2><span class="num">7.</span> Vos droits</h2>
+        <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+
+        <ul class="rights-list">
+            <li>
+                <strong>Droit d'accès</strong>
+                <span>Obtenir une copie de vos données personnelles</span>
+            </li>
+            <li>
+                <strong>Droit de rectification</strong>
+                <span>Corriger des données inexactes</span>
+            </li>
+            <li>
+                <strong>Droit à l'effacement</strong>
+                <span>Demander la suppression de vos données</span>
+            </li>
+            <li>
+                <strong>Droit à la limitation</strong>
+                <span>Restreindre le traitement de vos données</span>
+            </li>
+            <li>
+                <strong>Droit à la portabilité</strong>
+                <span>Recevoir vos données dans un format structuré</span>
+            </li>
+            <li>
+                <strong>Droit d'opposition</strong>
+                <span>Vous opposer au traitement de vos données</span>
+            </li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>
+                <strong>Pour exercer vos droits</strong>, contactez-nous à :
+                <a href="mailto:contact@humanrec.fr">contact@humanrec.fr</a><br>
+                Nous répondrons dans un délai d'un mois maximum.
+            </p>
+        </div>
+
+        <h2><span class="num">8.</span> Réclamation</h2>
+        <p>
+            Si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD,
+            vous avez le droit d'introduire une réclamation auprès de la CNIL :
+        </p>
+        <div class="info-block">
+            <p><strong>CNIL</strong></p>
+            <p>3 Place de Fontenoy</p>
+            <p>TSA 80715</p>
+            <p>75334 PARIS CEDEX 07</p>
+            <p>Site : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></p>
+        </div>
+
+        <h2><span class="num">9.</span> Modifications</h2>
+        <p>
+            Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment.
+            Toute modification sera publiée sur cette page avec une date de mise à jour.
+        </p>
+
+        <div class="update-date">
+            <p>Dernière mise à jour : <strong>20 janvier 2026</strong></p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 HUMAN REC. Tous droits réservés.
+            <a href="./">Accueil</a>
+            <a href="mentions-legales">Mentions légales</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

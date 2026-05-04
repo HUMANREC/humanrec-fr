@@ -1,0 +1,63 @@
+# ============================================================================
+# 301 .html → URL canonique sans extension
+# (force=! même si le fichier existe, pour éliminer la duplication d'index)
+# ============================================================================
+
+# Domain — www → apex (au cas où Netlify ne gère pas déjà)
+https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
+
+# Index pages → directory canonique
+/index.html                                                /                                                          301!
+/services/index.html                                       /services/                                                 301!
+
+# Pages racine
+/qui-sommes-nous.html                                      /qui-sommes-nous                                           301!
+/photos.html                                               /photos                                                    301!
+/book-evenements.html                                      /book-evenements                                           301!
+/hotel-le-mirador.html                                     /hotel-le-mirador                                          301!
+/production-video-avignon.html                             /production-video-avignon                                  301!
+/mentions-legales.html                                     /mentions-legales                                          301!
+/politique-confidentialite.html                            /politique-confidentialite                                 301!
+
+# Pages services
+/services/film-publicitaire-avignon.html                   /services/film-publicitaire-avignon                        301!
+/services/video-corporate-vaucluse.html                    /services/video-corporate-vaucluse                         301!
+/services/captation-evenementielle-avignon.html            /services/captation-evenementielle-avignon                 301!
+
+# Pages projets
+/projets/Film-Artistique.html                              /projets/Film-Artistique                                   301!
+/projets/Film-Evenementiel-DeliceShow.html                 /projets/Film-Evenementiel-DeliceShow                      301!
+/projets/Film-Evenementiel-Game-Of-Prod.html               /projets/Film-Evenementiel-Game-Of-Prod                    301!
+/projets/Film-Evenementiel-IceShow.html                    /projets/Film-Evenementiel-IceShow                         301!
+/projets/Film-Promotionnel-La-Maizon.html                  /projets/Film-Promotionnel-La-Maizon                       301!
+/projets/Film-institutionnel-Athletic-Fitness-Club.html    /projets/Film-institutionnel-Athletic-Fitness-Club         301!
+/projets/Film-promotionnel-Zerod.html                      /projets/Film-promotionnel-Zerod                           301!
+
+# ============================================================================
+# Anciennes URLs (ancien site) → nouvelles URLs canoniques
+# Source : Google Search Console — pages introuvables
+# ============================================================================
+
+# Anciennes pages génériques
+/a-propos                     /qui-sommes-nous                                          301!
+/nous-contacter               /#contact                                                 301!
+/nos-services                 /services/                                                301!
+/nos-realisations             /#portfolio                                               301!
+/showreel-2025                /#showreel                                                301!
+
+# Anciens slugs de projets
+/game-of-prod                 /projets/Film-Evenementiel-Game-Of-Prod                   301!
+/atlhetic-fitness-club        /projets/Film-institutionnel-Athletic-Fitness-Club        301!
+/athletic-fitness-club        /projets/Film-institutionnel-Athletic-Fitness-Club        301!
+/delice-show-circe            /projets/Film-Evenementiel-DeliceShow                     301!
+/seda                         /#portfolio                                               301!
+
+# Anciens noms de fichiers projets (projet-N.html)
+/projets/projet-1.html        /projets/Film-promotionnel-Zerod                          301!
+/projets/projet-2.html        /projets/Film-Promotionnel-La-Maizon                      301!
+/projets/projet-3.html        /projets/Film-institutionnel-Athletic-Fitness-Club        301!
+/projets/projet-4.html        /projets/Film-Evenementiel-Game-Of-Prod                   301!
+/projets/projet-5.html        /projets/Film-Evenementiel-DeliceShow                     301!
+
+# Fallback 404 (rester en dernier)
+/*  /404.html  404
