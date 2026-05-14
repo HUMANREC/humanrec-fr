@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO OPTIMISÉ -->
-    <title>Studio Production Vidéo Avignon — Réalisateur Pro | HUMAN REC</title>
+    <title>Studio Production Vidéo Avignon : Réalisateur Pro | HUMAN REC</title>
     <meta name="description"
         content="Production vidéo à Avignon et dans le Vaucluse. HUMAN REC réalise des films qui portent l'ADN de votre entreprise : des images vraies, pour des clients qui se reconnaissent.">
     <meta name="author" content="HUMAN REC">
@@ -250,15 +250,21 @@
 
         .hero h1 {
             font-family: 'Clash Display', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-size: clamp(3rem, 10vw, 8rem);
             font-weight: 600;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
+            line-height: 0.95;
+            letter-spacing: 0.02em;
             margin-bottom: 25px;
         }
 
-        .hero h1 span {
+        .hero h1 .outline {
+            -webkit-text-stroke: 2px var(--white);
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h1 .red {
             color: var(--red);
+            -webkit-text-fill-color: var(--red);
         }
 
         .hero-desc {
@@ -961,6 +967,95 @@
             height: 22px;
             color: var(--red);
         }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: left;
+            padding: 60px 5% 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            background: var(--gray-dark);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto 40px;
+        }
+        .footer-brand p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: var(--white);
+        }
+        .social-links a:hover {
+            border-color: var(--red);
+            background: var(--red);
+        }
+        .social-links svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        .footer-column h4 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: var(--gray);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .footer-column a:hover {
+            color: var(--red);
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .footer-bottom p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+        .footer-bottom a {
+            color: var(--red);
+        }
+        @media (max-width: 900px) {
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 25px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
     </style>
 </head>
 
@@ -975,7 +1070,7 @@
         <ul class="nav-menu">
             <li><a href="services/">Services</a></li>
             <li><a href="/#portfolio">Réalisations</a></li>
-            <li><a href="/blog/">Blog</a></li><li><a href="/blog/">Blog</a><a href="qui-sommes-nous">L'équipe</a></li>
+            <li><a href="/blog/">Blog</a></li><li><a href="qui-sommes-nous">L'équipe</a></li>
             <li><a href="/#contact">Contact</a></li>
             <li><a href="tel:+33783832507" class="nav-phone">07 83 83 25 07</a></li>
         </ul>
@@ -993,10 +1088,7 @@
                     <span class="current">Production Vidéo Avignon</span>
                 </nav>
                 <div class="hero-tag reveal">Production Vidéo</div>
-                <h1 class="reveal">
-                    Production <span>Vidéo</span><br>
-                    à Avignon
-                </h1>
+                <h1 class="reveal">PRODUCTION<br><span class="outline">VIDÉO</span><br><span class="red">AVIGNON</span></h1>
                 <p class="hero-desc reveal">
                     HUMAN REC accompagne les entreprises, marques et événements dans la création
                     de contenus vidéo impactants. Films promotionnels, captations, vidéos corporate :
@@ -1014,7 +1106,7 @@
 
         <!-- POUR QUI -->
         <section class="pour-qui">
-            <div class="section-label reveal">01 — Pour qui</div>
+            <div class="section-label reveal">01 : Pour qui</div>
             <h2 class="section-title reveal">À qui s'adressent <span>nos services</span> ?</h2>
             <p class="section-desc reveal">
                 Nous accompagnons tous types de structures dans leurs projets audiovisuels,
@@ -1090,7 +1182,7 @@
 
         <!-- SERVICES -->
         <section class="services">
-            <div class="section-label reveal">02 — Nos expertises</div>
+            <div class="section-label reveal">02 : Nos expertises</div>
             <h2 class="section-title reveal">Types de <span>vidéos</span> que nous réalisons</h2>
 
             <div class="services-grid">
@@ -1171,7 +1263,7 @@
         <section class="pourquoi">
             <div class="pourquoi-content">
                 <div class="pourquoi-text">
-                    <div class="section-label reveal">03 — Pourquoi nous</div>
+                    <div class="section-label reveal">03 : Pourquoi nous</div>
                     <h2 class="section-title reveal">Ce qui nous <span>différencie</span></h2>
 
                     <p class="reveal">
@@ -1185,28 +1277,28 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span><strong>Matériel professionnel</strong> — Caméras cinéma, optiques haut de gamme,
+                            <span><strong>Matériel professionnel</strong> : Caméras cinéma, optiques haut de gamme,
                                 éclairages, drone certifié</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span><strong>Réactivité</strong> — Devis sous 24h, disponibilité et flexibilité sur vos
+                            <span><strong>Réactivité</strong> : Devis sous 24h, disponibilité et flexibilité sur vos
                                 projets</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span><strong>Accompagnement complet</strong> — De l'idée au livrable final, on gère
+                            <span><strong>Accompagnement complet</strong> : De l'idée au livrable final, on gère
                                 tout</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span><strong>Post-production soignée</strong> — Montage créatif, étalonnage cinéma, sound
+                            <span><strong>Post-production soignée</strong> : Montage créatif, étalonnage cinéma, sound
                                 design</span>
                         </li>
                     </ul>
@@ -1236,7 +1328,7 @@
         <!-- PROCESSUS -->
         <section class="process">
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <div class="section-label reveal" style="justify-content: center;">04 — Processus</div>
+                <div class="section-label reveal" style="justify-content: center;">04 : Processus</div>
                 <h2 class="section-title reveal">Notre <span>méthode</span> de travail</h2>
             </div>
 
@@ -1268,7 +1360,7 @@
 
         <!-- RÉALISATIONS -->
         <section class="realisations">
-            <div class="section-label reveal">05 — Réalisations</div>
+            <div class="section-label reveal">05 : Réalisations</div>
             <h2 class="section-title reveal">Nos derniers <span>projets</span> en Vaucluse</h2>
             <p class="section-desc reveal">
                 Quelques exemples de vidéos réalisées pour des clients locaux et nationaux.
@@ -1282,7 +1374,7 @@
                         <span class="realisation-tag">Commercial</span>
                     </div>
                     <div class="realisation-content">
-                        <h3>ZEROD — Film Promotionnel</h3>
+                        <h3>ZEROD : Film Promotionnel</h3>
                         <p>Film de marque pour l'équipementier triathlon ZEROD. Tournage en conditions réelles avec
                             athlètes
                             professionnels et équipe de 15 personnes.</p>
@@ -1325,7 +1417,7 @@
                         <span class="realisation-tag">Événementiel</span>
                     </div>
                     <div class="realisation-content">
-                        <h3>Delice Show — Aftermovie</h3>
+                        <h3>Delice Show : Aftermovie</h3>
                         <p>Captation evenementielle pour Delice Show. Retransmettre les émotions de la soirée en film.
                         </p>
                         <div class="realisation-result">
@@ -1344,7 +1436,7 @@
         <section class="zones">
             <div class="zones-content">
                 <div class="zones-text">
-                    <div class="section-label reveal">06 — Zone d'intervention</div>
+                    <div class="section-label reveal">06 : Zone d'intervention</div>
                     <h2 class="section-title reveal">Où <span>intervenons</span>-nous ?</h2>
 
                     <p class="reveal">
@@ -1389,7 +1481,7 @@
         <!-- FAQ -->
         <section class="faq">
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <div class="section-label reveal" style="justify-content: center;">07 — FAQ</div>
+                <div class="section-label reveal" style="justify-content: center;">07 : FAQ</div>
                 <h2 class="section-title reveal">Questions <span>fréquentes</span></h2>
             </div>
 

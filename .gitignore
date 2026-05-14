@@ -32,3 +32,5 @@ npm-debug.log*
 
 # Fichiers temporaires de tests
 .tmp_*
+humanrec-studio/
+.claude/launch.json

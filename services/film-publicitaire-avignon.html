@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Publicitaire à Avignon — Spots TV &amp; Réseaux | HUMAN REC</title>
+    <title>Film Publicitaire à Avignon : Spots TV &amp; Réseaux | HUMAN REC</title>
     <meta name="description"
-        content="Films publicitaires à Avignon — HUMAN REC. Un film qui incarne ce que vous faites, dans une image à laquelle votre client se connecte. Pour attirer, convaincre, rester.">
+        content="Films publicitaires à Avignon : HUMAN REC. Un film qui incarne ce que vous faites, dans une image à laquelle votre client se connecte. Pour attirer, convaincre, rester.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://humanrec.fr/services/film-publicitaire-avignon">
 
@@ -272,14 +272,20 @@
 
         .service-hero h1 {
             font-family: 'Clash Display', sans-serif;
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            line-height: 1;
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.95;
             letter-spacing: 0.02em;
             margin-bottom: 25px;
         }
 
-        .service-hero h1 span {
+        .service-hero h1 .outline {
+            -webkit-text-stroke: 2px var(--white);
+            -webkit-text-fill-color: transparent;
+        }
+
+        .service-hero h1 .red {
             color: var(--red);
+            -webkit-text-fill-color: var(--red);
         }
 
         .service-hero-desc {
@@ -956,7 +962,7 @@
         <ul class="nav-menu">
             <li><a href="../services/">Services</a></li>
             <li><a href="/#portfolio">Réalisations</a></li>
-            <li><a href="/blog/">Blog</a></li><li><a href="/blog/">Blog</a><a href="../qui-sommes-nous">L'équipe</a></li>
+            <li><a href="/blog/">Blog</a></li><li><a href="../qui-sommes-nous">L'équipe</a></li>
             <li><a href="/#contact">Contact</a></li>
             <li><a href="tel:+33783832507" class="nav-phone">07 83 83 25 07</a></li>
         </ul>
@@ -987,7 +993,7 @@
                     </svg>
                     Service Premium
                 </div>
-                <h1>Film <span>Publicitaire</span> Avignon & Vaucluse</h1>
+                <h1>FILM<br><span class="outline">PUBLICITAIRE</span><br><span class="red">AVIGNON</span></h1>
                 <p class="service-hero-desc">
                     Spots publicitaires et films de marque (à partir de 800€). De la Direction Artistique
                     à la post-production, nous créons des formats performants (TV, Web, Réseaux Sociaux)
@@ -1236,7 +1242,7 @@
 
         <!-- FAQ -->
         
-        <!-- TARIFS — fourchettes transparentes (densification SEO + intent transactionnelle) -->
+        <!-- TARIFS : fourchettes transparentes (densification SEO + intent transactionnelle) -->
         <section class="pricing-tiers" style="padding: 5rem 2rem; background: var(--gray-dark);">
             <div class="container" style="max-width: 1100px; margin: 0 auto;">
                 <div class="section-header">
@@ -1273,7 +1279,9 @@
                     </ul>
                 </article>
                 </div>
-                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.75; text-align: center;">Tous les tarifs incluent la TVA non applicable (auto-entreprise). Le devis est gratuit et sans engagement.</p>
+                <div style="margin-top: 2.5rem; padding: 1.5rem 2rem; background: rgba(255,255,255,0.04); border-left: 3px solid var(--red); border-radius: 0 4px 4px 0;">
+                    <p style="font-size: 1rem; line-height: 1.7; margin: 0;"><strong>Ces fourchettes sont indicatives, basées sur nos prestations passées.</strong> Chaque projet a son propre tarif : certains coûtent moins, d'autres davantage, selon ce que vous cherchez vraiment à faire. L'objectif est de vous donner un ordre d'idée, pas de vous engager sur un chiffre avant d'avoir discuté. <a href="/#contact" style="color: var(--red);">Parlons-en en 15 minutes, devis gratuit sous 24-48h.</a></p>
+                </div>
             </div>
         </section>
 

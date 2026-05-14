@@ -115,14 +115,20 @@
 
         .photos-hero h1 {
             font-family: 'Clash Display', sans-serif;
-            font-size: clamp(3rem, 10vw, 7rem);
-            letter-spacing: 0.05em;
-            line-height: 1;
+            font-size: clamp(3rem, 10vw, 8rem);
+            letter-spacing: 0.02em;
+            line-height: 0.95;
             margin-bottom: 20px;
         }
 
-        .photos-hero h1 span {
+        .photos-hero h1 .outline {
+            -webkit-text-stroke: 2px var(--white);
+            -webkit-text-fill-color: transparent;
+        }
+
+        .photos-hero h1 .red {
             color: var(--red);
+            -webkit-text-fill-color: var(--red);
         }
 
         .photos-hero p {
@@ -221,21 +227,58 @@
             margin-left: 8px;
         }
 
-        /* ========== GALERIE MASONRY ========== */
+        /* ========== SECTION INTRO ========== */
+        .photos-intro {
+            padding: 60px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .photos-intro .section-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .photos-intro p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+
+        .photos-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ========== GALERIE GRILLE 16/9 ========== */
         .gallery-section {
             padding: 0 5% 100px;
         }
 
         .gallery-grid {
-            columns: 4;
-            column-gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
             max-width: 1600px;
             margin: 0 auto;
         }
 
+        @media (max-width: 1200px) {
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+
         .gallery-item {
-            break-inside: avoid;
-            margin-bottom: 15px;
+            aspect-ratio: 16 / 9;
             position: relative;
             overflow: hidden;
             cursor: pointer;
@@ -289,7 +332,8 @@
 
         .gallery-item img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
             filter: grayscale(20%);
             transition: all 0.5s ease;
@@ -591,7 +635,7 @@
         <ul class="nav-menu">
             <li><a href="services/">Services</a></li>
             <li><a href="/#portfolio">Réalisations</a></li>
-            <li><a href="/blog/">Blog</a></li><li><a href="/blog/">Blog</a><a href="qui-sommes-nous">L'équipe</a></li>
+            <li><a href="/blog/">Blog</a></li><li><a href="qui-sommes-nous">L'équipe</a></li>
             <li><a href="/#contact">Contact</a></li>
             <li><a href="tel:+33783832507" class="nav-phone">07 83 83 25 07</a></li>
         </ul>
@@ -645,7 +689,7 @@
             </div>
 
             <div class="section-label">Galerie</div>
-            <h1>NOS <span>IMAGES</span></h1>
+            <h1>NOS<br><span class="outline">IMAGES</span></h1>
             <p>Plongez dans l'énergie de nos événements, concerts et soirées. Chaque image capture un moment unique.</p>
 
             <div class="photo-counter">
@@ -653,15 +697,12 @@
             </div>
         </section>
 
-        <!-- Contexte éditorial SEO — photographie événementielle Avignon -->
+        <!-- Contexte éditorial SEO : photographie événementielle Avignon -->
         <section class="photos-intro">
-            <div class="photos-intro-inner">
-                <h2 class="section-title">La photo, l'autre versant du métier</h2>
-                <p>HUMAN REC ne se limite pas à la vidéo. La photographie événementielle fait partie du même geste : capter ce qui se passe vraiment, sans le mettre en scène. À Avignon et dans tout le Vaucluse, on couvre les soirées d'entreprise, les concerts, les festivals, les inaugurations, les conférences professionnelles, les lancements produit. Partout où il y a une énergie à conserver, on apporte un appareil et un œil.</p>
-                <p>Notre approche photo reprend le parti pris du studio : on ne cherche pas la pose parfaite, on cherche le geste juste. Le rire qui démarre, la main qui hésite, le regard qui se croise. Le reportage photo d'événement est un travail d'observation, pas de mise en scène. Notre matériel — boîtiers Lumix et Leica, optiques fixes, flashs débrayables — sert un seul objectif : ne pas être vu pendant qu'on capte ce qui compte.</p>
-                <p>Pour un <a href="/services/captation-evenementielle-avignon">aftermovie événement</a>, la photo et la vidéo se complètent. Pendant que la caméra suit le mouvement, l'appareil photo isole les visages, les détails, les expressions. À la fin de la soirée, vous repartez avec deux livrables : un film qui raconte la dynamique de la soirée, et une banque de 200 à 400 photos que vous pouvez utiliser sur les réseaux sociaux, dans la newsletter, dans la presse interne, sur le site web. Une seule équipe, deux supports, un seul regard cohérent.</p>
-                <p>On intervient sur Avignon, Orange, Carpentras, Cavaillon, L'Isle-sur-la-Sorgue, Pertuis, et sur toute la région PACA pour les événements importants. Pour les besoins ponctuels — portrait corporate, photo produit, reportage backstage — la formule est la même : un brief court, un tournage léger, une livraison rapide.</p>
-            </div>
+            <h2 class="section-title">La photo, l'autre versant du métier</h2>
+            <p>La photographie événementielle fait partie du même geste que la vidéo : capter ce qui se passe vraiment, sans le mettre en scène. Soirées d'entreprise, concerts, festivals, inaugurations, conférences : partout où il y a une énergie à garder, on apporte un appareil et un œil.</p>
+            <p>On ne cherche pas la pose parfaite. On cherche le geste juste. Le rire qui démarre, la main qui hésite, le regard qui se croise. C'est un travail d'observation, pas de mise en scène. Notre matériel : boîtiers Lumix et Leica, optiques fixes, flashs débrayables. Un seul objectif : ne pas être vu pendant qu'on capte ce qui compte.</p>
+            <p>Couplée à un <a href="/services/captation-evenementielle-avignon">aftermovie événement</a>, la photo complète naturellement la vidéo. Pendant que la caméra suit le mouvement, l'appareil isole les visages, les détails, les expressions. Vous repartez avec deux livrables cohérents : un film et une banque de photos prêtes à diffuser, signés par la même équipe.</p>
         </section>
 
         <!-- Filtres -->
@@ -1593,7 +1634,7 @@
 
     <!-- Footer -->
     <footer class="footer-simple">
-        <p>© 2026 HUMAN REC — Production Audiovisuelle <a href="./">Avignon & Vaucluse</a></p>
+        <p>© 2026 HUMAN REC · Production Audiovisuelle <a href="./">Avignon & Vaucluse</a></p>
     </footer>
 
     <!-- JavaScript -->
