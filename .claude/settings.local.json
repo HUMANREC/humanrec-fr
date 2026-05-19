@@ -69,7 +69,12 @@
       "Bash(curl -sL \"https://fonts.gstatic.com/s/bebasneueby/a/UcC93FwrK664m0pJ2brQRdt_XPayT3d5.woff2\" -o /tmp/hr-fonts/BebasNeue.woff2)",
       "Bash(curl -sL \"https://fonts.gstatic.com/s/bebasneueby/a/UcC93FwrK664m0pJ2brQRdt_XPayT3d5.woff2\" -o /tmp/hr-fonts/test.woff2)",
       "Bash(wait)",
-      "Bash(curl -s \"https://fonts.googleapis.com/css?family=Bebas+Neue\" -H \"User-Agent: Mozilla/4.0\")"
+      "Bash(curl -s \"https://fonts.googleapis.com/css?family=Bebas+Neue\" -H \"User-Agent: Mozilla/4.0\")",
+      "Bash(xargs -0 perl -i -pe 's/clash-display\\\\@400,500,600,700/clash-display\\\\@500,600/g; s/family=Inter:wght\\\\@300;400;500;600/family=Inter:wght\\\\@400;500;600/g')",
+      "Bash(sed -n '65p;67p' index.html)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
