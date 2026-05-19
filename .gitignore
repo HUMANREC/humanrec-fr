@@ -34,3 +34,5 @@ npm-debug.log*
 .tmp_*
 humanrec-studio/
 .claude/launch.json
+
+.claude/worktrees/
