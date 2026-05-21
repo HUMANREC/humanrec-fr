@@ -806,6 +806,38 @@
             width: 20px;
             height: 20px;
         }
+
+        /* ===== RESPONSIVE MOBILE / TABLETTE ===== */
+        @media (max-width: 768px) {
+            .origin-section,
+            .founders-section,
+            .collectif-section,
+            .values-section {
+                padding: 70px 5%;
+            }
+            .origin-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .founders-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .collectif-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .collectif-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
