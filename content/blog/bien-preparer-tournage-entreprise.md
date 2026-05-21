@@ -57,7 +57,7 @@ faqSchema: |
 draft: false
 ---
 
-Un bon tournage se joue avant le tournage. Le jour J, on filme : on ne réfléchit plus, on capte. Tout ce qui n'a pas été préparé en amont se paie en temps perdu, en stress, et souvent en images qui sonnent faux.
+Un bon tournage se joue avant le tournage. Plus on est préparé, plus le cadre est solide : on sait où on filme, comment, avec qui, avec quelle lumière. Et c'est justement ce cadre solide qui libère le jour J. Une fois les bases maîtrisées, on peut tenter des choses, proposer, capter des plans qui n'étaient pas prévus mais qui fonctionnent. C'est là que naît la vraie vie d'un tournage. Mais ça ne s'improvise pas : ça se prépare. Tout ce qui n'a pas été anticipé se paie en temps perdu, en stress, et souvent en images qui sonnent faux.
 
 Ce guide rassemble ce qu'on conseille à nos clients avant un film d'entreprise. L'objectif est simple : que vous arriviez serein, que vos équipes soient prêtes, et qu'on reparte avec des images vraies plutôt qu'une mise en scène figée. Rien de technique de votre côté : ça, c'est notre métier. Ce qui suit, c'est ce qui dépend de vous.
 
@@ -80,7 +80,7 @@ Quelques points à regarder en amont :
 - **Le rangement.** Pas besoin que tout soit parfait, au contraire : on cherche le vrai, pas le showroom. Mais un câble qui traîne au milieu du cadre, ça, on l'enlève. Un coup d'œil la veille suffit.
 - **L'espace.** On a besoin d'un peu de recul pour poser la caméra et la lumière. Prévenez si une zone est exiguë, on adapte le matériel.
 
-Le mieux reste un repérage rapide avant le jour J, sur place ou en photos. On voit les lieux, on choisit les cadres, et le tournage avance deux fois plus vite.
+Le mieux reste un repérage avant le jour J, sur place ou en photos. On voit les lieux, on choisit les cadres, on repère les arrivées électriques et par où entre la lumière selon les heures. Ce travail nous met en immersion : on prépare des plans dans les vraies conditions, au lieu de les imaginer derrière un écran et de découvrir le jour J que tout est différent. Un tournage repéré avance deux fois plus vite, et il avance mieux.
 
 ## Préparer les personnes filmées : le plus important
 
@@ -90,7 +90,9 @@ Prévenez à l'avance les personnes qui vont être filmées. Pas la veille au so
 
 Côté tenue, restez vous-mêmes. La tenue de travail habituelle est souvent la plus juste. Évitez seulement les motifs très serrés (fines rayures, petits carreaux) qui fatiguent l'image, et les logos d'autres marques.
 
-Le jour du tournage, on prend toujours le temps de mettre les gens à l'aise avant de filmer pour de vrai. On discute, on fait des prises pour rien, on attend que la présence revienne. Personne n'est naturel face à un objectif dans les dix premières secondes. C'est notre travail de créer le cadre où chacun redevient lui-même.
+Pour les personnes centrales du film, ça se prépare encore plus tôt. On ne peut pas demander à quelqu'un d'être à l'aise si on le filme dans l'heure qui suit la rencontre. Quand une personne porte le film, on la rencontre en amont : on discute, on se comprend, on est au clair sur ce qu'on va filmer d'elle.
+
+Le jour du tournage, on prend toujours le temps de mettre les gens à l'aise avant de filmer pour de vrai. Les premières minutes ne sont presque jamais les meilleures, et c'est normal. Au fur et à mesure qu'on tourne, ça se décoince, le naturel revient, et c'est là que naît le vrai. Personne n'est lui-même face à un objectif dans les dix premières secondes : notre travail, c'est de créer le cadre où chacun le redevient.
 
 ## La logistique du jour J
 
@@ -106,7 +108,9 @@ Si le tournage a lieu pendant l'activité, prévenez les équipes qu'une caméra
 
 Pour que ce soit clair : tout le reste, c'est nous. Le matériel, la lumière, le son, les cadres, le déroulé technique, le découpage de la journée. Vous n'avez aucune compétence audiovisuelle à apporter.
 
-Avant le tournage, on cale ensemble le message et le déroulé. Le jour J, on arrive avec un plan précis mais on laisse de la place à l'imprévu, parce que c'est souvent là que naissent les meilleurs moments. Après, on s'occupe du montage, de l'étalonnage et du son. Vous recevez un premier montage, vous nous dites ce qui va et ce qui ne va pas, on ajuste.
+Une fois le message clair et le déroulé calé, on ajuste nos moyens à votre projet. Sur un format simple, une seule personne suffit souvent à la captation : c'est léger, discret, et ça ne pèse pas sur votre activité. Sur un tournage plus conséquent, on est plusieurs : HUMAN REC fonctionne en collectif, avec les bonnes personnes derrière la caméra, au son et à la lumière. Et pour les besoins spécifiques, motion design ou effets spéciaux par exemple, on s'appuie sur un réseau d'intervenants. Vous avez toujours un seul interlocuteur, mais une équipe derrière dès que le projet le demande.
+
+Le jour J, on arrive avec un plan précis mais on laisse de la place à l'imprévu, parce que c'est souvent là que naissent les meilleurs moments. Après, on s'occupe du montage, de l'étalonnage et du son. Vous recevez un premier montage, vous nous dites ce qui va et ce qui ne va pas, on ajuste.
 
 Votre seul vrai travail, c'est celui décrit plus haut : savoir ce que vous voulez dire, préparer les lieux et les gens. Le reste, on le porte.
 
