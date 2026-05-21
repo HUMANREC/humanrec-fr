@@ -42,6 +42,15 @@
 
 /* Filtres catégorie */
 .blog-categories {
+    /* Reset : .blog-categories est un <nav>, ne doit PAS hériter du nav fixe du site */
+    position: static;
+    top: auto;
+    z-index: auto;
+    background: transparent !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border: none;
+    box-shadow: none;
     max-width: var(--blog-grid-max);
     margin: 0 auto 3rem;
     padding: 0 2rem;
