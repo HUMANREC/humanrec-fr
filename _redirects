@@ -59,5 +59,8 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 /projets/projet-4.html        /projets/Film-Evenementiel-Game-Of-Prod                   301!
 /projets/projet-5.html        /projets/Film-Evenementiel-DeliceShow                     301!
 
+# Ancien article supprimé → nouvel article (préserve l'équité de lien)
+/blog/combien-coute-film-entreprise-avignon-2026/   /blog/bien-preparer-tournage-entreprise/   301!
+
 # Fallback 404 (rester en dernier)
 /*  /404.html  404
