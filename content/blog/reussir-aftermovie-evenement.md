@@ -8,7 +8,7 @@ tags:
   - "Guide"
   - "Conseils"
 image: "/images/projet5.webp"
-image_alt: "Captation événementielle Délice Show au Circé par HUMAN REC, univers féerique tourné en optiques vintage"
+image_alt: "Captation événementielle Delice Show au Circé par HUMAN REC, univers féerique tourné en optiques vintage"
 description: "Ce qui sépare un aftermovie oubliable d'un aftermovie qui reste : préparation, direction artistique, discrétion, son et rythme. Le guide concret de HUMAN REC."
 focus_keyword: "réussir aftermovie événement"
 faqSchema: |
@@ -73,7 +73,7 @@ C'est la base invisible d'un bon aftermovie. Le jour J, on ne réfléchit plus �
 
 Un bon aftermovie ne se contente pas d'enregistrer. Il prolonge l'univers de l'événement. La vidéo doit donner la même sensation que la soirée a donnée.
 
-Un exemple concret. Pour Délice Show au Circé, l'événement créait un univers féerique. Pour le restituer vraiment, on a tourné avec des optiques vintage, pour un rendu doux, légèrement onirique, hors du temps. Puis tout le montage est allé dans cette direction : le rythme des coupes, l'étalonnage, le choix musical. Le résultat ne montre pas seulement ce qui s'est passé. Il fait ressentir la magie qui était dans la salle.
+Un exemple concret. Pour Delice Show au Circé, l'événement créait un univers féerique. Pour le restituer vraiment, on a tourné avec des optiques vintage, pour un rendu doux, légèrement onirique, hors du temps. Puis tout le montage est allé dans cette direction : le rythme des coupes, l'étalonnage, le choix musical. Le résultat ne montre pas seulement ce qui s'est passé. Il fait ressentir la magie qui était dans la salle.
 
 C'est ça, souligner un moment : choisir une direction artistique qui épouse l'événement, au lieu de filmer à plat. La technique n'est jamais là pour elle-même. Elle est au service de l'émotion que l'événement cherchait déjà à créer.
 
@@ -126,4 +126,4 @@ En général une à deux semaines pour l'aftermovie complet. Quand c'est utile, 
 
 Un aftermovie réussi n'est pas une question de chance. C'est une préparation sérieuse, une direction artistique qui épouse l'événement, une équipe discrète, un son soigné et un montage qui respecte l'émotion du moment.
 
-Pour voir concrètement comment on travaille, découvrez notre [captation événementielle à Avignon](/services/captation-evenementielle-avignon) ou le projet [Délice Show au Circé](/projets/Film-Evenementiel-DeliceShow). Et si vous avez un événement à venir, dites-nous où vous en êtes. On s'occupe du reste.
+Pour voir concrètement comment on travaille, découvrez notre [captation événementielle à Avignon](/services/captation-evenementielle-avignon) ou le projet [Delice Show au Circé](/projets/Film-Evenementiel-DeliceShow). Et si vous avez un événement à venir, dites-nous où vous en êtes. On s'occupe du reste.
