@@ -1979,34 +1979,6 @@
             }
         });
 
-        // 3. Bloquer les raccourcis clavier de sauvegarde
-        document.addEventListener('keydown', function (e) {
-            // Ctrl+S, Ctrl+Shift+S
-            if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
-                e.preventDefault();
-                return false;
-            }
-            // Ctrl+U (code source) - optionnel, peut gêner les développeurs
-            if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U')) {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        // 4. Protection tactile mobile (long press)
-        let touchTimer;
-        document.addEventListener('touchstart', function (e) {
-            if (e.target.tagName === 'IMG' || e.target.closest('.gallery-item')) {
-                touchTimer = setTimeout(function () {
-                    e.preventDefault();
-                }, 500);
-            }
-        }, { passive: false });
-
-        document.addEventListener('touchend', function () {
-            clearTimeout(touchTimer);
-        });
-
         // ========== FILTRES ==========
         const filterBtns = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
