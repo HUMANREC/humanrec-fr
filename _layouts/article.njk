@@ -9,7 +9,7 @@
 {# Map catégorie → slug URL #}
 {% set categorySlugMap = {
     "Film publicitaire": "film-publicitaire",
-    "Vidéo corporate": "video-corporate",
+    "Vidéo Promotionnelle": "video-promotionnelle",
     "Captation événementielle": "captation-evenementielle",
     "Photographie": "photographie",
     "Général": "general"
@@ -127,7 +127,7 @@
             </div>
             <div class="author-bio">
                 <strong>HUMAN REC</strong>
-                <p>Studio de production audiovisuelle à Avignon. On filme le vrai, pas le parfait. Films publicitaires, vidéos corporate, captation événementielle dans tout le Vaucluse.</p>
+                <p>Studio de production audiovisuelle à Avignon. On filme le vrai, pas le parfait. Films publicitaires, vidéos promotionnelles, captation événementielle dans tout le Vaucluse.</p>
                 <a href="/qui-sommes-nous" class="author-link">Qui se cache derrière HUMAN REC →</a>
             </div>
         </aside>
@@ -140,7 +140,7 @@
         </section>
 
         <!-- ARTICLES SIMILAIRES -->
-        {% set categoryKey = "posts_" + ({"Film publicitaire": "film_publicitaire", "Vidéo corporate": "video_corporate", "Captation événementielle": "captation_evenementielle", "Photographie": "photographie", "Général": "general"})[category] %}
+        {% set categoryKey = "posts_" + ({"Film publicitaire": "film_publicitaire", "Vidéo Promotionnelle": "video_promotionnelle", "Captation événementielle": "captation_evenementielle", "Photographie": "photographie", "Général": "general"})[category] %}
         {% set similarPosts = collections[categoryKey] %}
         {% if similarPosts and similarPosts.length > 1 %}
         <section class="article-related">

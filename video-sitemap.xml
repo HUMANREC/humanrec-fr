@@ -91,23 +91,23 @@
         </video:video>
     </url>
 
-    <!-- 4. ATHLETIC FITNESS CLUB - Film Publicitaire -->
+    <!-- 4. ATHLETIC FITNESS CLUB - Vidéo Promotionnelle -->
     <url>
-        <loc>https://humanrec.fr/projets/Film-institutionnel-Athletic-Fitness-Club</loc>
+        <loc>https://humanrec.fr/projets/Film-Promotionnel-Athletic-Fitness-Club</loc>
         <video:video>
             <video:thumbnail_loc>https://humanrec.fr/images/projet3.jpg</video:thumbnail_loc>
-            <video:title>Film Publicitaire Athletic Fitness Club</video:title>
-            <video:description>Film publicitaire réalisé pour Athletic Fitness Club, salle de sport dans le Vaucluse. Un film authentique, énergique et fidèle à l'esprit du club, conçu pour renforcer son image et attirer de nouveaux adhérents. Tournage sur 2 jours par HUMAN REC.</video:description>
+            <video:title>Vidéo promotionnelle Athletic Fitness Club</video:title>
+            <video:description>Vidéo promotionnelle réalisée pour Athletic Fitness Club, salle de sport à Montpellier. Un film authentique, énergique et fidèle à l'esprit du club, conçu pour renforcer son image et attirer de nouveaux adhérents. Tournage sur 2 jours par HUMAN REC.</video:description>
             <video:content_loc>https://humanrec.fr/videos/Atlhetics%20Fitness%20Club.mp4</video:content_loc>
             <video:duration>60</video:duration>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
             <video:requires_subscription>no</video:requires_subscription>
             <video:live>no</video:live>
-            <video:tag>film publicitaire</video:tag>
+            <video:tag>vidéo promotionnelle</video:tag>
             <video:tag>salle de sport</video:tag>
             <video:tag>fitness</video:tag>
-            <video:tag>vidéo corporate</video:tag>
+            <video:tag>film d'entreprise</video:tag>
             <video:tag>production vidéo Vaucluse</video:tag>
             <video:category>Sports</video:category>
         </video:video>

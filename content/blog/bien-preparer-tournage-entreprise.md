@@ -3,7 +3,7 @@ layout: article.njk
 title: "Comment bien préparer son tournage d'entreprise : le guide avant le jour J"
 slug: "bien-preparer-tournage-entreprise"
 date: 2026-05-21
-category: "Vidéo corporate"
+category: "Vidéo Promotionnelle"
 tags:
   - "Guide"
   - "Conseils"
@@ -148,4 +148,4 @@ Deux à trois semaines pour un projet confortable : le temps de cadrer le messag
 
 Bien préparer un tournage, ce n'est pas de la technique : c'est savoir ce que vous voulez dire et préparer les gens à le dire avec sincérité. Le reste, l'image, le son, le montage, c'est nous.
 
-Pour voir comment on travaille en vidéo d'entreprise, regardez notre page [vidéo corporate dans le Vaucluse](/services/video-corporate-vaucluse) ou nos [réalisations](/#portfolio). Et si vous avez un projet en tête, dites-nous où vous en êtes. On s'occupe du reste.
+Pour voir comment on travaille en vidéo d'entreprise, regardez notre page [vidéo promotionnelle dans le Vaucluse](/services/video-promotionnelle-avignon) ou nos [réalisations](/#portfolio). Et si vous avez un projet en tête, dites-nous où vous en êtes. On s'occupe du reste.

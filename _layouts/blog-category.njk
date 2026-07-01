@@ -7,7 +7,7 @@
 
 {# Récupération de la bonne collection selon le slug #}
 {% if cat.slug == "film-publicitaire" %}{% set posts = collections.posts_film_publicitaire %}
-{% elif cat.slug == "video-corporate" %}{% set posts = collections.posts_video_corporate %}
+{% elif cat.slug == "video-promotionnelle" %}{% set posts = collections.posts_video_promotionnelle %}
 {% elif cat.slug == "captation-evenementielle" %}{% set posts = collections.posts_captation_evenementielle %}
 {% elif cat.slug == "photographie" %}{% set posts = collections.posts_photographie %}
 {% else %}{% set posts = collections.posts_general %}
@@ -50,7 +50,7 @@
     <nav class="blog-categories" aria-label="Filtrer par catégorie">
         <a href="/blog/" class="cat-pill">Tout voir</a>
         <a href="/blog/categorie/film-publicitaire/" class="cat-pill {% if cat.slug == 'film-publicitaire' %}active{% endif %}">Film publicitaire</a>
-        <a href="/blog/categorie/video-corporate/" class="cat-pill {% if cat.slug == 'video-corporate' %}active{% endif %}">Vidéo corporate</a>
+        <a href="/blog/categorie/video-promotionnelle/" class="cat-pill {% if cat.slug == 'video-promotionnelle' %}active{% endif %}">Vidéo Promotionnelle</a>
         <a href="/blog/categorie/captation-evenementielle/" class="cat-pill {% if cat.slug == 'captation-evenementielle' %}active{% endif %}">Captation événementielle</a>
         <a href="/blog/categorie/photographie/" class="cat-pill {% if cat.slug == 'photographie' %}active{% endif %}">Photographie</a>
     </nav>

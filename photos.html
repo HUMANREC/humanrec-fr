@@ -258,33 +258,73 @@
         }
 
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            display: block !important;
+            grid-template-columns: none !important;
+            column-count: 4;
+            column-gap: 15px;
+            column-fill: balance;
             max-width: 1600px;
             margin: 0 auto;
         }
 
         @media (max-width: 1200px) {
-            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .gallery-grid { column-count: 3 !important; }
         }
 
         @media (max-width: 768px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { column-count: 2 !important; }
         }
 
         @media (max-width: 480px) {
-            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-grid { column-count: 1 !important; }
         }
 
         .gallery-item {
-            aspect-ratio: 16 / 9;
+            aspect-ratio: auto !important;
             position: relative;
             overflow: hidden;
             cursor: pointer;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 0.6s ease forwards;
+            break-inside: avoid;
+            page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            margin: 0 0 15px 0 !important;
+            padding: 0 !important;
+            display: block;
+            width: 100%;
+            height: auto !important;
+            min-height: 0 !important;
+            max-height: none !important;
+            font-size: 0;
+        }
+
+        .gallery-item img {
+            aspect-ratio: auto !important;
+            display: block !important;
+            width: 100% !important;
+            height: auto !important;
+            max-height: none !important;
+            min-height: 0 !important;
+            object-fit: fill !important;
+            vertical-align: bottom;
+        }
+
+        .gallery-item .gallery-overlay,
+        .gallery-item .gallery-category,
+        .gallery-item .gallery-title,
+        .gallery-item .gallery-number {
+            line-height: 1.4;
+        }
+        .gallery-item .gallery-category {
+            font-size: 0.7rem !important;
+        }
+        .gallery-item .gallery-title {
+            font-size: 1.3rem !important;
+        }
+        .gallery-item .gallery-number {
+            font-size: 0.9rem !important;
         }
 
         .gallery-item:nth-child(1) {
@@ -332,8 +372,8 @@
 
         .gallery-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
             display: block;
             filter: grayscale(20%);
             transition: all 0.5s ease;
@@ -621,6 +661,104 @@
             width: 18px;
             height: 18px;
         }
+
+        /* ========== FOOTER RICHE ========== */
+        footer {
+            background: var(--gray-dark);
+            padding: 60px 5% 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: left;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto 40px;
+        }
+        .footer-brand .logo-img {
+            height: 40px;
+            width: auto;
+        }
+        .footer-brand p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        .social-links a:hover {
+            border-color: var(--red);
+            background: var(--red);
+        }
+        .social-links svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+        .footer-column h4 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+        .footer-column a {
+            color: var(--gray);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .footer-column a:hover {
+            color: var(--red);
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .footer-bottom p {
+            color: var(--gray);
+            font-size: 0.85rem;
+            text-align: left;
+        }
+        .footer-bottom a {
+            color: var(--red);
+        }
+        @media (max-width: 1200px) {
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .footer-bottom p { text-align: center; }
+        }
     </style>
 </head>
 
@@ -693,7 +831,7 @@
             <p>Plongez dans l'énergie de nos événements, concerts et soirées. Chaque image capture un moment unique.</p>
 
             <div class="photo-counter">
-                <span>TOTAL</span> 49
+                <span>TOTAL</span> 65
             </div>
         </section>
 
@@ -709,16 +847,16 @@
         <section class="filters-section">
             <div class="filters-container">
                 <button class="filter-btn active" data-filter="all">
-                    Toutes <span class="filter-count">(49)</span>
+                    Toutes <span class="filter-count">(65)</span>
                 </button>
                 <button class="filter-btn" data-filter="evenement">
-                    Événement <span class="filter-count">(27)</span>
+                    Événement <span class="filter-count">(29)</span>
                 </button>
                 <button class="filter-btn" data-filter="concert">
                     Concert <span class="filter-count">(13)</span>
                 </button>
                 <button class="filter-btn" data-filter="soiree">
-                    Soirée <span class="filter-count">(9)</span>
+                    Soirée <span class="filter-count">(23)</span>
                 </button>
             </div>
         </section>
@@ -727,14 +865,12 @@
         <section class="gallery-section">
             <div class="gallery-grid" id="galleryGrid">
 
-                <!-- ========== ÉVÉNEMENT - DELICE SHOW (9 photos) ========== -->
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">001</span>
-                    <img src="images/photos/DeliceShow-Circe1.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 5.webp" alt="Soirée privée - Ambiance et lumières de la soirée 5" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Delice Show</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -744,14 +880,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">002</span>
-                    <img src="images/photos/DeliceShow-Circe2.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 16.webp" alt="Soirée privée - Ambiance et lumières de la soirée 16" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Delice Show</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -761,11 +895,9 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">003</span>
-                    <img src="images/photos/DeliceShow-Circe3.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/DeliceShow-Circe8.webp" alt="Soirée Délice Show au Circé - Photo 8" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Delice Show</span>
@@ -778,14 +910,12 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">004</span>
-                    <img src="images/photos/DeliceShow-Circe4.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 15.webp" alt="Spectacle Walibi - Mise en scène lumineuse colorée" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Delice Show</span>
+                        <span class="gallery-title">Walibi</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -795,14 +925,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">005</span>
-                    <img src="images/photos/DeliceShow-Circe5.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 7.webp" alt="Soirée privée - Ambiance et lumières de la soirée 7" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Delice Show</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -812,14 +940,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">006</span>
-                    <img src="images/photos/DeliceShow-Circe6.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/NAPS 6.webp" alt="Concert NAPS - Final du concert avec public conquis" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Delice Show</span>
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -829,14 +955,12 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">007</span>
-                    <img src="images/photos/DeliceShow-Circe7.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 12.webp" alt="Walibi spectacle - Choreographie de groupe sur la glace" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Delice Show</span>
+                        <span class="gallery-title">Walibi</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -846,14 +970,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">008</span>
-                    <img src="images/photos/DeliceShow-Circe8.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 21.webp" alt="Soirée privée - Ambiance et lumières de la soirée 21" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Delice Show</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -863,14 +985,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">009</span>
-                    <img src="images/photos/DeliceShow-Circe9.webp" alt="Delice Show Circe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 15.webp" alt="Soirée privée - Ambiance et lumières de la soirée 15" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Delice Show</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -880,13 +1000,9 @@
                         </svg>
                     </div>
                 </div>
-
-                <!-- ========== ÉVÉNEMENT - WALIBI (18 photos) ========== -->
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">010</span>
-                    <img src="images/photos/WALIBI 1.webp"
-                        alt="Spectacle sur glace Walibi - Patineuse en costume sous les projecteurs" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 1.webp" alt="Spectacle sur glace Walibi - Patineuse en costume sous les projecteurs" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Walibi</span>
@@ -899,15 +1015,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">011</span>
-                    <img src="images/photos/WALIBI 2.webp"
-                        alt="Ice Show Walibi - Duo de patineurs artistiques sur la patinoire illuminée" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WIB3.webp" alt="Concert WIB - Vue d'ensemble de la scène avec public" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -917,12 +1030,9 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">012</span>
-                    <img src="images/photos/WALIBI 3.webp"
-                        alt="Spectacle Walibi - Acrobates aériens avec jeux de lumières colorées" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 10.webp" alt="Walibi - Ambiance féérique du spectacle sur glace" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Walibi</span>
@@ -935,14 +1045,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">013</span>
-                    <img src="images/photos/WALIBI 4.webp" alt="Show Walibi - Danseurs illuminés sur scène spectaculaire"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 2.webp" alt="Soirée privée - Ambiance et lumières de la soirée 2" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -952,15 +1060,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">014</span>
-                    <img src="images/photos/WALIBI 5.webp"
-                        alt="Captation événementielle Walibi - Artiste en action dans décor féérique" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/NAPS 3.webp" alt="Concert NAPS - Performance live avec jeux de lumières rouges" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -970,12 +1075,9 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">015</span>
-                    <img src="images/photos/WALIBI 6.webp"
-                        alt="Spectacle événementiel Walibi - Performers sur glace vus d'en haut" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 8.webp" alt="Walibi Ice Show - Patineuse solo sous projecteur unique" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Walibi</span>
@@ -988,12 +1090,9 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">016</span>
-                    <img src="images/photos/WALIBI 7.webp"
-                        alt="Ice Show Walibi - Finale du spectacle avec ensemble de patineurs" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 14.webp" alt="Walibi - Performeur acrobatique en plein saut" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Walibi</span>
@@ -1006,15 +1105,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">017</span>
-                    <img src="images/photos/WALIBI 8.webp"
-                        alt="Walibi événementiel - Effets pyrotechniques et laser sur la scène" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 12.webp" alt="Soirée privée - Ambiance et lumières de la soirée 12" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1024,15 +1120,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">018</span>
-                    <img src="images/photos/WALIBI 9.webp"
-                        alt="Captation spectacle Walibi - Chorégraphie synchronisée sous éclairage bleu" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 3.webp" alt="Soirée privée - Ambiance et lumières de la soirée 3" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1042,15 +1135,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">019</span>
-                    <img src="images/photos/WALIBI 10.webp"
-                        alt="Spectacle nocturne Walibi - Artiste principal sous les feux de la rampe" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WIB4.webp" alt="Concert WIB - Chanteur au micro devant la foule en délire" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1060,12 +1150,9 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">020</span>
-                    <img src="images/photos/WALIBI 11.webp"
-                        alt="Show événementiel Walibi - Silhouettes de danseurs en contre-jour" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 11.webp" alt="Ice Show Walibi - Performer en costume scintillant" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Walibi</span>
@@ -1078,15 +1165,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">021</span>
-                    <img src="images/photos/WALIBI 12.webp"
-                        alt="Walibi Ice Show - Grand final avec confettis et public en liesse" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WIB5.webp" alt="Concert WIB - Ambiance électrique avec lumières stroboscopiques" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1096,12 +1180,9 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">022</span>
-                    <img src="images/photos/WALIBI 13.webp"
-                        alt="Captation live Walibi - Mascotte et performers interagissant avec la foule" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 3.webp" alt="Spectacle Walibi - Acrobates aériens avec jeux de lumières colorées" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Walibi</span>
@@ -1114,12 +1195,9 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">023</span>
-                    <img src="images/photos/WALIBI 14.webp"
-                        alt="Événement Walibi - Vue panoramique du spectacle avec décor hivernal" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 17.webp" alt="Walibi spectacle - Final du show avec tous les artistes" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Walibi</span>
@@ -1132,15 +1210,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">024</span>
-                    <img src="images/photos/WALIBI 15.webp"
-                        alt="Ice Show Walibi - Patineuse exécutant une figure artistique" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 1.webp" alt="Soirée privée - Ambiance et lumières de la soirée 1" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1150,15 +1225,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">025</span>
-                    <img src="images/photos/WALIBI 16.webp"
-                        alt="Spectacle Walibi - Mise en scène féerique avec neige artificielle" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 10.webp" alt="Soirée privée - Ambiance et lumières de la soirée 10" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1168,15 +1240,12 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">026</span>
-                    <img src="images/photos/WALIBI 17.webp"
-                        alt="Walibi événement - Tableau final du spectacle avec éclairage dramatique" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/evenement-1.webp" alt="Événement privé - Capture d'ambiance, photo 1" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
-                        <span class="gallery-title">Walibi</span>
+                        <span class="gallery-title">Événement</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1186,12 +1255,24 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="evenement">
+                <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">027</span>
-                    <img src="images/photos/WALIBI 18.webp"
-                        alt="Captation événement Walibi - Scène complète vue depuis les gradins" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WIB7.webp" alt="Concert WIB - Finale du concert avec fumée et projecteurs" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">028</span>
+                    <img src="images/photos/WALIBI 16.webp" alt="Walibi Ice Show - Patineur en costume traditionnel" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Événement</span>
                         <span class="gallery-title">Walibi</span>
@@ -1204,33 +1285,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <!-- ========== CONCERT - WIB (7 photos) ========== -->
-                <div class="gallery-item" data-category="concert">
-                    <span class="gallery-number">028</span>
-                    <img src="images/photos/WIB1.webp" alt="Concert WIB - Artiste sur scène éclairé par jeux de lumières"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">WIB</span>
-                    </div>
-                    <div class="gallery-zoom">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="M21 21l-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">029</span>
-                    <img src="images/photos/WIB2.webp"
-                        alt="Concert WIB - Musicien en pleine performance sous spots colorés" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 17.webp" alt="Soirée privée - Ambiance et lumières de la soirée 17" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">WIB</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1240,14 +1300,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">030</span>
-                    <img src="images/photos/WIB3.webp" alt="Concert WIB - Vue d'ensemble de la scène avec public"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/DeliceShow-Circe5.webp" alt="Soirée Délice Show au Circé - Photo 5" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">WIB</span>
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1257,14 +1315,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">031</span>
-                    <img src="images/photos/WIB4.webp" alt="Concert WIB - Chanteur au micro devant la foule en délire"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 19.webp" alt="Soirée privée - Ambiance et lumières de la soirée 19" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">WIB</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1274,15 +1330,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">032</span>
-                    <img src="images/photos/WIB5.webp"
-                        alt="Concert WIB - Ambiance électrique avec lumières stroboscopiques" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 13.webp" alt="Walibi Ice Show - Plan large de la patinoire en spectacle" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">WIB</span>
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1292,14 +1345,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">033</span>
-                    <img src="images/photos/WIB6.webp" alt="Concert WIB - Groupe en action vu depuis le public"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 11.webp" alt="Soirée privée - Ambiance et lumières de la soirée 11" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">WIB</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1309,14 +1360,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">034</span>
-                    <img src="images/photos/WIB7.webp" alt="Concert WIB - Finale du concert avec fumée et projecteurs"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 2.webp" alt="Ice Show Walibi - Duo de patineurs artistiques sur la patinoire illuminée" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">WIB</span>
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1326,16 +1375,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <!-- ========== CONCERT - NAPS (6 photos) ========== -->
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">035</span>
-                    <img src="images/photos/NAPS 1.webp"
-                        alt="Concert NAPS - Rappeur sur scène devant la foule en ébullition" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/DeliceShow-Circe1.webp" alt="Soirée Délice Show au Circé - Photo 1" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">NAPS</span>
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1345,14 +1390,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">036</span>
-                    <img src="images/photos/NAPS 2.webp" alt="Concert NAPS - Artiste interagissant avec le premier rang"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/namaste-1.webp" alt="Soirée Namaste - Ambiance événementielle, photo 1" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">NAPS</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée Namaste</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1362,15 +1405,12 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">037</span>
-                    <img src="images/photos/NAPS 3.webp"
-                        alt="Concert NAPS - Performance live avec jeux de lumières rouges" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WIB2.webp" alt="Concert WIB - Musicien en pleine performance sous spots colorés" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">NAPS</span>
+                        <span class="gallery-title">WIB</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1380,14 +1420,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">038</span>
-                    <img src="images/photos/NAPS 4.webp" alt="Concert NAPS - Vue panoramique de la scène et du public"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 6.webp" alt="Soirée privée - Ambiance et lumières de la soirée 6" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">NAPS</span>
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1397,14 +1435,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">039</span>
-                    <img src="images/photos/NAPS 5.webp" alt="Concert NAPS - Rappeur en gros plan micro en main"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 18.webp" alt="Walibi Ice Show - Salutation finale sous applaudissements" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Concert</span>
-                        <span class="gallery-title">NAPS</span>
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1414,11 +1450,39 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="concert">
+                <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">040</span>
-                    <img src="images/photos/NAPS 6.webp" alt="Concert NAPS - Moment fort du show avec foule en liesse"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 14.webp" alt="Soirée privée - Ambiance et lumières de la soirée 14" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">041</span>
+                    <img src="images/photos/WALIBI 4.webp" alt="Show Walibi - Danseurs illuminés sur scène spectaculaire" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">042</span>
+                    <img src="images/photos/NAPS 2.webp" alt="Concert NAPS - Artiste interagissant avec le premier rang" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Concert</span>
                         <span class="gallery-title">NAPS</span>
@@ -1431,50 +1495,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <!-- ========== SOIRÉE (9 photos) ========== -->
-                <div class="gallery-item" data-category="soiree">
-                    <span class="gallery-number">041</span>
-                    <img src="images/photos/Soiree 1.webp" alt="Soirée privée - DJ aux platines avec éclairage ambiance"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
-                    </div>
-                    <div class="gallery-zoom">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="M21 21l-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="soiree">
-                    <span class="gallery-number">042</span>
-                    <img src="images/photos/Soiree 2.webp"
-                        alt="Ambiance soirée événementielle - Invités sur la piste de danse" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
-                    <div class="gallery-overlay">
-                        <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
-                    </div>
-                    <div class="gallery-zoom">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="M21 21l-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-
                 <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">043</span>
-                    <img src="images/photos/Soiree 3.webp" alt="Soirée corporate - Décor élégant avec éclairage tamisé"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 9.webp" alt="Soirée privée - Ambiance et lumières de la soirée 9" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1484,14 +1510,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="soiree">
+                <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">044</span>
-                    <img src="images/photos/Soiree 4.webp" alt="Ambiance nocturne - Bar lounge avec lumières colorées"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/NAPS 5.webp" alt="Concert NAPS - Rappeur en gros plan micro en main" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1501,14 +1525,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="soiree">
+                <div class="gallery-item" data-category="concert">
                     <span class="gallery-number">045</span>
-                    <img src="images/photos/Soiree 5.webp" alt="Soirée privée - Performances live et animation"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WIB6.webp" alt="Concert WIB - Groupe en action vu depuis le public" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1518,14 +1540,12 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">046</span>
-                    <img src="images/photos/Soiree 6.webp" alt="Événement nocturne - Cocktail avec ambiance festive"
-                        loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 20.webp" alt="Soirée privée - Ambiance et lumières de la soirée 20" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1535,14 +1555,12 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="soiree">
+                <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">047</span>
-                    <img src="images/photos/Soiree 7.webp" alt="Soirée gala - Invités en tenue de soirée" loading="lazy"
-                        draggable="false" oncontextmenu="return false;">
+                    <img src="images/photos/WALIBI 5.webp" alt="Captation événementielle Walibi - Artiste en action dans décor féérique" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1552,15 +1570,12 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="gallery-item" data-category="soiree">
                     <span class="gallery-number">048</span>
-                    <img src="images/photos/Soiree 8.webp"
-                        alt="Ambiance soirée VIP - Décoration scintillante et convives" loading="lazy" draggable="false"
-                        oncontextmenu="return false;">
+                    <img src="images/photos/Soiree 13.webp" alt="Soirée privée - Ambiance et lumières de la soirée 13" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
+                        <span class="gallery-title">Soirée privée</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1570,15 +1585,252 @@
                         </svg>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="soiree">
+                <div class="gallery-item" data-category="evenement">
                     <span class="gallery-number">049</span>
-                    <img src="images/photos/Soiree 9.webp"
-                        alt="Soirée événement - Fin de soirée avec lumières d'ambiance" loading="lazy" draggable="false"
-                        oncontextmenu="return false;">
+                    <img src="images/photos/DeliceShow-Circe2.webp" alt="Soirée Délice Show au Circé - Photo 2" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">050</span>
+                    <img src="images/photos/DeliceShow-Circe3.webp" alt="Soirée Délice Show au Circé - Photo 3" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">051</span>
+                    <img src="images/photos/WIB1.webp" alt="Concert WIB - Artiste sur scène éclairé par jeux de lumières" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">WIB</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">052</span>
+                    <img src="images/photos/NAPS 4.webp" alt="Concert NAPS - Vue panoramique de la scène et du public" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">053</span>
+                    <img src="images/photos/DeliceShow-Circe6.webp" alt="Soirée Délice Show au Circé - Photo 6" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="concert">
+                    <span class="gallery-number">054</span>
+                    <img src="images/photos/NAPS 1.webp" alt="Concert NAPS - Rappeur sur scène devant la foule en ébullition" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Concert</span>
+                        <span class="gallery-title">NAPS</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">055</span>
+                    <img src="images/photos/Soiree 18.webp" alt="Soirée privée - Ambiance et lumières de la soirée 18" loading="lazy" draggable="false" oncontextmenu="return false;">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Soirée</span>
-                        <span class="gallery-title">Ambiance nocturne</span>
+                        <span class="gallery-title">Soirée privée</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">056</span>
+                    <img src="images/photos/Soiree 4.webp" alt="Soirée privée - Ambiance et lumières de la soirée 4" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">057</span>
+                    <img src="images/photos/DeliceShow-Circe7.webp" alt="Soirée Délice Show au Circé - Photo 7" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">058</span>
+                    <img src="images/photos/namaste-2.webp" alt="Soirée Namaste - Ambiance événementielle, photo 2" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée Namaste</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">059</span>
+                    <img src="images/photos/DeliceShow-Circe9.webp" alt="Soirée Délice Show au Circé - Photo 9" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">060</span>
+                    <img src="images/photos/evenement-2.webp" alt="Événement privé - Capture d'ambiance, photo 2" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Événement</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">061</span>
+                    <img src="images/photos/WALIBI 7.webp" alt="Ice Show Walibi - Finale du spectacle avec ensemble de patineurs" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">062</span>
+                    <img src="images/photos/WALIBI 9.webp" alt="Spectacle Walibi - Couple de patineurs lors d'un porté artistique" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="soiree">
+                    <span class="gallery-number">063</span>
+                    <img src="images/photos/Soiree 8.webp" alt="Soirée privée - Ambiance et lumières de la soirée 8" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Soirée</span>
+                        <span class="gallery-title">Soirée privée</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">064</span>
+                    <img src="images/photos/DeliceShow-Circe4.webp" alt="Soirée Délice Show au Circé - Photo 4" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Delice Show</span>
+                    </div>
+                    <div class="gallery-zoom">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="evenement">
+                    <span class="gallery-number">065</span>
+                    <img src="images/photos/WALIBI 6.webp" alt="Spectacle événementiel Walibi - Performers sur glace vus d'en haut" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Événement</span>
+                        <span class="gallery-title">Walibi</span>
                     </div>
                     <div class="gallery-zoom">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1594,7 +1846,7 @@
 
         <!-- Lightbox -->
         <div class="lightbox" id="lightbox">
-            <span class="lightbox-counter"><span id="currentIndex">1</span> / <span id="totalImages">49</span></span>
+            <span class="lightbox-counter"><span id="currentIndex">1</span> / <span id="totalImages">65</span></span>
             <div class="lightbox-content">
                 <button class="lightbox-close" id="lightboxClose">×</button>
                 <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
@@ -1633,8 +1885,76 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer-simple">
-        <p>© 2026 HUMAN REC · Production Audiovisuelle <a href="./">Avignon & Vaucluse</a></p>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo" aria-label="HUMAN REC - Retour à l'accueil">
+                    <img src="images/logo.webp" alt="HUMAN REC" class="logo-img" width="320" height="177" loading="lazy">
+                </a>
+                <p>Production audiovisuelle basée dans le Vaucluse. Films publicitaires, promotionnels et événementiels.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/human_rec/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/103476613/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@humanrec-prod" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="qui-sommes-nous">L'équipe</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#portfolio">Réalisations</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services/film-publicitaire-avignon">Films publicitaires</a></li>
+                    <li><a href="services/video-promotionnelle-avignon">Vidéos Promotionnelles</a></li>
+                    <li><a href="services/captation-evenementielle-avignon">Captation événementielle</a></li>
+                    <li><a href="photos">Galerie photo</a></li>
+                    <li><a href="production-video-avignon">Production vidéo Avignon</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Projets</h4>
+                <ul>
+                    <li><a href="projets/Film-promotionnel-Zerod">Z3ROD - Triathlon</a></li>
+                    <li><a href="projets/Film-Promotionnel-La-Maizon">La Maizon</a></li>
+                    <li><a href="projets/Film-Promotionnel-Athletic-Fitness-Club">Athletic Fitness Club</a></li>
+                    <li><a href="projets/Film-Evenementiel-DeliceShow">Delice Show</a></li>
+                    <li><a href="projets/Film-Evenementiel-Game-Of-Prod">Game of Prod</a></li>
+                    <li><a href="projets/Film-Evenementiel-IceShow">Ice Show</a></li>
+                    <li><a href="projets/Film-Artistique">Film Artistique</a></li>
+                    <li><a href="projets/Film-Teaser-TripleVisage">Teaser Triple Visage</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="mentions-legales">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite">Confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 HUMAN REC. Tous droits réservés.</p>
+            <p>Fait à <a href="#">Avignon</a>. Pour durer.</p>
+        </div>
     </footer>
 
     <!-- JavaScript -->

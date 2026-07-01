@@ -21,7 +21,9 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 
 # Pages services
 /services/film-publicitaire-avignon.html                   /services/film-publicitaire-avignon                        301!
-/services/video-corporate-vaucluse.html                    /services/video-corporate-vaucluse                         301!
+/services/video-corporate-vaucluse.html                    /services/video-promotionnelle-avignon                     301!
+/services/video-corporate-vaucluse                         /services/video-promotionnelle-avignon                     301!
+/services/video-promotionnelle-avignon.html                /services/video-promotionnelle-avignon                     301!
 /services/captation-evenementielle-avignon.html            /services/captation-evenementielle-avignon                 301!
 
 # Pages projets
@@ -30,7 +32,9 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 /projets/Film-Evenementiel-Game-Of-Prod.html               /projets/Film-Evenementiel-Game-Of-Prod                    301!
 /projets/Film-Evenementiel-IceShow.html                    /projets/Film-Evenementiel-IceShow                         301!
 /projets/Film-Promotionnel-La-Maizon.html                  /projets/Film-Promotionnel-La-Maizon                       301!
-/projets/Film-institutionnel-Athletic-Fitness-Club.html    /projets/Film-institutionnel-Athletic-Fitness-Club         301!
+/projets/Film-institutionnel-Athletic-Fitness-Club.html    /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
+/projets/Film-institutionnel-Athletic-Fitness-Club         /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
+/projets/Film-Promotionnel-Athletic-Fitness-Club.html      /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
 /projets/Film-promotionnel-Zerod.html                      /projets/Film-promotionnel-Zerod                           301!
 
 # ============================================================================
@@ -47,20 +51,23 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 
 # Anciens slugs de projets
 /game-of-prod                 /projets/Film-Evenementiel-Game-Of-Prod                   301!
-/atlhetic-fitness-club        /projets/Film-institutionnel-Athletic-Fitness-Club        301!
-/athletic-fitness-club        /projets/Film-institutionnel-Athletic-Fitness-Club        301!
+/atlhetic-fitness-club        /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
+/athletic-fitness-club        /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
 /delice-show-circe            /projets/Film-Evenementiel-DeliceShow                     301!
 /seda                         /#portfolio                                               301!
 
 # Anciens noms de fichiers projets (projet-N.html)
 /projets/projet-1.html        /projets/Film-promotionnel-Zerod                          301!
 /projets/projet-2.html        /projets/Film-Promotionnel-La-Maizon                      301!
-/projets/projet-3.html        /projets/Film-institutionnel-Athletic-Fitness-Club        301!
+/projets/projet-3.html        /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
 /projets/projet-4.html        /projets/Film-Evenementiel-Game-Of-Prod                   301!
 /projets/projet-5.html        /projets/Film-Evenementiel-DeliceShow                     301!
 
 # Ancien article supprimé → nouvel article (préserve l'équité de lien)
 /blog/combien-coute-film-entreprise-avignon-2026/   /blog/bien-preparer-tournage-entreprise/   301!
+
+# Ancienne catégorie blog "vidéo corporate" → nouvelle catégorie "vidéo promotionnelle"
+/blog/categorie/video-corporate/                    /blog/categorie/video-promotionnelle/      301!
 
 # Fallback 404 (rester en dernier)
 /*  /404.html  404

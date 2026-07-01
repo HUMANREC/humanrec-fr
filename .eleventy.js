@@ -96,7 +96,7 @@ module.exports = function (eleventyConfig) {
     // Par catégorie (utilisé sur les pages catégorie)
     const categoriesMap = {
         "film_publicitaire": "Film publicitaire",
-        "video_corporate": "Vidéo corporate",
+        "video_promotionnelle": "Vidéo Promotionnelle",
         "captation_evenementielle": "Captation événementielle",
         "photographie": "Photographie",
         "general": "Général"

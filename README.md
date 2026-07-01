@@ -97,7 +97,7 @@ npm run clean
 ## Cadence éditoriale
 
 - 2 articles par mois
-- 4 catégories : Film publicitaire / Vidéo corporate / Captation événementielle / Photographie
+- 4 catégories : Film publicitaire / Vidéo Promotionnelle / Captation événementielle / Photographie
 - Tags libres : Guide, Tarifs, Coulisses, Étude de cas, etc.
 - Image header obligatoire (1200x630 minimum, JPG ou WebP, < 300 KB)
 - Auteur : HUMAN REC (collectif)
