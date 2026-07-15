@@ -772,3 +772,36 @@ if (backToTopBtn) {
         );
     });
 })();
+// ── SUIVI DES CONVERSIONS (GA4) ──────────────────────────────
+// Ne se déclenche que si gtag est chargé (donc après consentement RGPD).
+(function () {
+    function track(name, params) {
+        if (typeof window.gtag === 'function') { window.gtag('event', name, params || {}); }
+    }
+    // Clics contact (téléphone, email, WhatsApp) via délégation
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        var cta = a.getAttribute('data-cta') || '';
+        if (href.indexOf('tel:') === 0) {
+            track('contact_click', { method: 'phone', source: cta || 'lien' });
+        } else if (href.indexOf('mailto:') === 0) {
+            track('contact_click', { method: 'email', source: cta || 'lien' });
+        } else if (a.classList.contains('whatsapp-btn') || href.indexOf('wa.me') !== -1) {
+            track('contact_click', { method: 'whatsapp', source: 'flottant' });
+        } else if (cta === 'quote-sticky' || cta === 'quote') {
+            track('cta_click', { cta: 'devis', source: cta });
+        } else if (cta === 'google-reviews') {
+            track('outbound_click', { destination: 'google_reviews' });
+        }
+    }, true);
+    // Envoi du formulaire de contact
+    var form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', function () {
+            var t = form.querySelector('[name="project_type"]');
+            track('generate_lead', { form: 'contact', project_type: t ? t.value : '' });
+        });
+    }
+})();
