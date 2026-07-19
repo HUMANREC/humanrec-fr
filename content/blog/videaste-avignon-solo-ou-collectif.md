@@ -8,7 +8,7 @@ tags:
   - "Guide"
   - "Coulisses"
 image: "/images/blog-videaste-avignon.webp"
-image_alt: "Vidéaste à Avignon en tournage, équipe HUMAN REC au travail"
+image_alt: "Vidéaste HUMAN REC filmant un athlète sur une piste, caméra à l'épaule et éclairage de tournage"
 description: "Vidéaste à Avignon : un seul opérateur ne peut pas tout exceller. Chez HUMAN REC, un vidéaste s'entoure de spécialistes dédiés, à la mesure de votre film."
 focus_keyword: "vidéaste Avignon"
 faqSchema: |
