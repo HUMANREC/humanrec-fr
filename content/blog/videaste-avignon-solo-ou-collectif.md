@@ -34,7 +34,7 @@ faqSchema: |
       "name": "Si plusieurs personnes interviennent, qui gère l'équipe ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Vous, jamais. Vous parlez à un seul interlocuteur, du premier échange à la livraison. C'est lui qui brief le mixeur son, l'étalonneur ou le monteur effets spéciaux, qui coordonne et qui garde la cohérence du film. Vous n'avez pas à gérer une équipe : vous racontez ce que vous voulez, on s'occupe du reste."
+        "text": "Vous, jamais. Vous parlez à un seul interlocuteur, du premier échange à la livraison. C'est lui qui brief le second opérateur, l'ingénieure son ou l'étalonneur, qui coordonne et qui garde la cohérence du film. Vous n'avez pas à gérer une équipe : vous racontez ce que vous voulez, on s'occupe du reste."
       }
     },
     {
@@ -63,7 +63,7 @@ Tapez "vidéaste Avignon" dans Google et vous tomberez surtout sur des opérateu
 
 Un vidéaste qui travaille seul, c'est une vraie qualité. Il est souple, réactif, peu coûteux sur les petits formats, et vous avez un seul interlocuteur qui connaît votre projet par cœur. Pour une interview, un format court, une captation simple, c'est souvent le choix le plus juste.
 
-Mais soyons francs sur la limite. Le même vidéaste filme, monte, étale la couleur et mixe le son. Or ce sont quatre métiers différents. Personne n'est excellent dans les quatre à la fois. Un opérateur seul fait tout correctement, mais rarement tout au meilleur niveau. Sur un film qui doit vraiment marquer, ça se sent.
+Mais soyons francs sur la limite. Le même vidéaste filme, monte, étalonne et mixe le son. Or ce sont quatre métiers différents. Personne n'est excellent dans les quatre à la fois. Un opérateur seul fait tout correctement, mais rarement tout au meilleur niveau. Sur un film qui doit vraiment marquer, ça se sent.
 
 ## La grosse structure : des spécialistes, mais lourde et impersonnelle
 
@@ -77,9 +77,11 @@ HUMAN REC se place exactement entre les deux, et c'est un choix.
 
 Tout part d'un vidéaste : la souplesse, l'écoute, un seul interlocuteur qui porte votre projet du premier échange à la livraison. Vous gardez cette relation directe et humaine, celle qui fait qu'on prend le temps de comprendre ce que vous êtes avant d'allumer la caméra.
 
-Et quand le projet le mérite, ce vidéaste s'entoure de spécialistes dédiés. Un mixeur son pour que chaque mot soit net et que l'ambiance sonne juste. Un étalonneur pour donner au film une vraie signature couleur. Un monteur effets spéciaux ou motion design quand l'image doit aller plus loin. Chacun est excellent à son poste, parce que c'est son seul métier.
+Et derrière ce vidéaste, il y a un réseau. Au fil des tournages, on s'est entourés de gens qu'on rappelle sans cesse, parce qu'on sait exactement comment ils travaillent. Besoin d'un second opérateur ou d'un autre vidéaste pour couvrir une scène à plusieurs caméras ? On l'a. D'un plan qui demande de la machinerie plus lourde, d'une ingénieure son pour une captation exigeante, d'un étalonneur pour une vraie signature couleur, d'un monteur effets spéciaux quand l'image doit aller plus loin ? On fait appel aux bonnes personnes, pour quelques plans ou pour un projet entier.
 
-Vous n'avez pas à choisir entre la proximité d'un vidéaste et la qualité d'une équipe. Vous avez les deux, calibrées sur votre film.
+C'est ça, la vraie force : un carnet de collaborateurs fiables qui nous permet de dire oui, presque sans limite, dans la mesure du raisonnable. Et comme on assemble l'équipe au plus juste, sans grosse structure à faire tourner en permanence, ça reste à un coût raisonnable.
+
+Vous n'avez pas à choisir entre la proximité d'un vidéaste et la puissance d'une équipe. Vous avez les deux, calibrées sur votre film.
 
 ## Ce que ça change, concrètement
 
@@ -90,6 +92,12 @@ La différence ne se voit pas sur le devis, elle se voit et s'entend à l'écran
 - **Les effets.** Motion design, habillage, effets spéciaux : quand l'image doit dire quelque chose que la caméra seule ne peut pas montrer, un spécialiste prend le relais, proprement, sans que ça fasse gadget.
 
 Sur un format simple, rien de tout ça n'est nécessaire, et on ne vous le vendra pas. Sur un film ambitieux, c'est ce qui sépare une jolie vidéo d'un vrai film.
+
+## Un exemple : un podcast pour un grand groupe
+
+Un grand groupe nous a sollicités pour filmer un podcast. On a monté l'équipe qu'il fallait : deux opérateurs caméra et une ingénieure son. Elle a géré toute la partie sonore, des micros main sur la scène jusqu'à la console son de la salle, le tout enregistré en direct sur nos enregistreurs professionnels.
+
+Deux points de vue à l'image, un son maîtrisé de bout en bout, et une cliente qui a eu exactement ce qu'elle voulait. On a reçu une demande précise, on s'y est adaptés sans lourdeur, et le rendu était à la hauteur. C'est tout l'intérêt du réseau : répondre à une vraie exigence sans se transformer en usine, ni faire exploser le budget.
 
 ## Un seul interlocuteur, toujours
 
