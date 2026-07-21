@@ -126,4 +126,4 @@ En général une à deux semaines pour l'aftermovie complet. Quand c'est utile, 
 
 Un aftermovie réussi n'est pas une question de chance. C'est une préparation sérieuse, une direction artistique qui épouse l'événement, une équipe discrète, un son soigné et un montage qui respecte l'émotion du moment.
 
-Pour voir concrètement comment on travaille, découvrez notre [captation événementielle à Avignon](/services/captation-evenementielle-avignon) ou le projet [Delice Show au Circé](/projets/Film-Evenementiel-DeliceShow). Et si vous avez un événement à venir, dites-nous où vous en êtes. On s'occupe du reste.
+Pour voir concrètement comment on travaille, découvrez notre [captation événementielle à Avignon](/services/captation-evenementielle-avignon) ou le projet [Delice Show au Circé](/projets/film-evenementiel-deliceshow). Et si vous avez un événement à venir, dites-nous où vous en êtes. On s'occupe du reste.

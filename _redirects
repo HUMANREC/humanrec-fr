@@ -27,15 +27,33 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 /services/captation-evenementielle-avignon.html            /services/captation-evenementielle-avignon                 301!
 
 # Pages projets
-/projets/Film-Artistique.html                              /projets/Film-Artistique                                   301!
-/projets/Film-Evenementiel-DeliceShow.html                 /projets/Film-Evenementiel-DeliceShow                      301!
-/projets/Film-Evenementiel-Game-Of-Prod.html               /projets/Film-Evenementiel-Game-Of-Prod                    301!
-/projets/Film-Evenementiel-IceShow.html                    /projets/Film-Evenementiel-IceShow                         301!
-/projets/Film-Promotionnel-La-Maizon.html                  /projets/Film-Promotionnel-La-Maizon                       301!
-/projets/Film-institutionnel-Athletic-Fitness-Club.html    /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
-/projets/Film-institutionnel-Athletic-Fitness-Club         /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
-/projets/Film-Promotionnel-Athletic-Fitness-Club.html      /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
-/projets/Film-promotionnel-Zerod.html                      /projets/Film-promotionnel-Zerod                           301!
+/projets/film-artistique.html                              /projets/film-artistique                                   301!
+/projets/film-evenementiel-deliceshow.html                 /projets/film-evenementiel-deliceshow                      301!
+/projets/film-evenementiel-game-of-prod.html               /projets/film-evenementiel-game-of-prod                    301!
+/projets/film-evenementiel-iceshow.html                    /projets/film-evenementiel-iceshow                         301!
+/projets/film-promotionnel-la-maizon.html                  /projets/film-promotionnel-la-maizon                       301!
+/projets/Film-institutionnel-Athletic-Fitness-Club.html    /projets/film-promotionnel-athletic-fitness-club           301!
+/projets/Film-institutionnel-Athletic-Fitness-Club         /projets/film-promotionnel-athletic-fitness-club           301!
+/projets/film-promotionnel-athletic-fitness-club.html      /projets/film-promotionnel-athletic-fitness-club           301!
+/projets/film-promotionnel-zerod.html                      /projets/film-promotionnel-zerod                           301!
+
+# Anciennes URLs projets en majuscules → minuscules (corrige la boucle canonique)
+/projets/Film-Artistique                                   /projets/film-artistique                                   301!
+/projets/Film-Artistique.html                              /projets/film-artistique                                   301!
+/projets/Film-Evenementiel-DeliceShow                      /projets/film-evenementiel-deliceshow                      301!
+/projets/Film-Evenementiel-DeliceShow.html                 /projets/film-evenementiel-deliceshow                      301!
+/projets/Film-Evenementiel-Game-Of-Prod                    /projets/film-evenementiel-game-of-prod                    301!
+/projets/Film-Evenementiel-Game-Of-Prod.html               /projets/film-evenementiel-game-of-prod                    301!
+/projets/Film-Evenementiel-IceShow                         /projets/film-evenementiel-iceshow                         301!
+/projets/Film-Evenementiel-IceShow.html                    /projets/film-evenementiel-iceshow                         301!
+/projets/Film-Promotionnel-Athletic-Fitness-Club           /projets/film-promotionnel-athletic-fitness-club           301!
+/projets/Film-Promotionnel-Athletic-Fitness-Club.html      /projets/film-promotionnel-athletic-fitness-club           301!
+/projets/Film-Promotionnel-La-Maizon                       /projets/film-promotionnel-la-maizon                       301!
+/projets/Film-Promotionnel-La-Maizon.html                  /projets/film-promotionnel-la-maizon                       301!
+/projets/Film-Teaser-TripleVisage                          /projets/film-teaser-triplevisage                          301!
+/projets/Film-Teaser-TripleVisage.html                     /projets/film-teaser-triplevisage                          301!
+/projets/Film-promotionnel-Zerod                           /projets/film-promotionnel-zerod                           301!
+/projets/Film-promotionnel-Zerod.html                      /projets/film-promotionnel-zerod                           301!
 
 # ============================================================================
 # Anciennes URLs (ancien site) → nouvelles URLs canoniques
@@ -50,18 +68,18 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 /showreel-2025                /#showreel                                                301!
 
 # Anciens slugs de projets
-/game-of-prod                 /projets/Film-Evenementiel-Game-Of-Prod                   301!
-/atlhetic-fitness-club        /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
-/athletic-fitness-club        /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
-/delice-show-circe            /projets/Film-Evenementiel-DeliceShow                     301!
+/game-of-prod                 /projets/film-evenementiel-game-of-prod                   301!
+/atlhetic-fitness-club        /projets/film-promotionnel-athletic-fitness-club           301!
+/athletic-fitness-club        /projets/film-promotionnel-athletic-fitness-club           301!
+/delice-show-circe            /projets/film-evenementiel-deliceshow                     301!
 /seda                         /#portfolio                                               301!
 
 # Anciens noms de fichiers projets (projet-N.html)
-/projets/projet-1.html        /projets/Film-promotionnel-Zerod                          301!
-/projets/projet-2.html        /projets/Film-Promotionnel-La-Maizon                      301!
-/projets/projet-3.html        /projets/Film-Promotionnel-Athletic-Fitness-Club           301!
-/projets/projet-4.html        /projets/Film-Evenementiel-Game-Of-Prod                   301!
-/projets/projet-5.html        /projets/Film-Evenementiel-DeliceShow                     301!
+/projets/projet-1.html        /projets/film-promotionnel-zerod                          301!
+/projets/projet-2.html        /projets/film-promotionnel-la-maizon                      301!
+/projets/projet-3.html        /projets/film-promotionnel-athletic-fitness-club           301!
+/projets/projet-4.html        /projets/film-evenementiel-game-of-prod                   301!
+/projets/projet-5.html        /projets/film-evenementiel-deliceshow                     301!
 
 # Ancien article supprimé → nouvel article (préserve l'équité de lien)
 /blog/combien-coute-film-entreprise-avignon-2026/   /blog/bien-preparer-tournage-entreprise/   301!

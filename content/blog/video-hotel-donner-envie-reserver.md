@@ -103,7 +103,7 @@ Quelques secondes suffisent. Le drone n'est pas un style, c'est une réponse : o
 
 Notre approche sur l'hôtellerie tient en une idée : chaque plan doit exister en horizontal et en vertical. Le film principal d'une à deux minutes porte le site web et YouTube. Les déclinaisons verticales de 15 à 30 secondes alimentent Instagram et TikTok, là où les voyageurs rêvent leur prochain séjour.
 
-C'est ce qu'on a fait pour [La Maizon](/projets/Film-Promotionnel-La-Maizon), lieu d'exception près d'Avignon, et pour les shorts d'hôtels tournés au Mirador, au-dessus du lac Léman, et à La Bastide des Salins à Saint-Tropez, visibles sur notre page [vidéo promotionnelle](/services/video-promotionnelle-avignon). Un tournage, une identité visuelle, et des mois de contenu à diffuser.
+C'est ce qu'on a fait pour [La Maizon](/projets/film-promotionnel-la-maizon), lieu d'exception près d'Avignon, et pour les shorts d'hôtels tournés au Mirador, au-dessus du lac Léman, et à La Bastide des Salins à Saint-Tropez, visibles sur notre page [vidéo promotionnelle](/services/video-promotionnelle-avignon). Un tournage, une identité visuelle, et des mois de contenu à diffuser.
 
 Le tournage lui-même reste discret : équipe réduite, matériel compact, créneaux calés sur les creux de fréquentation. Vos clients ne doivent rien remarquer, et votre équipe continue de travailler normalement.
 

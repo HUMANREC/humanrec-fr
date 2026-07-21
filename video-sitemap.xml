@@ -10,7 +10,7 @@
 
     <!-- 1. ZEROD - Film Promotionnel Triathlon -->
     <url>
-        <loc>https://humanrec.fr/projets/Film-promotionnel-Zerod</loc>
+        <loc>https://humanrec.fr/projets/film-promotionnel-zerod</loc>
         <video:video>
             <video:thumbnail_loc>https://humanrec.fr/images/projet1.png</video:thumbnail_loc>
             <video:title>Film Promotionnel Z3ROD - Triathlon</video:title>
@@ -32,7 +32,7 @@
 
     <!-- 2. DELICE SHOW - Version Courte (Le Show) -->
     <url>
-        <loc>https://humanrec.fr/projets/Film-Evenementiel-DeliceShow</loc>
+        <loc>https://humanrec.fr/projets/film-evenementiel-deliceshow</loc>
         <video:video>
             <video:thumbnail_loc>https://humanrec.fr/images/projet5.png</video:thumbnail_loc>
             <video:title>Delice Show - Le Show (Version Courte)</video:title>
@@ -71,7 +71,7 @@
 
     <!-- 3. GAME OF PROD - Forever Living 2024 -->
     <url>
-        <loc>https://humanrec.fr/projets/Film-Evenementiel-Game-Of-Prod</loc>
+        <loc>https://humanrec.fr/projets/film-evenementiel-game-of-prod</loc>
         <video:video>
             <video:thumbnail_loc>https://humanrec.fr/images/projet4.jpg</video:thumbnail_loc>
             <video:title>Game of Prod - Event is Coming (Forever Living 2024)</video:title>
@@ -93,7 +93,7 @@
 
     <!-- 4. ATHLETIC FITNESS CLUB - Vidéo Promotionnelle -->
     <url>
-        <loc>https://humanrec.fr/projets/Film-Promotionnel-Athletic-Fitness-Club</loc>
+        <loc>https://humanrec.fr/projets/film-promotionnel-athletic-fitness-club</loc>
         <video:video>
             <video:thumbnail_loc>https://humanrec.fr/images/projet3.jpg</video:thumbnail_loc>
             <video:title>Vidéo promotionnelle Athletic Fitness Club</video:title>
@@ -115,7 +115,7 @@
 
     <!-- 5. LA MAIZON - Maison d'hôtes Provence -->
     <url>
-        <loc>https://humanrec.fr/projets/Film-Promotionnel-La-Maizon</loc>
+        <loc>https://humanrec.fr/projets/film-promotionnel-la-maizon</loc>
         <video:video>
             <video:thumbnail_loc>https://humanrec.fr/images/projet2.png</video:thumbnail_loc>
             <video:title>Film Publicitaire La Maizon - Maison d'hôtes de Provence</video:title>
@@ -138,7 +138,7 @@
 
     <!-- 6. ICE SHOW BY DELICE SHOW - Walibi Belgique -->
     <url>
-        <loc>https://humanrec.fr/projets/Film-Evenementiel-IceShow</loc>
+        <loc>https://humanrec.fr/projets/film-evenementiel-iceshow</loc>
         <video:video>
             <video:thumbnail_loc>https://humanrec.fr/images/WALIBI-MINIA_1.10.1.jpg</video:thumbnail_loc>
             <video:title>Ice Show by Delice Show - Walibi Belgique</video:title>
@@ -179,7 +179,7 @@
 
     <!-- 7. FILM ARTISTIQUE - Grace is a violence you cannot see -->
     <url>
-        <loc>https://humanrec.fr/projets/Film-Artistique</loc>
+        <loc>https://humanrec.fr/projets/film-artistique</loc>
         <video:video>
             <video:thumbnail_loc>https://humanrec.fr/images/Minia-FilmArtistique.jpg</video:thumbnail_loc>
             <video:title>Grace is a violence you cannot see</video:title>
