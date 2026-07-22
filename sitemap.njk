@@ -10,13 +10,13 @@ eleventyExcludeFromCollections: true
     <!-- ========================================== -->
     <!-- SITEMAP PRINCIPAL - HUMAN REC              -->
     <!-- Production Audiovisuelle Avignon Vaucluse  -->
-    <!-- Dernière mise à jour : 2026-04-28          -->
+    <!-- lastmod genere depuis git (voir .eleventy.js)-->
     <!-- ========================================== -->
 
     <!-- Page d'accueil -->
     <url>
         <loc>https://humanrec.fr/</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "index.html" | lastmod }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -28,7 +28,7 @@ eleventyExcludeFromCollections: true
     <!-- Page SEO principale - Production Vidéo Avignon -->
     <url>
         <loc>https://humanrec.fr/production-video-avignon</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "production-video-avignon.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -36,7 +36,7 @@ eleventyExcludeFromCollections: true
     <!-- Page Photos -->
     <url>
         <loc>https://humanrec.fr/photos</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "photos.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -44,7 +44,7 @@ eleventyExcludeFromCollections: true
     <!-- Page L'équipe -->
     <url>
         <loc>https://humanrec.fr/qui-sommes-nous</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "qui-sommes-nous.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -55,28 +55,28 @@ eleventyExcludeFromCollections: true
     
     <url>
         <loc>https://humanrec.fr/services/</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "services/index.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://humanrec.fr/services/film-publicitaire-avignon</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "services/film-publicitaire-avignon.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://humanrec.fr/services/video-promotionnelle-avignon</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "services/video-promotionnelle-avignon.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://humanrec.fr/services/captation-evenementielle-avignon</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "services/captation-evenementielle-avignon.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -85,7 +85,7 @@ eleventyExcludeFromCollections: true
 
     <url>
         <loc>https://humanrec.fr/services/creation-fiction-clip-podcast</loc>
-        <lastmod>2026-06-29</lastmod>
+        <lastmod>{{ "services/creation-fiction-clip-podcast.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -97,7 +97,7 @@ eleventyExcludeFromCollections: true
     <!-- 1. ZEROD - Film Promotionnel -->
     <url>
         <loc>https://humanrec.fr/projets/film-promotionnel-zerod</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "projets/film-promotionnel-zerod.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -119,7 +119,7 @@ eleventyExcludeFromCollections: true
     <!-- 2. DELICE SHOW - Captation Événementielle -->
     <url>
         <loc>https://humanrec.fr/projets/film-evenementiel-deliceshow</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "projets/film-evenementiel-deliceshow.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -150,7 +150,7 @@ eleventyExcludeFromCollections: true
     <!-- 3. GAME OF PROD - Captation Événementielle -->
     <url>
         <loc>https://humanrec.fr/projets/film-evenementiel-game-of-prod</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "projets/film-evenementiel-game-of-prod.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -172,7 +172,7 @@ eleventyExcludeFromCollections: true
     <!-- 4. ATHLETIC FITNESS CLUB - Vidéo Promotionnelle -->
     <url>
         <loc>https://humanrec.fr/projets/film-promotionnel-athletic-fitness-club</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "projets/film-promotionnel-athletic-fitness-club.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -194,7 +194,7 @@ eleventyExcludeFromCollections: true
     <!-- 5. LA MAIZON - Film Publicitaire -->
     <url>
         <loc>https://humanrec.fr/projets/film-promotionnel-la-maizon</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "projets/film-promotionnel-la-maizon.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -216,7 +216,7 @@ eleventyExcludeFromCollections: true
     <!-- 6. ICE SHOW BY DELICE SHOW - Captation Événementielle -->
     <url>
         <loc>https://humanrec.fr/projets/film-evenementiel-iceshow</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "projets/film-evenementiel-iceshow.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -253,7 +253,7 @@ eleventyExcludeFromCollections: true
     <!-- 7. FILM ARTISTIQUE - Volare -->
     <url>
         <loc>https://humanrec.fr/projets/film-artistique</loc>
-        <lastmod>2026-04-28</lastmod>
+        <lastmod>{{ "projets/film-artistique.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -275,7 +275,7 @@ eleventyExcludeFromCollections: true
     <!-- 8. TEASER TRIPLE VISAGE - Fiction -->
     <url>
         <loc>https://humanrec.fr/projets/film-teaser-triplevisage</loc>
-        <lastmod>2026-05-21</lastmod>
+        <lastmod>{{ "projets/film-teaser-triplevisage.html" | lastmod }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>

@@ -1,6 +1,41 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { execFileSync } = require("child_process");
+const fs = require("fs");
+
+// ==========================================================================
+// lastmod : date du dernier commit git d'un fichier (cache en memoire).
+// Un lastmod faux pousse Google a ignorer le champ pour tout le site,
+// donc on le derive de git plutot que de le coder en dur.
+// Repli : date de modification du fichier, puis date du build.
+// ==========================================================================
+const _lastmodCache = new Map();
+function gitLastMod(filePath) {
+    if (_lastmodCache.has(filePath)) return _lastmodCache.get(filePath);
+    let date = null;
+    try {
+        if (fs.existsSync(filePath)) {
+            const out = execFileSync("git", ["log", "-1", "--format=%cs", "--", filePath], {
+                encoding: "utf8",
+                stdio: ["ignore", "pipe", "ignore"],
+            }).trim();
+            if (/^\d{4}-\d{2}-\d{2}$/.test(out)) date = out;
+        }
+    } catch (e) {
+        // git indisponible (clone superficiel, etc.) : on passe au repli
+    }
+    if (!date && fs.existsSync(filePath)) {
+        try { date = fs.statSync(filePath).mtime.toISOString().slice(0, 10); } catch (e) { }
+    }
+    if (!date) date = new Date().toISOString().slice(0, 10);
+    _lastmodCache.set(filePath, date);
+    return date;
+}
 
 module.exports = function (eleventyConfig) {
+
+    // Renvoie la date de derniere modif reelle d'un fichier source.
+    // Usage dans un template : {{ "services/index.html" | lastmod }}
+    eleventyConfig.addFilter("lastmod", (filePath) => gitLastMod(filePath));
 
     // ==========================================================================
     // PLUGINS
