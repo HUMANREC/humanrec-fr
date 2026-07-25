@@ -7,7 +7,7 @@
     <title>Captation Drone Avignon : Vidéo &amp; Photo Aérienne | HUMAN REC</title>
     <meta name="description"
         content="Captation par drone à Avignon et dans le Vaucluse, partout en France. HUMAN REC filme vos lieux et événements vus du ciel : hôtels, domaines, événementiel.">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://humanrec.fr/services/captation-drone-avignon">
 
     <!-- Open Graph -->
@@ -146,6 +146,28 @@
                 }
             }
         ]
+    }
+    </script>
+
+    <!-- Schema.org VideoObject (showreel drone) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "@id": "https://humanrec.fr/services/captation-drone-avignon#showreel",
+        "name": "Showreel drone HUMAN REC - Captation aérienne à Avignon et dans le Vaucluse",
+        "description": "Montage de prises de vue aériennes par drone réalisées par HUMAN REC : hôtels, domaines, événements et lieux filmés vus du ciel en 4K, à Avignon, dans le Vaucluse et partout en France.",
+        "thumbnailUrl": "https://i.ytimg.com/vi/vdIBTeq-CMQ/hqdefault.jpg",
+        "uploadDate": "2026-07-23",
+        "contentUrl": "https://www.youtube.com/watch?v=vdIBTeq-CMQ",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/vdIBTeq-CMQ",
+        "inLanguage": "fr-FR",
+        "publisher": {
+            "@id": "https://humanrec.fr/#organization",
+            "@type": "VideoProductionCompany",
+            "name": "HUMAN REC",
+            "url": "https://humanrec.fr"
+        }
     }
     </script>
 
@@ -951,11 +973,9 @@
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <!-- Bouton "Voir le montage drone" en suspens : à réactiver quand le showreel sera en ligne
                     <a href="#showreel" class="btn btn-outline">
                         Voir le montage drone
                     </a>
-                    -->
                 </div>
             </div>
         </section>
@@ -1100,8 +1120,7 @@
             </div>
         </section>
 
-        <!-- MONTAGE DRONE (SHOWREEL) — EN SUSPENS : réactiver quand la vidéo est prête -->
-        <!--
+        <!-- MONTAGE DRONE (SHOWREEL) -->
         <section class="realisations" id="showreel">
             <div class="section-header">
                 <div class="section-label">Le montage</div>
@@ -1111,15 +1130,15 @@
             </div>
             <div style="max-width: 1000px; margin: 0 auto;">
                 <div class="drone-showreel"
-                    style="position: relative; width: 100%; aspect-ratio: 16/9; background: var(--gray-dark); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="https://www.youtube.com/embed/ID_DE_LA_VIDEO" title="Montage drone HUMAN REC"
+                    style="position: relative; width: 100%; aspect-ratio: 16/9; background: var(--gray-dark); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden;">
+                    <iframe src="https://www.youtube-nocookie.com/embed/vdIBTeq-CMQ" title="Showreel drone HUMAN REC - Captation aérienne Avignon Vaucluse"
                         style="position:absolute; inset:0; width:100%; height:100%; border:0;"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
         </section>
-        -->
 
         <!-- ÉQUIPEMENT -->
         <section class="equipment">
@@ -1411,6 +1430,7 @@
                         <li><a href="film-publicitaire-avignon">Film Publicitaire</a></li>
                         <li><a href="video-promotionnelle-avignon">Vidéo Promotionnelle</a></li>
                         <li><a href="captation-evenementielle-avignon">Captation Événementielle</a></li>
+                        <li><a href="captation-drone-avignon">Captation Drone</a></li>
                         <li><a href="../photos">Galerie photo</a></li>
                     </ul>
                 </div>
