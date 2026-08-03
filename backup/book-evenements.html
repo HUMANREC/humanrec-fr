@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations Événementielles | HUMAN REC</title>
+    <meta name="description" content="Nos réalisations vidéo et photos pour vos événements et soirées · HUMAN REC Production Audiovisuelle Avignon.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="global.min.css">
+
+    <style>
+        /* ===== HERO ===== */
+        .showcase-hero {
+            min-height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 180px 5% 90px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 15% 60%, rgba(230, 57, 70, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 85% 40%, rgba(230, 57, 70, 0.07) 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, rgba(230, 57, 70, 0.05) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        /* Pellicule décorative */
+        .film-holes {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+        .film-holes.left { left: 18px; }
+        .film-holes.right { right: 18px; }
+        .film-hole {
+            width: 18px;
+            height: 13px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 2px;
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.7rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 24px;
+            font-family: 'Inter', sans-serif;
+        }
+        .eyebrow::before,
+        .eyebrow::after {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .showcase-hero h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.8rem, 7.5vw, 6.5rem);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+        .showcase-hero h1 em {
+            font-style: normal;
+            color: var(--red);
+        }
+
+        .showcase-hero .lead {
+            max-width: 600px;
+            color: rgba(245, 245, 245, 0.55);
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 44px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== TRUSTED BY ===== */
+        .trusted-section {
+            padding: 10px 0 60px;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        .trusted-title {
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.45);
+            margin-bottom: 40px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .trusted-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .trusted-grid img {
+            height: 90px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%) opacity(0.5);
+            transition: all 0.35s ease;
+        }
+
+        .trusted-grid img:hover {
+            filter: grayscale(0%) opacity(1);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 900px) {
+            .trusted-grid { gap: 60px; }
+            .trusted-grid img { height: 70px; }
+        }
+
+        @media (max-width: 600px) {
+            .trusted-grid { gap: 40px; }
+            .trusted-grid img { height: 55px; }
+        }
+
+        /* NAV override */
+        .nav-back {
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(245, 245, 245, 0.65);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+            padding: 9px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-back:hover { color: var(--red); border-color: rgba(230, 57, 70, 0.5); }
+        .nav-back svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+        /* ===== CONTENEUR UNIQUE ===== */
+        /* Toutes les sections partagent ce wrapper pour un alignement parfait */
+        .w {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        /* ===== SECTION HEADER ===== */
+        /* Reprend exactement les mêmes règles que .w pour un alignement parfait */
+        .section-header {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 5% 36px;
+            text-align: left;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.68rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 14px;
+        }
+        .section-tag::before {
+            content: '';
+            width: 22px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .section-header h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            line-height: 1.1;
+        }
+        .section-header h2 em {
+            font-style: normal;
+            color: var(--red);
+        }
+
+        .section-header p {
+            max-width: 580px;
+            color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.85;
+            margin-top: 14px;
+        }
+
+        /* ===== VIDEO GRID ===== */
+        .video-section {
+            padding-bottom: 90px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .video-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: #0f0f0f;
+        }
+
+        /* Wide: spans 3/4 cols, stretches to portrait row height */
+        .video-card.wide {
+            grid-column: span 3;
+            min-height: 340px;
+        }
+
+        /* Portrait: 1/4 col, 9:16 aspect ratio · sets row height */
+        .video-card.portrait {
+            grid-column: span 1;
+            aspect-ratio: 9 / 16;
+            max-height: 680px;
+        }
+
+        /* Full: cinematic 21:9 banner */
+        .video-card.full {
+            grid-column: 1 / -1;
+            aspect-ratio: 21 / 9;
+        }
+
+        /* Thumbnail fill */
+        .video-thumb-wrap {
+            position: absolute;
+            inset: 0;
+        }
+
+        .video-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        filter 0.4s ease;
+            filter: grayscale(25%) brightness(0.9);
+        }
+
+        .video-card:hover .video-thumb {
+            transform: scale(1.04);
+            filter: grayscale(0%) brightness(1);
+        }
+
+        /* Gradient overlay */
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                160deg,
+                transparent 30%,
+                rgba(10, 10, 10, 0.75) 100%
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 18px;
+            transition: background 0.4s ease;
+        }
+
+        .video-card:hover .video-overlay {
+            background: linear-gradient(
+                160deg,
+                rgba(230, 57, 70, 0.06) 0%,
+                rgba(10, 10, 10, 0.88) 100%
+            );
+        }
+
+        /* Red border on hover */
+        .video-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px solid transparent;
+            pointer-events: none;
+            transition: border-color 0.35s ease;
+            z-index: 2;
+        }
+        .video-card:hover::after {
+            border-color: var(--red);
+        }
+
+        /* Play button */
+        .play-circle {
+            width: 50px;
+            height: 50px;
+            border: 1.5px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(6px);
+            background: rgba(10, 10, 10, 0.25);
+            align-self: flex-start;
+        }
+        .video-card:hover .play-circle {
+            border-color: var(--red);
+            background: var(--red);
+            transform: scale(1.08);
+        }
+        .play-circle svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--white);
+            margin-left: 3px;
+        }
+
+        /* Card meta */
+        .video-card-meta { align-self: flex-end; }
+        .video-tag {
+            display: inline-block;
+            font-size: 0.62rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--red);
+            background: rgba(230, 57, 70, 0.12);
+            border: 1px solid rgba(230, 57, 70, 0.3);
+            padding: 3px 9px;
+            margin-bottom: 7px;
+        }
+        .video-card-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(1rem, 1.6vw, 1.4rem);
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            line-height: 1.2;
+        }
+        .video-card-sub {
+            font-size: 0.76rem;
+            color: rgba(245, 245, 245, 0.45);
+            margin-top: 4px;
+            letter-spacing: 0.04em;
+        }
+
+        /* Duration */
+        .video-duration {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            font-size: 0.72rem;
+            font-family: 'Clash Display', sans-serif;
+            letter-spacing: 0.1em;
+            color: rgba(245, 245, 245, 0.65);
+            background: rgba(10, 10, 10, 0.55);
+            padding: 3px 9px;
+            border-radius: 2px;
+            backdrop-filter: blur(4px);
+            z-index: 1;
+        }
+
+        /* ===== VIDEO MODAL ===== */
+        .video-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+        }
+        .video-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-bg {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.94);
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+        }
+        .modal-container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .modal-container.is-wide {
+            width: 90vw;
+            max-width: 1100px;
+        }
+        .modal-container.is-portrait {
+            height: 88vh;
+            width: auto;
+        }
+        .modal-video {
+            display: block;
+            outline: none;
+            background: #000;
+        }
+        .modal-container.is-wide .modal-video {
+            width: 100%;
+            max-height: 85vh;
+        }
+        .modal-container.is-portrait .modal-video {
+            height: 88vh;
+            width: auto;
+            max-width: 90vw;
+        }
+        .modal-close {
+            position: absolute;
+            top: -48px;
+            right: 0;
+            width: 38px;
+            height: 38px;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            font-size: 1.35rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            line-height: 1;
+        }
+        .modal-close:hover { background: var(--red); border-color: var(--red); }
+
+        .modal-info {
+            margin-top: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            align-self: flex-start;
+        }
+        .modal-info-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .modal-info-dot {
+            width: 5px;
+            height: 5px;
+            background: var(--red);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ===== DIVIDER ===== */
+        .section-divider {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .divider-icon {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(230, 57, 70, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .divider-icon svg {
+            width: 12px;
+            height: 12px;
+            fill: var(--red);
+        }
+
+        /* ===== PHOTO GRID ===== */
+        .photo-section {
+            padding-bottom: 90px;
+        }
+
+        .photo-grid {
+            columns: 4;
+            column-gap: 10px;
+        }
+
+        .photo-item {
+            break-inside: avoid;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .photo-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        filter 0.35s ease;
+            filter: grayscale(20%) brightness(0.92);
+        }
+        .photo-item:hover img {
+            transform: scale(1.04);
+            filter: grayscale(0%) brightness(1);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.65) 0%, transparent 55%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .photo-item:hover .photo-overlay { opacity: 1; }
+
+        .photo-zoom {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 34px;
+            height: 34px;
+            background: var(--red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.6);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        .photo-item:hover .photo-zoom {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .photo-zoom svg {
+            width: 14px;
+            height: 14px;
+            stroke: white;
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+        }
+
+        /* ===== PHOTO CATEGORIES ===== */
+        .photo-category {
+            margin-bottom: 40px;
+        }
+        .photo-cat-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+        .photo-cat-label {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(245,245,245,0.5);
+        }
+        .photo-cat-count {
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            color: var(--red);
+            background: rgba(230,57,70,0.1);
+            border: 1px solid rgba(230,57,70,0.2);
+            padding: 2px 8px;
+        }
+        .photo-cat-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* ===== PHOTO LIGHTBOX ===== */
+        .photo-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .photo-lightbox.active { opacity: 1; visibility: visible; }
+
+        .lb-bg {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            cursor: pointer;
+        }
+        .lb-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lb-img {
+            max-width: 88vw;
+            max-height: 86vh;
+            object-fit: contain;
+            display: block;
+        }
+        .lb-close {
+            position: absolute;
+            top: -46px;
+            right: 0;
+            width: 38px;
+            height: 38px;
+            background: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--white);
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .lb-close:hover { background: var(--red); border-color: var(--red); }
+
+        .lb-prev,
+        .lb-next {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(10,10,10,0.7);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        .lb-prev { left: 20px; }
+        .lb-next { right: 20px; }
+        .lb-prev:hover, .lb-next:hover { background: var(--red); border-color: var(--red); }
+        .lb-prev svg, .lb-next svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .lb-counter {
+            position: absolute;
+            bottom: -34px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.35);
+            white-space: nowrap;
+        }
+
+        /* ===== CTA ===== */
+        .showcase-cta {
+            background: var(--gray-dark);
+            padding: 110px 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .showcase-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(230, 57, 70, 0.07) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .showcase-cta .eyebrow { margin-bottom: 22px; }
+        .showcase-cta h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+        .showcase-cta h2 em {
+            font-style: normal;
+            color: var(--red);
+        }
+        .showcase-cta p {
+            max-width: 520px;
+            margin: 0 auto 44px;
+            color: var(--gray);
+            font-size: 0.93rem;
+            line-height: 1.85;
+        }
+        .cta-contact-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 44px;
+            padding-top: 44px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .cta-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: rgba(245,245,245,0.5);
+        }
+        .cta-contact-item a {
+            color: var(--white);
+            letter-spacing: 0.03em;
+            transition: color 0.3s ease;
+        }
+        .cta-contact-item a:hover { color: var(--red); }
+        .cta-dot {
+            width: 5px;
+            height: 5px;
+            background: var(--red);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1100px) {
+            .photo-grid { columns: 3; }
+        }
+        @media (max-width: 900px) {
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+            .video-card.wide { grid-column: 1 / -1; aspect-ratio: 16 / 9; min-height: auto; }
+            .video-card.portrait { grid-column: span 1; aspect-ratio: 9 / 16; max-height: 480px; }
+            .video-card.full { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+            .photo-grid { columns: 2; }
+        }
+        @media (max-width: 600px) {
+            .w { padding-left: 4%; padding-right: 4%; }
+            .video-grid { grid-template-columns: 1fr; gap: 8px; }
+            .video-card.portrait { aspect-ratio: 9 / 16; max-height: 560px; }
+            .photo-grid { columns: 2; column-gap: 6px; }
+            .photo-item { margin-bottom: 6px; }
+            .lb-prev { left: 8px; }
+            .lb-next { right: 8px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <a href="/" class="logo" aria-label="HUMAN REC - Retour à l'accueil">
+            <span class="logo-dot"></span>
+            <img src="images/logo.webp" alt="HUMAN REC" class="logo-img" width="320" height="177">
+        </a>
+        <a href="/" class="nav-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 5l-7 7 7 7"/>
+            </svg>
+            Retour au site
+        </a>
+    </nav>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="showcase-hero">
+            <div class="film-holes left">
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+            </div>
+            <div class="film-holes right">
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+                <div class="film-hole"></div><div class="film-hole"></div>
+            </div>
+
+            <div class="eyebrow">Captation Événementielle</div>
+            <h1>NOS <em>CRÉATIONS</em><br>POUR VOS ÉVÉNEMENTS</h1>
+            <p class="lead">
+                Chez HUMAN REC, chaque événement mérite d'être raconté avec précision et émotion.
+                Films événementiels, aftermovies, reportages photo. Nous capturons l'énergie unique
+                de vos soirées et shows pour en faire des images inoubliables et utilisables.
+            </p>
+            <div class="hero-btns">
+                <a href="#videos" class="btn btn-primary">Voir nos réalisations</a>
+                <a href="/" class="btn btn-outline">Retour au site</a>
+            </div>
+        </section>
+
+        <!-- ===== TRUSTED BY ===== -->
+        <section class="trusted-section">
+            <div class="w">
+                <p class="trusted-title">Les pros de l'événementiel qui nous font confiance</p>
+                <div class="trusted-grid">
+                    <img src="images/ALP%20-%20logo00086405.png" alt="ALP logo" loading="lazy">
+                    <img src="images/Caron%20Alain%20-%20logo00086405.png" alt="Caron Alain logo" loading="lazy">
+                    <img src="images/DeliceShow%20-%20logo00086405.png" alt="DeliceShow logo" loading="lazy">
+                    <img src="images/GOP%20-%20logo00086405.png" alt="GOP logo" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VIDEO SECTION ===== -->
+        <div class="section-header" id="videos">
+            <div class="section-tag">Films événementiels</div>
+            <h2>RÉALISATIONS <em>VIDÉO</em></h2>
+            <p>De la soirée intime au show d'envergure nationale, nos films capturent l'ADN de votre entreprise. Cliquez sur une réalisation pour la visionner en plein écran.</p>
+        </div>
+
+        <div class="video-section">
+            <div class="w">
+            <div class="video-grid">
+
+                <!-- 1. WIDE · Circé -->
+                <div class="video-card wide"
+                     data-video="videos/Circe-30sec-4k.mp4"
+                     data-title="CIRCÉ · Délice Show"
+                     data-format="wide"
+                     role="button" tabindex="0" aria-label="Lire Circé · Version Courte 4K">
+                    <div class="video-thumb-wrap">
+                        <img src="images/projet5.webp" alt="Circé · Délice Show" class="video-thumb" loading="eager">
+                        <div class="video-overlay">
+                            <div class="play-circle">
+                                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <div class="video-card-meta">
+                                <span class="video-tag">AFTERMOVIE</span>
+                                <h3 class="video-card-title">CIRCÉ BEAULIEU-SUR-MER</h3>
+                                <p class="video-card-sub">Delice Show · Version Courte</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-duration">0:30</div>
+                </div>
+
+                <!-- 2. PORTRAIT · Aftermovie (short2) -->
+                <div class="video-card portrait"
+                     data-video="videos/short2.mp4"
+                     data-title="AFTERMOVIE · La Croix des Pins"
+                     data-format="portrait"
+                     role="button" tabindex="0" aria-label="Lire Aftermovie · La Croix des Pins">
+                    <div class="video-thumb-wrap">
+                        <img src="images/short2.webp" alt="Aftermovie La Croix des Pins" class="video-thumb" loading="eager">
+                        <div class="video-overlay">
+                            <div class="play-circle">
+                                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <div class="video-card-meta">
+                                <span class="video-tag">AFTERMOVIE</span>
+                                <h3 class="video-card-title">Soirée à l'envers</h3>
+                                <p class="video-card-sub">Château la Croix des Pins</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-duration">0:35</div>
+                </div>
+
+                <!-- 3. PORTRAIT · Promo DJ (short3) -->
+                <div class="video-card portrait"
+                     data-video="videos/short3.mp4"
+                     data-title="PROMO DJ"
+                     data-format="portrait"
+                     role="button" tabindex="0" aria-label="Lire Promo DJ">
+                    <div class="video-thumb-wrap">
+                        <img src="images/short3.webp" alt="Promo DJ" class="video-thumb" loading="lazy">
+                        <div class="video-overlay">
+                            <div class="play-circle">
+                                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <div class="video-card-meta">
+                                <span class="video-tag">Short</span>
+                                <h3 class="video-card-title">PROMO DJ UNCLE JIMS</h3>
+                                <p class="video-card-sub">Artistic Live Production</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-duration">0:30</div>
+                </div>
+
+                <!-- 4. WIDE · Délice Show Artistique -->
+                <div class="video-card wide"
+                     data-video="videos/DeliceShow-Artistic.mp4"
+                     data-title="DÉLICE SHOW · Film Artistique"
+                     data-format="wide"
+                     role="button" tabindex="0" aria-label="Lire Délice Show · Film Artistique">
+                    <div class="video-thumb-wrap">
+                        <img src="images/Minia-FeteDeLaMusique00086400.webp" alt="Délice Show · Film Artistique" class="video-thumb" loading="lazy">
+                        <div class="video-overlay">
+                            <div class="play-circle">
+                                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <div class="video-card-meta">
+                                <span class="video-tag">AFTERMOVIE</span>
+                                <h3 class="video-card-title">Soirée privée - CANNES</h3>
+                                <p class="video-card-sub">Delice Show</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. FULL · Fête de la Musique -->
+                <div class="video-card full"
+                     data-video="videos/FeteMusique-Saint-Mathieu-de-Trevier.mp4"
+                     data-title="FÊTE DE LA MUSIQUE · Saint-Mathieu-de-Trévier"
+                     data-format="wide"
+                     role="button" tabindex="0" aria-label="Lire Fête de la Musique · Saint-Mathieu-de-Trévier">
+                    <div class="video-thumb-wrap">
+                        <img src="images/Minia-FeteDeLaMusique00086401.webp" alt="Fête de la Musique Saint-Mathieu-de-Trévier" class="video-thumb" loading="lazy">
+                        <div class="video-overlay">
+                            <div class="play-circle">
+                                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <div class="video-card-meta">
+                                <span class="video-tag">AFTERMOVIE</span>
+                                <h3 class="video-card-title">FÊTE DE LA MUSIQUE</h3>
+                                <p class="video-card-sub">Saint-Mathieu-de-Trévier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /video-grid -->
+            </div><!-- /w -->
+        </div><!-- /video-section -->
+
+        <!-- ===== DIVIDER ===== -->
+        <div class="section-divider"><div class="w" style="display:flex;align-items:center;gap:18px;width:100%">
+            <div style="flex:1;height:1px;background:rgba(255,255,255,0.05)"></div>
+            <div class="divider-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <div style="flex:1;height:1px;background:rgba(255,255,255,0.05)"></div>
+        </div></div>
+
+        <!-- ===== PHOTO SECTION ===== -->
+        <div class="section-header" id="photos">
+            <div class="section-tag">Reportage photo</div>
+            <h2>GALERIE <em>IMAGES</em></h2>
+            <p>Soirées, événements, shows. Nos reportages photo capturent l'atmosphère et les moments forts de chaque occasion. La photographie est une option exclusive réservée à nos clients vidéo.</p>
+        </div>
+
+        <div class="photo-section">
+            <div class="w">
+            <!-- CATÉGORIE : SOIRÉES -->
+            <div class="photo-category">
+                <div class="photo-cat-header">
+                    <span class="photo-cat-label">Soirées</span>
+                    <span class="photo-cat-count">14 photos</span>
+                    <div class="photo-cat-line"></div>
+                </div>
+                <div class="photo-grid">
+                <div class="photo-item" data-index="0">
+                    <img src="images/photos/soiree-privee-1.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="1">
+                    <img src="images/photos/soiree-privee-2.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="2">
+                    <img src="images/photos/soiree-privee-3.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="3">
+                    <img src="images/photos/soiree-privee-4.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="4">
+                    <img src="images/photos/soiree-privee-5.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="5">
+                    <img src="images/photos/soiree-privee-6.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="6">
+                    <img src="images/photos/soiree-privee-7.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="7">
+                    <img src="images/photos/soiree-privee-8.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="8">
+                    <img src="images/photos/soiree-privee-9.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="9">
+                    <img src="images/photos/soiree-privee-10.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="10">
+                    <img src="images/photos/soiree-privee-11.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="11">
+                    <img src="images/photos/soiree-privee-12.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="12">
+                    <img src="images/photos/soiree-privee-13.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="13">
+                    <img src="images/photos/soiree-privee-14.webp" alt="Soirée" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                </div><!-- /photo-grid soirées -->
+            </div><!-- /photo-category soirées -->
+
+            <!-- CATÉGORIE : ÉVÉNEMENTS & SHOWS -->
+            <div class="photo-category">
+                <div class="photo-cat-header">
+                    <span class="photo-cat-label">Événements &amp; Shows</span>
+                    <span class="photo-cat-count">27 photos</span>
+                    <div class="photo-cat-line"></div>
+                </div>
+                <div class="photo-grid">
+                <div class="photo-item" data-index="9">
+                    <img src="images/photos/delice-show-circe-1.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="10">
+                    <img src="images/photos/delice-show-circe-2.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="11">
+                    <img src="images/photos/delice-show-circe-3.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="12">
+                    <img src="images/photos/delice-show-circe-4.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="13">
+                    <img src="images/photos/delice-show-circe-5.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="14">
+                    <img src="images/photos/delice-show-circe-6.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="15">
+                    <img src="images/photos/delice-show-circe-7.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="16">
+                    <img src="images/photos/delice-show-circe-8.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="17">
+                    <img src="images/photos/delice-show-circe-9.webp" alt="Délice Show · Circé" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+
+                <!-- WALIBI ICE SHOW (18) -->
+                <div class="photo-item" data-index="18">
+                    <img src="images/photos/spectacle-walibi-1.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="19">
+                    <img src="images/photos/spectacle-walibi-2.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="20">
+                    <img src="images/photos/spectacle-walibi-3.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="21">
+                    <img src="images/photos/spectacle-walibi-4.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="22">
+                    <img src="images/photos/spectacle-walibi-5.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="23">
+                    <img src="images/photos/spectacle-walibi-6.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="24">
+                    <img src="images/photos/spectacle-walibi-7.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="25">
+                    <img src="images/photos/spectacle-walibi-8.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="26">
+                    <img src="images/photos/spectacle-walibi-9.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="27">
+                    <img src="images/photos/spectacle-walibi-10.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="28">
+                    <img src="images/photos/spectacle-walibi-11.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="29">
+                    <img src="images/photos/spectacle-walibi-12.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="30">
+                    <img src="images/photos/spectacle-walibi-13.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="31">
+                    <img src="images/photos/spectacle-walibi-14.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="32">
+                    <img src="images/photos/spectacle-walibi-15.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="33">
+                    <img src="images/photos/spectacle-walibi-16.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="34">
+                    <img src="images/photos/spectacle-walibi-17.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                <div class="photo-item" data-index="35">
+                    <img src="images/photos/spectacle-walibi-18.webp" alt="Ice Show · Walibi" loading="lazy" draggable="false">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                </div>
+                </div><!-- /photo-grid événements -->
+            </div><!-- /photo-category événements -->
+
+            </div><!-- /w -->
+        </div><!-- /photo-section -->
+
+        <!-- ===== CTA ===== -->
+        <section class="showcase-cta">
+            <div class="eyebrow">Votre projet</div>
+            <h2>PARLONS DE <em>VOTRE</em><br>ÉVÉNEMENT</h2>
+            <p>
+                Vous organisez un événement, une soirée, un show ?
+                Confiez-nous sa captation. Nous vous accompagnons de la prise de vue
+                au rendu final pour des images à la hauteur de vos ambitions.
+            </p>
+            <div class="hero-btns">
+                <a href="/#contact" class="btn btn-primary">Demander un devis</a>
+                <a href="/" class="btn btn-outline">Découvrir nos services</a>
+            </div>
+            <div class="cta-contact-row">
+                <div class="cta-contact-item">
+                    <span class="cta-dot"></span>
+                    <span>Téléphone</span>
+                    <a href="tel:+33783832507">07 83 83 25 07</a>
+                </div>
+                <div class="cta-contact-item">
+                    <span class="cta-dot"></span>
+                    <span>Email</span>
+                    <a href="mailto:contact@humanrec.fr">contact@humanrec.fr</a>
+                </div>
+                <div class="cta-contact-item">
+                    <span class="cta-dot"></span>
+                    <span>Basé à</span>
+                    <span style="color: var(--white);">Avignon · Vaucluse</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== VIDEO MODAL ===== -->
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo">
+        <div class="modal-bg" id="modalBg"></div>
+        <div class="modal-container" id="modalContainer">
+            <button class="modal-close" id="modalClose" aria-label="Fermer">&#x2715;</button>
+            <video class="modal-video" id="modalVideo" controls playsinline preload="none"></video>
+            <div class="modal-info">
+                <span class="modal-info-dot"></span>
+                <span class="modal-info-title" id="modalTitle"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PHOTO LIGHTBOX ===== -->
+    <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Galerie photo">
+        <div class="lb-bg" id="lbBg"></div>
+        <button class="lb-prev" id="lbPrev" aria-label="Photo précédente">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="lb-inner">
+            <button class="lb-close" id="lbClose" aria-label="Fermer">&#x2715;</button>
+            <img class="lb-img" id="lbImg" src="" alt="">
+            <div class="lb-counter" id="lbCounter"></div>
+        </div>
+        <button class="lb-next" id="lbNext" aria-label="Photo suivante">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+    </div>
+
+    <script>
+        // ===== NAV SCROLL =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        // ===== VIDEO MODAL =====
+        const videoModal = document.getElementById('videoModal');
+        const modalBg    = document.getElementById('modalBg');
+        const modalClose = document.getElementById('modalClose');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalCont  = document.getElementById('modalContainer');
+
+        document.querySelectorAll('.video-card').forEach(card => {
+            card.addEventListener('click', function() { openVideo(this); });
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(this); }
+            });
+        });
+
+        function openVideo(card) {
+            const src    = card.dataset.video;
+            const title  = card.dataset.title;
+            const format = card.dataset.format;
+
+            // Stop any current playback cleanly
+            modalVideo.pause();
+            modalVideo.removeAttribute('src');
+            modalVideo.load();
+
+            // Set format class before showing
+            modalCont.className = format === 'portrait' ? 'modal-container is-portrait' : 'modal-container is-wide';
+            modalTitle.textContent = title;
+
+            // Show modal
+            videoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Assign src directly on the video element (fiable sur tous les navigateurs)
+            modalVideo.src = src;
+            modalVideo.load();
+
+            // Lecture dès que les métadonnées sont prêtes
+            modalVideo.addEventListener('loadedmetadata', function handler() {
+                modalVideo.removeEventListener('loadedmetadata', handler);
+                modalVideo.play().catch(() => {
+                    // Autoplay bloqué par le navigateur · l'utilisateur peut lancer manuellement
+                });
+            });
+        }
+
+        function closeVideo() {
+            videoModal.classList.remove('active');
+            modalVideo.pause();
+            modalVideo.removeAttribute('src');
+            modalVideo.load();
+            document.body.style.overflow = '';
+        }
+
+        modalClose.addEventListener('click', closeVideo);
+        modalBg.addEventListener('click', closeVideo);
+
+        // ===== PHOTO LIGHTBOX =====
+        const photoLightbox = document.getElementById('photoLightbox');
+        const lbBg     = document.getElementById('lbBg');
+        const lbClose  = document.getElementById('lbClose');
+        const lbImg    = document.getElementById('lbImg');
+        const lbCounter= document.getElementById('lbCounter');
+        const lbPrev   = document.getElementById('lbPrev');
+        const lbNext   = document.getElementById('lbNext');
+
+        const photoItems = Array.from(document.querySelectorAll('.photo-item'));
+        const photoSrcs  = photoItems.map(item => ({
+            src: item.querySelector('img').src,
+            alt: item.querySelector('img').alt
+        }));
+        let currentPhoto = 0;
+
+        photoItems.forEach((item, i) => {
+            item.addEventListener('click', () => openPhoto(i));
+        });
+
+        function openPhoto(index) {
+            currentPhoto = index;
+            lbImg.src = photoSrcs[index].src;
+            lbImg.alt = photoSrcs[index].alt;
+            lbCounter.textContent = (index + 1) + ' / ' + photoSrcs.length;
+            photoLightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePhoto() {
+            photoLightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigate(dir) {
+            currentPhoto = (currentPhoto + dir + photoSrcs.length) % photoSrcs.length;
+            lbImg.style.opacity = '0';
+            setTimeout(() => {
+                lbImg.src = photoSrcs[currentPhoto].src;
+                lbImg.alt = photoSrcs[currentPhoto].alt;
+                lbCounter.textContent = (currentPhoto + 1) + ' / ' + photoSrcs.length;
+                lbImg.style.opacity = '1';
+            }, 150);
+        }
+
+        lbClose.addEventListener('click', closePhoto);
+        lbBg.addEventListener('click', closePhoto);
+        lbPrev.addEventListener('click', () => navigate(-1));
+        lbNext.addEventListener('click', () => navigate(1));
+
+        // Transition sur l'image lightbox
+        lbImg.style.transition = 'opacity 0.15s ease';
+
+        // Keyboard navigation
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                if (videoModal.classList.contains('active')) closeVideo();
+                else if (photoLightbox.classList.contains('active')) closePhoto();
+            }
+            if (photoLightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft')  navigate(-1);
+                if (e.key === 'ArrowRight') navigate(1);
+            }
+        });
+    </script>
+    <script src="/js/reveal.js" defer></script>
+
+</body>
+</html>

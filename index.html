@@ -143,7 +143,7 @@
             "url": "https://humanrec.fr",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://humanrec.fr/images/logo.png",
+                "url": "https://humanrec.fr/images/logo.webp",
                 "width": 300,
                 "height": 100
             },
@@ -516,6 +516,14 @@
                     <source srcset="images/clients/lamaizon-logo.webp" type="image/webp">
                     <img src="images/clients/lamaizon-logo.png" alt="La Maizon" width="160" height="80" loading="lazy" decoding="async">
                 </picture>
+                <picture>
+                    <source srcset="images/clients/seda-logo.avif" type="image/avif">
+                    <img src="images/clients/seda-logo.webp" alt="SEDA réfrigération" width="356" height="200" loading="lazy" decoding="async">
+                </picture>
+                <picture>
+                    <source srcset="images/clients/lacroixdespins-logo.avif" type="image/avif">
+                    <img src="images/clients/lacroixdespins-logo.webp" alt="Château La Croix des Pins" width="356" height="200" loading="lazy" decoding="async">
+                </picture>
             </div>
         </section>
 
@@ -784,21 +792,36 @@
                             </div>
                         </a>
 
-                    </div>
+                        <a href="projets/film-promotionnel-la-bastide-des-salins" class="portfolio-item medium reveal"
+                            data-category="promotionnel">
+                            <img src="images/Minia-LaBastideDesSalins.webp" loading="lazy"
+                                alt="La Bastide des Salins - Vidéo hôtel 4 étoiles à Saint-Tropez par HUMAN REC" width="800"
+                                height="450" decoding="async">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-tag">Promotionnelle</span>
+                                <h3 class="portfolio-title">La Bastide des Salins</h3>
+                            </div>
+                            <div class="portfolio-play">
+                                <svg viewBox="0 0 24 24">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                            </div>
+                        </a>
 
-                    <!-- Bandeau CTA aligné sur la largeur de la grille -->
-                    <a href="#contact" class="portfolio-cta-banner reveal"
-                        style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; margin: 30px 5% 0; padding: 24px 36px; background: linear-gradient(135deg, rgba(230,57,70,.12), rgba(230,57,70,.04)); border: 1px solid rgba(230,57,70,.25); transition: all 0.5s ease;">
-                        <div>
-                            <div style="font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--red); margin-bottom: 6px;">Votre projet ici ?</div>
-                            <h3 style="font-family: 'Clash Display', sans-serif; font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 600; letter-spacing: 0.02em; line-height: 1.1; margin: 0; color: var(--white);">Discutons-en</h3>
-                        </div>
-                        <div class="portfolio-cta-arrow" style="display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border: 1px solid rgba(230,57,70,.5); border-radius: 50%; color: var(--red); flex-shrink: 0; transition: all 0.4s ease;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </div>
-                    </a>
+                        <a href="#contact" class="portfolio-item portfolio-cta-card reveal"
+                            style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 16px; min-height: 250px; padding: 32px; background: linear-gradient(135deg, rgba(230,57,70,.14), rgba(230,57,70,.05)); border: 1px solid rgba(230,57,70,.28); text-decoration: none; transition: all 0.5s ease;">
+                            <div>
+                                <div style="font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--red); margin-bottom: 8px;">Un projet en tête ?</div>
+                                <h3 style="font-family: 'Clash Display', sans-serif; font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 600; letter-spacing: 0.02em; line-height: 1.05; margin: 0; color: var(--white);">Discutons-en</h3>
+                            </div>
+                            <div class="portfolio-cta-arrow" style="display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border: 1px solid rgba(230,57,70,.5); border-radius: 50%; color: var(--red); flex-shrink: 0; transition: all 0.4s ease;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </a>
+
+                    </div>
 
                     <style>
                         .portfolio-cta-banner:hover {

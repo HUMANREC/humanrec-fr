@@ -17,8 +17,8 @@
     <meta property="og:type" content="video.other">
     <meta property="og:url" content="https://humanrec.fr/projets/film-evenementiel-game-of-prod">
     <meta property="og:image" content="https://humanrec.fr/images/projet4.webp">
-    <meta property="og:video" content="https://humanrec.fr/videos/GOP-ForeverLiving2024-ok.mp4">
-    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video" content="https://www.youtube.com/embed/o0Sj05oKPt4">
+    <meta property="og:video:type" content="text/html">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="HUMAN REC">
 
@@ -45,13 +45,13 @@
     "thumbnailUrl": "https://humanrec.fr/images/projet4.webp",
     "uploadDate": "2024-11-01",
     "duration": "PT1M",
-    "contentUrl": "https://humanrec.fr/videos/GOP-ForeverLiving2024-ok.mp4",
-    "embedUrl": "https://humanrec.fr/projets/film-evenementiel-game-of-prod",
+    "contentUrl": "https://www.youtube.com/watch?v=o0Sj05oKPt4",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/o0Sj05oKPt4",
     "producer": {
         "@type": "Organization",
         "name": "HUMAN REC",
         "url": "https://humanrec.fr",
-        "logo": "https://humanrec.fr/images/logo.png"
+        "logo": "https://humanrec.fr/images/logo.webp"
     },
     "author": {
         "@type": "Person",
@@ -78,7 +78,7 @@
         "name": "HUMAN REC",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://humanrec.fr/images/logo.png",
+            "url": "https://humanrec.fr/images/logo.webp",
             "width": 300,
             "height": 100
         }
@@ -211,17 +211,11 @@
 
                     <!-- Vidéo -->
                     <div class="project-video fade-in delay-3" id="videoContainer">
-                        <video id="projectVideo" poster="../images/projet4.webp">
-                            <source src="../videos/GOP-ForeverLiving2024-ok.mp4" type="video/mp4">
-                            Votre navigateur ne supporte pas la vidéo.
-                        </video>
-                        <div class="play-overlay" onclick="playVideo()">
-                            <div class="play-btn">
-                                <svg viewBox="0 0 24 24">
-                                    <polygon points="5 3 19 12 5 21 5 3" />
-                                </svg>
-                            </div>
-                        </div>
+                        <iframe src="https://www.youtube-nocookie.com/embed/o0Sj05oKPt4" title="Game of Prod - Event is Coming, captation evenementielle HUMAN REC"
+                            style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen loading="lazy"></iframe>
                     </div>
 
                 </div>
@@ -435,15 +429,6 @@
             video.play();
             video.controls = true;
         }
-
-        document.getElementById('projectVideo').addEventListener('pause', function () {
-            document.getElementById('videoContainer').classList.remove('playing');
-        });
-
-        document.getElementById('projectVideo').addEventListener('ended', function () {
-            document.getElementById('videoContainer').classList.remove('playing');
-            this.controls = false;
-        });
     </script>
     <script src="/js/reveal.js" defer></script>
 

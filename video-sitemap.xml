@@ -12,7 +12,7 @@
     <url>
         <loc>https://humanrec.fr/projets/film-promotionnel-zerod</loc>
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/projet1.png</video:thumbnail_loc>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet1.webp</video:thumbnail_loc>
             <video:title>Film Promotionnel Z3ROD - Triathlon</video:title>
             <video:description>Film publicitaire réalisé pour Z3ROD, marque française de triathlon reconnue à l'international. Pensée pour refléter les valeurs de performance, d'endurance et d'élégance sportive de la marque. Tournage sur 3 jours par HUMAN REC, production audiovisuelle Avignon.</video:description>
             <video:content_loc>https://humanrec.fr/videos/ZEROD.mp4</video:content_loc>
@@ -34,10 +34,10 @@
     <url>
         <loc>https://humanrec.fr/projets/film-evenementiel-deliceshow</loc>
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/projet5.png</video:thumbnail_loc>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet5.webp</video:thumbnail_loc>
             <video:title>Delice Show - Le Show (Version Courte)</video:title>
             <video:description>Captation événementielle d'une soirée privée au Circe organisée par Delice Show. Version courte mettant en valeur les moments forts du show. Production HUMAN REC, vidéaste événementiel Vaucluse.</video:description>
-            <video:content_loc>https://humanrec.fr/videos/Circe-30sec-4k.mp4</video:content_loc>
+            <video:player_loc>https://www.youtube.com/embed/FpVzqrBMk-I</video:player_loc>
             <video:duration>45</video:duration>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
@@ -52,10 +52,10 @@
         
         <!-- Version Longue (Préparation + Show) -->
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/projet5bis.jpg</video:thumbnail_loc>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet5bis.webp</video:thumbnail_loc>
             <video:title>Delice Show - Préparation + Show (Version Complète)</video:title>
             <video:description>Version longue de la captation événementielle Delice Show, incluant les coulisses, la préparation et le show complet. Une immersion dans l'univers élégant de Delice Show. Production HUMAN REC Avignon.</video:description>
-            <video:content_loc>https://humanrec.fr/videos/Circe-1min-4k.mp4</video:content_loc>
+            <video:player_loc>https://www.youtube.com/embed/icz87pg2a-g</video:player_loc>
             <video:duration>120</video:duration>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
@@ -73,10 +73,10 @@
     <url>
         <loc>https://humanrec.fr/projets/film-evenementiel-game-of-prod</loc>
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/projet4.jpg</video:thumbnail_loc>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet4.webp</video:thumbnail_loc>
             <video:title>Game of Prod - Event is Coming (Forever Living 2024)</video:title>
             <video:description>Captation événementielle complète pour Game of Prod. Sur une journée entière, notre équipe a capté l'énergie et les moments forts de l'événement Forever Living 2024. Film percutant et promotionnel par HUMAN REC.</video:description>
-            <video:content_loc>https://humanrec.fr/videos/GOP-ForeverLiving2024-ok.mp4</video:content_loc>
+            <video:player_loc>https://www.youtube.com/embed/o0Sj05oKPt4</video:player_loc>
             <video:duration>60</video:duration>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
@@ -95,10 +95,10 @@
     <url>
         <loc>https://humanrec.fr/projets/film-promotionnel-athletic-fitness-club</loc>
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/projet3.jpg</video:thumbnail_loc>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet3.webp</video:thumbnail_loc>
             <video:title>Vidéo promotionnelle Athletic Fitness Club</video:title>
             <video:description>Vidéo promotionnelle réalisée pour Athletic Fitness Club, salle de sport à Montpellier. Un film authentique, énergique et fidèle à l'esprit du club, conçu pour renforcer son image et attirer de nouveaux adhérents. Tournage sur 2 jours par HUMAN REC.</video:description>
-            <video:content_loc>https://humanrec.fr/videos/Atlhetics%20Fitness%20Club.mp4</video:content_loc>
+            <video:player_loc>https://www.youtube.com/embed/R07ILtYv8Tk</video:player_loc>
             <video:duration>60</video:duration>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
@@ -117,10 +117,10 @@
     <url>
         <loc>https://humanrec.fr/projets/film-promotionnel-la-maizon</loc>
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/projet2.png</video:thumbnail_loc>
+            <video:thumbnail_loc>https://humanrec.fr/images/projet2.webp</video:thumbnail_loc>
             <video:title>Film Publicitaire La Maizon - Maison d'hôtes de Provence</video:title>
             <video:description>Film publicitaire pour La Maizon, maison d'hôtes de charme au cœur du Vaucluse. Approche cinématographique mettant en scène des instants de vie et moments de convivialité pour permettre aux visiteurs de se projeter dans l'expérience. Production HUMAN REC Avignon.</video:description>
-            <video:content_loc>https://humanrec.fr/videos/La%20Maizon%20V1.mp4</video:content_loc>
+            <video:player_loc>https://www.youtube.com/embed/N05l9AmdBsw</video:player_loc>
             <video:duration>60</video:duration>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
@@ -140,10 +140,10 @@
     <url>
         <loc>https://humanrec.fr/projets/film-evenementiel-iceshow</loc>
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/WALIBI-MINIA_1.10.1.jpg</video:thumbnail_loc>
+            <video:thumbnail_loc>https://humanrec.fr/images/WALIBI-MINIA_1.10.1.webp</video:thumbnail_loc>
             <video:title>Ice Show by Delice Show - Walibi Belgique</video:title>
             <video:description>Captation événementielle du Ice Show par Delice Show au parc Walibi en Belgique. HUMAN REC a suivi les équipes pour immortaliser ce spectacle sur glace unique. Production audiovisuelle Avignon.</video:description>
-            <video:content_loc>https://humanrec.fr/videos/WalibiV1.mp4</video:content_loc>
+            <video:player_loc>https://www.youtube.com/embed/acAXEd6QoS0</video:player_loc>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
             <video:requires_subscription>no</video:requires_subscription>
@@ -159,10 +159,10 @@
         
         <!-- Tournée France 2025 -->
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/Minia-Tournee.jpg</video:thumbnail_loc>
+            <video:thumbnail_loc>https://humanrec.fr/images/Minia-Tournee.webp</video:thumbnail_loc>
             <video:title>Ice Show by Delice Show - Tournée France 2025</video:title>
             <video:description>Captation de la tournée Ice Show par Delice Show à travers la France durant les fêtes de Noël. HUMAN REC a accompagné les équipes dans plusieurs villes pour capturer l'énergie de chaque représentation. Production HUMAN REC Avignon.</video:description>
-            <video:content_loc>https://humanrec.fr/videos/DeliceShow-Tournee2025V2.mp4</video:content_loc>
+            <video:player_loc>https://www.youtube.com/embed/ySTEf0b5fu0</video:player_loc>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
             <video:requires_subscription>no</video:requires_subscription>
@@ -177,14 +177,14 @@
         </video:video>
     </url>
 
-    <!-- 7. FILM ARTISTIQUE - Grace is a violence you cannot see -->
+    <!-- 7. FILM ARTISTIQUE - Volare -->
     <url>
         <loc>https://humanrec.fr/projets/film-artistique</loc>
         <video:video>
-            <video:thumbnail_loc>https://humanrec.fr/images/Minia-FilmArtistique.jpg</video:thumbnail_loc>
-            <video:title>Grace is a violence you cannot see</video:title>
+            <video:thumbnail_loc>https://humanrec.fr/images/Minia-FilmArtistique.webp</video:thumbnail_loc>
+            <video:title>Volare</video:title>
             <video:description>Projet artistique unique par HUMAN REC. Une exploration visuelle et sonore, avec un travail approfondi sur la colorimétrie et le montage rythmique. Une œuvre d'art vidéo.</video:description>
-            <video:content_loc>https://humanrec.fr/videos/Grace%20is%20a%20violence%20you%20cannot%20see..mp4</video:content_loc>
+            <video:player_loc>https://www.youtube.com/embed/hrywBz3qaqM</video:player_loc>
             <video:duration>60</video:duration>
             <video:publication_date>2026-04-28</video:publication_date>
             <video:family_friendly>yes</video:family_friendly>
@@ -195,6 +195,28 @@
             <video:tag>création vidéo</video:tag>
             <video:tag>HUMAN REC</video:tag>
             <video:category>Arts</video:category>
+        </video:video>
+    </url>
+
+    <!-- 8. VIDEO DE PRESENTATION - La Bastide des Salins -->
+    <url>
+        <loc>https://humanrec.fr/projets/film-promotionnel-la-bastide-des-salins</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/Minia-LaBastideDesSalins.webp</video:thumbnail_loc>
+            <video:title>La Bastide des Salins - Hôtel 4 étoiles à Saint-Tropez</video:title>
+            <video:description>Vidéo de présentation de La Bastide des Salins, hôtel 4 étoiles à Saint-Tropez. À la demande du client, un regard neutre sans mise en scène ni comédiens, tourné en deux jours. Production HUMAN REC.</video:description>
+            <video:player_loc>https://www.youtube.com/embed/jafaTvMW9yo</video:player_loc>
+            <video:duration>37</video:duration>
+            <video:publication_date>2026-08-01</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+            <video:tag>vidéo de présentation</video:tag>
+            <video:tag>hôtel</video:tag>
+            <video:tag>Saint-Tropez</video:tag>
+            <video:tag>4 étoiles</video:tag>
+            <video:tag>HUMAN REC</video:tag>
+            <video:category>Travel</video:category>
         </video:video>
     </url>
 

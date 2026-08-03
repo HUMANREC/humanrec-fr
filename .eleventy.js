@@ -73,6 +73,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.ignores.add("node_modules");
     eleventyConfig.ignores.add("_site");
     eleventyConfig.ignores.add(".git");
+    eleventyConfig.ignores.add("backup"); // pages mises en suspens, hors site (non deployees)
 
     // ==========================================================================
     // FILTRES — utilitaires pour les templates
