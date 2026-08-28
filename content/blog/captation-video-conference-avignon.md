@@ -199,8 +199,6 @@ Le déroulé est le même que vous soyez au Centre des Congrès du Palais des Pa
 
 **Environ deux heures avant.** Pour une conférence qui commence à 15h30, l'équipe arrive à 13h30. Installation des caméras et du son, essais, point avec la régie. Ce temps n'est pas une marge de confort, c'est là que se règlent les problèmes qui n'auraient aucune solution une fois le public installé.
 
-<img src="/images/preparation-captation-conference-camera.webp" alt="Préparation d'une captation de conférence par HUMAN REC : point sur le déroulé avec l'organisatrice avant l'ouverture au public, caméra installée sur trépied à droite" width="1600" height="1200" loading="lazy" decoding="async">
-
 C'est aussi le moment où l'on cale le déroulé avec vous : qui parle, dans quel ordre, ce qui est prévu et ce qui peut bouger. Une équipe qui connaît le programme n'a plus à deviner ce qui va se passer pendant l'événement.
 
 **Pendant.** L'équipe reste du début à la fin, débordement horaire inclus. Un événement qui déborde de vingt minutes ne s'arrête pas de tourner, et cela ne se renégocie pas sur place.
