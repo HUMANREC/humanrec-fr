@@ -36,3 +36,7 @@ humanrec-studio/
 .claude/launch.json
 
 .claude/worktrees/
+
+# Dossiers hors site (conserves dans ~/Desktop/HUMANREC-hors-site)
+mockups/
+backup/
