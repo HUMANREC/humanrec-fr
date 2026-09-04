@@ -49,6 +49,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("services");
     eleventyConfig.addPassthroughCopy("projets");
     eleventyConfig.addPassthroughCopy("images");
+    eleventyConfig.addPassthroughCopy("img"); // images a URL stable (signature mail, etc.)
     eleventyConfig.addPassthroughCopy("videos");
     eleventyConfig.addPassthroughCopy("js");
     eleventyConfig.addPassthroughCopy("favicons");
