@@ -2923,3 +2923,52 @@ footer {
         display: none;
     }
 }
+
+
+/* ==========================================================================
+   BANDEAU LOGOS CLIENTS — defilement continu sur une seule ligne
+   ========================================================================== */
+.clients-marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+
+.clients-marquee .clients-grid {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 0;
+    width: max-content;
+    animation: clients-scroll 28s linear infinite;
+}
+
+.clients-marquee .clients-grid > picture {
+    flex: 0 0 auto;
+    margin-right: 70px;
+}
+
+/* Lecture confortable : on stoppe au survol */
+.clients-marquee:hover .clients-grid {
+    animation-play-state: paused;
+}
+
+/* 3 copies dans la piste : un tiers = exactement une serie */
+@keyframes clients-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-33.3333%); }
+}
+
+@media (max-width: 768px) {
+    .clients-marquee .clients-grid > picture { margin-right: 45px; }
+    .clients-marquee .clients-grid { animation-duration: 22s; }
+}
+
+/* Accessibilite : pas d'animation, retour a la grille sur plusieurs lignes */
+@media (prefers-reduced-motion: reduce) {
+    .clients-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+    .clients-marquee .clients-grid { animation: none; width: auto; flex-wrap: wrap; justify-content: center; }
+    .clients-marquee .clients-grid > picture { margin-right: 35px; }
+    .clients-marquee .clients-grid > picture[aria-hidden="true"] { display: none; }
+}
