@@ -25,6 +25,9 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 /services/video-corporate-vaucluse                         /services/video-promotionnelle-avignon                     301!
 /services/video-promotionnelle-avignon.html                /services/video-promotionnelle-avignon                     301!
 /services/captation-evenementielle-avignon.html            /services/captation-evenementielle-avignon                 301!
+/services/photographe-avignon.html                         /services/photographe-avignon                              301!
+/services/captation-drone-avignon.html                     /services/captation-drone-avignon                          301!
+/services/creation-fiction-clip-podcast.html               /services/creation-fiction-clip-podcast                    301!
 
 # Pages projets
 /projets/film-artistique.html                              /projets/film-artistique                                   301!

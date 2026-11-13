@@ -14,7 +14,9 @@ Sitemap: https://humanrec.fr/video-sitemap.xml
 # Crawl-delay (optionnel)
 Crawl-delay: 1
 
-# Règles spécifiques pour Bing
+# Règles spécifiques pour Bing (un groupe dédié remplace le groupe *, d'où les Disallow répétés)
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /*.pdf$
 Crawl-delay: 1

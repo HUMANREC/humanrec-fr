@@ -1,0 +1,119 @@
+/* ==========================================================================
+   HUMAN REC : correctifs tablette et téléphone, communs à toutes les pages.
+   Chargé en dernier dans le <head> pour passer après les styles de chaque page.
+   Penser à incrémenter ?v=N dans les pages à chaque modification.
+   ========================================================================== */
+
+/* ---------- Tablette : grilles à 4 colonnes ramenées à 2 ---------- */
+@media (max-width: 1024px) {
+  .advantages-grid, .process-timeline, .events-grid, .types-grid,
+  .deliverables-grid, .equipment-grid, .creation-univers-grid,
+  .pour-qui-grid, .services-grid, .process-grid, .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* ---------- Navigation ---------- */
+  nav .nav-menu { display: none !important; }
+  .menu-toggle { display: flex !important; }
+  .mobile-menu { gap: 22px !important; padding: 90px 20px 40px; overflow-y: auto; }
+  .mobile-menu a { font-size: 1.9rem !important; }
+  body:has(.mobile-menu.active) .breadcrumb, body:has(.mobile-menu.active) .whatsapp-btn { visibility: hidden; }
+  .mobile-menu a.mobile-phone-link, .mobile-menu a.hr-mm-phone {
+    font-family: Inter, sans-serif !important; font-size: 1.05rem !important;
+    color: var(--red) !important; font-weight: 600; letter-spacing: .06em; margin-top: 12px;
+  }
+
+  /* ---------- Fil d'Ariane : une ligne, défilable ---------- */
+  .breadcrumb { padding: 10px 16px !important; }
+  .breadcrumb-list { flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; font-size: .7rem !important; }
+  .breadcrumb-list::-webkit-scrollbar { display: none; }
+  .breadcrumb-list li { white-space: nowrap; flex: 0 0 auto; }
+  .breadcrumb-list a, .breadcrumb-list .current { letter-spacing: .06em !important; }
+
+  /* ---------- Hero des pages de service ---------- */
+  .service-hero { padding: 150px 20px 70px !important; min-height: auto !important; }
+  .service-hero-content { min-width: 0 !important; width: 100% !important; max-width: 100% !important; }
+  .service-hero h1 { font-size: clamp(1.9rem, 8.4vw, 3.2rem) !important; overflow-wrap: anywhere; }
+  .service-hero-desc { font-size: 1rem !important; }
+  .hero-cta-group { flex-direction: column; align-items: stretch; }
+  .hero-cta-group .btn { justify-content: center; }
+
+  /* ---------- Grilles : une colonne ---------- */
+  .advantages-grid, .process-timeline, .events-grid, .types-grid,
+  .deliverables-grid, .equipment-grid, .equipment-list, .creation-univers-grid,
+  .pour-qui-grid, .services-grid, .process-grid, .included-grid,
+  .other-services-grid, .realisations-grid, .pourquoi-content, .zones-content {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 22px !important;
+  }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 14px !important; }
+
+  /* Vignettes de réalisations : pleine largeur, format vidéo */
+  .realisations-grid .realisation-card,
+  .realisations-grid > a, .realisations-grid > div { width: 100% !important; max-width: none !important; }
+  .realisations-grid img { width: 100% !important; max-width: 100% !important; object-fit: cover; }
+  .shorts-row { grid-template-columns: minmax(0, 300px) !important; }
+
+  /* Processus : numéros plus petits, alignés à gauche du texte */
+  .process-timeline::before, .process-timeline::after { display: none !important; }
+  .process-step { display: grid !important; grid-template-columns: 64px minmax(0, 1fr); column-gap: 18px;
+                  text-align: left !important; align-items: start; }
+  .process-step .step-number { width: 64px !important; height: 64px !important; font-size: 1.4rem !important;
+                               margin: 0 !important; grid-row: span 2; }
+  .process-step .step-number + * { margin-top: 6px !important; }
+  .process-step h3, .process-step p { grid-column: 2; }
+  .process-step::before, .process-step::after { display: none !important; }
+
+  /* Ce qui est inclus : image au-dessus, texte en dessous */
+  .included-grid > * { min-width: 0; }
+  .included-grid img { width: 100% !important; height: auto !important; aspect-ratio: 4 / 3; object-fit: cover; }
+  .included-image, .included-visual { order: 2; min-height: 0 !important; height: auto !important; }
+  .included-visual::before { top: 10px !important; left: 10px !important; right: -8px !important; bottom: -8px !important; }
+
+  /* Cartes : pas de largeur minimale qui déborde */
+  .advantage-card, .deliverable-card, .event-card, .type-card, .other-service-card,
+  .service-card, .pricing-card, .stat-card { min-width: 0 !important; width: auto !important; }
+  .advantage-card, .deliverable-card, .event-card, .type-card { padding: 28px 22px !important; }
+  .other-service-card { padding: 26px 22px !important; }
+
+  /* Grilles de tarifs en ligne (minmax 280px) */
+  .pricing-grid { grid-template-columns: minmax(0, 1fr) !important; }
+
+  /* Sections : marges intérieures plus serrées */
+  section { scroll-margin-top: 120px; }
+
+  /* ---------- Pied de page : logo centré ---------- */
+  .footer-brand { text-align: center; }
+  .footer-brand .logo { display: inline-flex !important; justify-content: center; margin: 0 auto; }
+  .footer-brand .logo-img { margin: 0 auto; }
+  .footer-brand .social-links { justify-content: center; }
+  .footer-column { text-align: center; }
+
+  /* ---------- Bandeau cookies au-dessus de la barre Appeler / Devis ---------- */
+  body:has(.mobile-cta-bar) .cookie-banner { bottom: 54px !important; }
+  .cookie-banner { z-index: 1003 !important; }
+  .cookie-banner.show { padding: 16px 20px !important; gap: 12px !important; }
+  body:has(.mobile-cta-bar) #hr-cookie-banner { bottom: 54px !important; }
+  #hr-cookie-banner { z-index: 1003 !important; padding: 14px 16px !important; gap: 10px 16px !important; }
+  #hr-cookie-banner p { font-size: .8rem !important; text-align: center; }
+}
+
+/* ---------- Avant / après étalonnage (accueil) ---------- */
+@media (max-width: 768px) {
+  .ba-prompt { top: 12px !important; bottom: auto !important; left: 12px !important; transform: none !important;
+               padding: 7px 13px !important; font-size: .74rem !important; gap: 7px !important; }
+  .ba-prompt svg { width: 14px; height: 14px; }
+  .ba-toggle-btn { bottom: 12px !important; right: 12px !important; padding: 7px 13px !important; font-size: .74rem !important; }
+}
+@media (hover: none) {
+  .ba-prompt { font-size: 0 !important; }
+  .ba-prompt::after { content: 'Glissez le doigt pour révéler'; font-size: .74rem; }
+}
+
+/* ---------- Petits écrans ---------- */
+@media (max-width: 420px) {
+  .stats-grid { grid-template-columns: minmax(0, 1fr) !important; }
+}
