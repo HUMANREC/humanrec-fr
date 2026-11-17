@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message reçu : c'est dans la boîte | HUMAN REC</title>
+    <meta name="description" content="Votre message est bien arrivé. Sacha Preschesmisky vous répond sous 24 heures ouvrées.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="preload" href="/fonts/clash-display-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" href="/global.min.css?v=2">
+
+    <style>
+        /* ===== PAGE MERCI : un clap de fin de prise ===== */
+        .merci {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+            gap: 70px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 150px 40px 100px;
+        }
+
+        /* Perforations de pellicule, comme sur l'accueil */
+        .perfo {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            pointer-events: none;
+            z-index: 0;
+            background: #060606;
+            border-left: 1px solid rgba(255, 255, 255, .04);
+            border-right: 1px solid rgba(255, 255, 255, .04);
+        }
+
+        .perfo.left { left: 0; }
+        .perfo.right { right: 0; }
+
+        .perfo span {
+            width: 12px;
+            height: 18px;
+            border-radius: 2px;
+            background: #161616;
+        }
+
+        /* Compteur REC en haut de page */
+        .rec-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: .78rem;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 34px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .rec-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--red);
+            box-shadow: 0 0 12px rgba(230, 57, 70, .7);
+            animation: recBlink 1.2s steps(1) infinite;
+        }
+
+        .rec-counter strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .rec-counter .stop {
+            color: var(--red);
+        }
+
+        @keyframes recBlink {
+            50% { opacity: .15; }
+        }
+
+        .merci h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 600;
+            font-size: clamp(2.8rem, 6.5vw, 5.6rem);
+            line-height: .95;
+            letter-spacing: .01em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .merci h1 .outline {
+            display: block;
+            -webkit-text-stroke: 2px var(--white);
+            -webkit-text-fill-color: transparent;
+        }
+
+        .merci h1 .red {
+            display: block;
+            color: var(--red);
+        }
+
+        .merci-lead {
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: #a8a8a8;
+            max-width: 520px;
+            margin-bottom: 50px;
+        }
+
+        .merci-lead strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* La suite : trois plans */
+        .suite-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-size: .78rem;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 22px;
+        }
+
+        .suite-label::before {
+            content: "";
+            width: 40px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .suite {
+            list-style: none;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            margin-bottom: 46px;
+        }
+
+        .suite li {
+            display: grid;
+            grid-template-columns: 70px 1fr;
+            gap: 18px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .suite .plan {
+            font-family: 'Clash Display', sans-serif;
+            font-size: .8rem;
+            letter-spacing: .15em;
+            color: var(--red);
+            padding-top: 3px;
+        }
+
+        .suite h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 500;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+        }
+
+        .suite p {
+            color: #a8a8a8;
+            font-size: .95rem;
+            line-height: 1.6;
+        }
+
+        .merci-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .merci-actions .btn {
+            padding: 18px 32px;
+        }
+
+        .btn-ghost {
+            background: transparent !important;
+            border: 1px solid rgba(255, 255, 255, .35) !important;
+        }
+
+        .btn-ghost:hover {
+            background: var(--white) !important;
+            color: var(--black) !important;
+        }
+
+        .merci-whatsapp {
+            margin-top: 26px;
+            font-size: .9rem;
+            color: var(--gray);
+        }
+
+        .merci-whatsapp a {
+            color: var(--white);
+            border-bottom: 1px solid var(--red);
+            padding-bottom: 1px;
+        }
+
+        /* ===== LE CLAP ===== */
+        .clap-wrap {
+            position: relative;
+            perspective: 900px;
+        }
+
+        .clap {
+            position: relative;
+            width: 100%;
+            max-width: 470px;
+            margin-left: auto;
+            filter: drop-shadow(0 30px 60px rgba(0, 0, 0, .6));
+        }
+
+        .clap-stick,
+        .clap-base-top {
+            height: 54px;
+            background: repeating-linear-gradient(-55deg, #f5f5f5 0 30px, #0a0a0a 30px 60px);
+            border: 2px solid #f5f5f5;
+        }
+
+        .clap-stick {
+            position: relative;
+            transform-origin: 4% 100%;
+            transform: rotate(-22deg);
+            animation: clapShut .55s cubic-bezier(.6, 0, .9, .5) .9s forwards;
+            border-radius: 3px 3px 0 0;
+            z-index: 2;
+        }
+
+        .clap-stick::after {
+            content: "";
+            position: absolute;
+            left: 10px;
+            bottom: -9px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #2a2a2a;
+            border: 2px solid #f5f5f5;
+        }
+
+        @keyframes clapShut {
+            0% { transform: rotate(-22deg); }
+            85% { transform: rotate(1.5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .clap-base-top {
+            margin-top: 4px;
+            background: repeating-linear-gradient(55deg, #f5f5f5 0 30px, #0a0a0a 30px 60px);
+        }
+
+        .clap-board {
+            background: #101010;
+            border: 2px solid #f5f5f5;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            padding: 24px 26px 26px;
+            font-family: 'Clash Display', sans-serif;
+            color: var(--white);
+            position: relative;
+            animation: clapHit .25s ease 1.42s;
+        }
+
+        @keyframes clapHit {
+            40% { transform: translateY(3px); }
+        }
+
+        .clap-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid rgba(245, 245, 245, .25);
+        }
+
+        .clap-row:last-child {
+            border-bottom: none;
+        }
+
+        .clap-cell {
+            padding: 12px 10px;
+            min-width: 0;
+        }
+
+        .clap-cell + .clap-cell {
+            border-left: 1px solid rgba(245, 245, 245, .25);
+        }
+
+        .clap-cell.full {
+            grid-column: 1 / -1;
+        }
+
+        .clap-cell small {
+            display: block;
+            font-family: Inter, sans-serif;
+            font-size: .62rem;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 4px;
+        }
+
+        .clap-cell span {
+            display: block;
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            overflow-wrap: anywhere;
+        }
+
+        .clap-cell .big {
+            font-size: 2.6rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .clap-cell .handwrite {
+            color: var(--red);
+        }
+
+        .clap-flash {
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 999;
+            animation: flash .4s ease-out 1.42s;
+        }
+
+        @keyframes flash {
+            0% { opacity: 0; }
+            20% { opacity: .08; }
+            100% { opacity: 0; }
+        }
+
+        .merci-footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 40px 40px;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: var(--gray);
+            font-size: .85rem;
+        }
+
+        .merci-footer a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 900px) {
+            .merci {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 130px 40px 70px;
+            }
+
+            .clap {
+                margin: 0 auto;
+            }
+
+            .clap {
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .perfo { display: none; }
+
+            .merci {
+                padding: 120px 20px 60px;
+            }
+
+            .clap-stick,
+            .clap-base-top {
+                height: 40px;
+            }
+
+            .clap-board {
+                padding: 16px 16px 18px;
+            }
+
+            .clap-cell .big {
+                font-size: 2rem;
+            }
+
+            .clap-cell span {
+                font-size: .85rem;
+                letter-spacing: .02em;
+            }
+
+            .merci-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .merci-footer {
+                padding: 24px 20px 30px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .clap-stick { animation: none; transform: none; }
+            .clap-board, .clap-flash, .rec-dot { animation: none; }
+        }
+    </style>
+
+    <link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
+    <link rel="icon" href="/favicons/favicon.svg?v=2" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png?v=2">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="perfo left" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="perfo right" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="clap-flash" aria-hidden="true"></div>
+
+    <nav>
+        <a href="/" class="logo" aria-label="HUMAN REC, retour à l'accueil">
+            <img src="/images/human-rec-logo.svg" alt="HUMAN REC" class="logo-img" width="314" height="160">
+        </a>
+        <a href="/" class="back-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Retour à l'accueil</span>
+        </a>
+    </nav>
+
+    <main class="merci">
+        <div class="merci-text">
+            <div class="rec-counter" aria-hidden="true">
+                <span class="rec-dot"></span>
+                <strong id="timecode">00:00:00:00</strong>
+                <span class="stop" id="recState">REC</span>
+            </div>
+
+            <h1>
+                <span id="merciNom">Coupez.</span>
+                <span class="outline">C'est dans</span>
+                <span class="red">la boîte.</span>
+            </h1>
+
+            <p class="merci-lead">
+                Votre message est bien arrivé. <strong>Sacha vous répond sous 24 heures ouvrées</strong>,
+                par téléphone ou par e-mail. On ne fait pas de devis avant d'avoir compris ce que vous
+                cherchez vraiment à dire.
+            </p>
+
+            <div class="suite-label">La suite</div>
+            <ol class="suite">
+                <li>
+                    <span class="plan">PLAN 01</span>
+                    <div>
+                        <h2>On vous recontacte</h2>
+                        <p>Sous 24 heures ouvrées. Si vous avez laissé un numéro, on vous appelle.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="plan">PLAN 02</span>
+                    <div>
+                        <h2>Quinze minutes pour comprendre</h2>
+                        <p>Ce que vous voulez dire, à qui, avec quels moyens. L'image vient après.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="plan">PLAN 03</span>
+                    <div>
+                        <h2>Un devis détaillé sous 48 heures</h2>
+                        <p>Poste par poste : préparation, tournage, montage, étalonnage. Rien de caché.</p>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="merci-actions">
+                <a href="/#portfolio" class="btn">Voir nos réalisations</a>
+                <a href="/#showreel" class="btn btn-ghost">Le showreel</a>
+            </div>
+
+            <p class="merci-whatsapp">
+                Un détail à ajouter, une date qui presse ?
+                <a href="https://wa.me/33783832507?text=Bonjour%20Sacha%2C%20je%20viens%20de%20vous%20envoyer%20un%20message%20depuis%20le%20site." target="_blank" rel="noopener noreferrer" class="whatsapp-link">Écrivez-nous sur WhatsApp</a>
+                ou appelez le <a href="tel:+33783832507">07 83 83 25 07</a>.
+            </p>
+        </div>
+
+        <div class="clap-wrap" aria-hidden="true">
+            <div class="clap">
+                <div class="clap-stick"></div>
+                <div class="clap-base-top"></div>
+                <div class="clap-board">
+                    <div class="clap-row">
+                        <div class="clap-cell full">
+                            <small>Production</small>
+                            <span id="clapProd">Votre projet</span>
+                        </div>
+                    </div>
+                    <div class="clap-row">
+                        <div class="clap-cell">
+                            <small>Scène</small>
+                            <span class="big">01</span>
+                        </div>
+                        <div class="clap-cell">
+                            <small>Prise</small>
+                            <span class="big handwrite">01</span>
+                        </div>
+                    </div>
+                    <div class="clap-row">
+                        <div class="clap-cell">
+                            <small>Réalisation</small>
+                            <span>S. Preschesmisky</span>
+                        </div>
+                        <div class="clap-cell">
+                            <small>Date</small>
+                            <span id="clapDate">Aujourd'hui</span>
+                        </div>
+                    </div>
+                    <div class="clap-row">
+                        <div class="clap-cell full">
+                            <small>Studio</small>
+                            <span>HUMAN REC · Avignon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="merci-footer">
+        <p>© 2026 HUMAN REC. Fait à Avignon. Pour durer.</p>
+        <p>
+            <a href="/mentions-legales">Mentions légales</a> ·
+            <a href="/politique-confidentialite">Confidentialité</a>
+        </p>
+    </footer>
+
+    <script>
+        (function () {
+            // Date du jour sur le clap
+            var d = new Date();
+            var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+            document.getElementById('clapDate').textContent = pad(d.getDate()) + '.' + pad(d.getMonth() + 1) + '.' + d.getFullYear();
+
+            // Personnalisation : prénom et type de projet laissés par le formulaire
+            // (stockés dans cet onglet uniquement, jamais dans l'adresse de la page)
+            try {
+                var lead = JSON.parse(sessionStorage.getItem('hr_lead') || 'null');
+                if (lead) {
+                    if (lead.prenom) {
+                        document.getElementById('merciNom').textContent = 'Merci ' + lead.prenom + '.';
+                    }
+                    if (lead.projet) {
+                        document.getElementById('clapProd').textContent = lead.projet;
+                    }
+                }
+            } catch (e) { }
+
+            // Timecode qui tourne puis s'arrête au moment du clap
+            var tc = document.getElementById('timecode');
+            var state = document.getElementById('recState');
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var start = performance.now();
+            var stopAt = reduce ? 0 : 1450;
+            function frame(now) {
+                var ms = Math.min(now - start, stopAt);
+                var f = Math.floor((ms % 1000) / 40);
+                var s = Math.floor(ms / 1000);
+                tc.textContent = '00:00:' + pad(s) + ':' + pad(f);
+                if (now - start < stopAt) {
+                    requestAnimationFrame(frame);
+                } else {
+                    state.textContent = 'Coupé';
+                }
+            }
+            requestAnimationFrame(frame);
+        })();
+    </script>
+    <script src="/js/analytics.js" defer></script>
+</body>
+
+</html>

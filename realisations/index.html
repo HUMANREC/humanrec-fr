@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations : films, publicités, aftermovies | HUMAN REC</title>
+    <meta name="description"
+        content="Publicité, vidéo promotionnelle, événementiel, fiction : les films réalisés par HUMAN REC, avec pour chacun le brief, les choix et le résultat.">
+    <!-- Brouillon : passer en "index, follow" et ajouter au sitemap une fois la page validée -->
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://humanrec.fr/realisations/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Réalisations : films, publicités, aftermovies | HUMAN REC">
+    <meta property="og:description"
+        content="Publicité, vidéo promotionnelle, événementiel, fiction : les films réalisés par HUMAN REC, avec pour chacun le brief, les choix et le résultat.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://humanrec.fr/realisations/">
+    <meta property="og:image" content="https://humanrec.fr/images/og-human-rec.webp">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="HUMAN REC - Production Audiovisuelle">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Réalisations : films, publicités, aftermovies | HUMAN REC">
+    <meta name="twitter:description"
+        content="Publicité, vidéo promotionnelle, événementiel, fiction : les films réalisés par HUMAN REC, avec pour chacun le brief, les choix et le résultat.">
+    <meta name="twitter:image" content="https://humanrec.fr/images/og-human-rec.webp">
+
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Favicon -->
+
+    <!-- Fonts (chargement non-bloquant) -->
+    <link rel="preload" href="/fonts/clash-display-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/fonts/fonts.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": "https://humanrec.fr/realisations/#page",
+                "url": "https://humanrec.fr/realisations/",
+                "name": "Réalisations : films, publicités, aftermovies | HUMAN REC",
+                "inLanguage": "fr-FR",
+                "isPartOf": { "@id": "https://humanrec.fr/#website" },
+                "about": { "@id": "https://humanrec.fr/#organization" }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://humanrec.fr/" },
+                    { "@type": "ListItem", "position": 2, "name": "Réalisations", "item": "https://humanrec.fr/realisations/" }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #0a0a0a;
+            --white: #f5f5f5;
+            --red: #e63946;
+            --red-dark: #b71c1c;
+            --gray: #666;
+            --gray-dark: #111;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.55);
+            -webkit-backdrop-filter: blur(18px) saturate(150%);
+            backdrop-filter: blur(18px) saturate(150%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--red);
+            border-radius: 50%;
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
+        }
+
+        .logo-img {
+            height: 52px;
+            width: auto;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--red);
+        }
+
+        .nav-cta {
+            padding: 12px 25px;
+            background: var(--red);
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--red-dark);
+            transform: translateY(-2px);
+        }
+
+        .nav-phone {
+            color: var(--red) !important;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--red);
+            padding: 6px 14px !important;
+            border-radius: 3px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-phone:hover {
+            background: var(--red);
+            color: var(--white) !important;
+        }
+
+        /* Menu mobile */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+            z-index: 101;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: var(--black);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 99;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--red);
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            position: fixed;
+            top: 90px;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 12px 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            font-size: 0.8rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .breadcrumb-list li:not(:last-child)::after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: var(--red);
+            border-radius: 50%;
+        }
+
+        .breadcrumb-list a {
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-list a:hover {
+            color: var(--red);
+        }
+
+        .breadcrumb-list .current {
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* HERO */
+        .services-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 180px 5% 100px;
+            overflow: hidden;
+        }
+
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(230, 57, 70, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(230, 57, 70, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .services-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 15px;
+        }
+
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--red);
+        }
+
+        .services-hero h1 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.95;
+            letter-spacing: 0.02em;
+            margin-bottom: 25px;
+        }
+
+        .services-hero h1 .outline {
+            -webkit-text-stroke: 2px var(--white);
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-hero h1 .red {
+            color: var(--red);
+            -webkit-text-fill-color: var(--red);
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: var(--gray);
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        /* SECTION */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-title {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+        }
+
+        .section-title span {
+            color: var(--red);
+        }
+
+        .section-desc {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* SERVICES GRID */
+        .services-section {
+            background: var(--gray-dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            padding: 50px 35px;
+            background: var(--black);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--red);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--red);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            color: var(--red);
+            margin-bottom: 25px;
+        }
+
+        .service-num {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 3rem;
+            color: rgba(230, 57, 70, 0.1);
+            line-height: 1;
+        }
+
+        .service-card h3 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 25px;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--red);
+            transition: gap 0.3s ease;
+        }
+
+        .service-card:hover .service-link {
+            gap: 15px;
+        }
+
+        .service-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* PROCESSUS */
+        .process-section {
+            background: var(--black);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-grid::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 12.5%;
+            width: 75%;
+            height: 2px;
+            background: linear-gradient(to right, var(--red), var(--red-dark));
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 120px;
+            height: 120px;
+            border: 2px solid var(--red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-family: 'Clash Display', sans-serif;
+            font-size: 2.5rem;
+            color: var(--red);
+            background: var(--black);
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s ease;
+        }
+
+        .process-step:hover .step-number {
+            background: var(--red);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .process-step h3 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+        }
+
+        .process-step p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: var(--gray-dark);
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            text-align: left;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--red);
+        }
+
+        .faq-question svg {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 25px;
+        }
+
+        .faq-answer p {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 100%);
+            text-align: center;
+            padding: 100px 5%;
+        }
+
+        .cta-section h2 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 35px;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-section .btn {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .cta-section .btn:hover {
+            background: var(--black);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* FOOTER */
+        .service-footer {
+            background: var(--gray-dark);
+            padding: 60px 5% 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            border-color: var(--red);
+            background: var(--red);
+        }
+
+        .social-links svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .footer-column h4 {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: var(--gray);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--red);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom a {
+            color: var(--red);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            .nav-menu {
+                list-style: none;
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .breadcrumb {
+                top: 70px;
+            }
+
+            .services-hero {
+                padding: 150px 5% 80px;
+                min-height: auto;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <style>
+        /* ===== PAGE RÉALISATIONS ===== */
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+        .real-hero, .real-list, .real-shorts, .real-cta { max-width: 1200px; margin: 0 auto; padding-left: 40px; padding-right: 40px; }
+        .real-hero { padding-top: 185px; padding-bottom: 60px; }
+        .real-label { display: inline-flex; align-items: center; gap: 15px; font-size: .78rem; letter-spacing: .3em; text-transform: uppercase; color: var(--red); margin-bottom: 22px; }
+        .real-label::before { content: ""; width: 40px; height: 1px; background: var(--red); }
+        .real-title { font-family: 'Clash Display', sans-serif; font-weight: 600; text-transform: uppercase; font-size: clamp(2.8rem, 7vw, 6rem); line-height: .95; letter-spacing: .01em; margin-bottom: 28px; }
+        .real-title .outline, .real-h2 .outline { -webkit-text-stroke: 2px var(--white); -webkit-text-fill-color: transparent; }
+        .real-title .red, .real-h2 .red { color: var(--red); }
+        .real-intro { color: #a8a8a8; font-size: 1.1rem; line-height: 1.75; max-width: 620px; }
+        .real-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 50px; margin-top: 40px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.08); }
+        .real-facts li { display: flex; flex-direction: column; gap: 2px; }
+        .real-facts strong { font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 1.6rem; }
+        .real-facts span { color: var(--gray); font-size: .85rem; letter-spacing: .05em; }
+
+        .real-list { padding-bottom: 100px; }
+        .real-list-head { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 34px; }
+        .real-filters { display: flex; flex-wrap: wrap; gap: 10px; }
+        .real-filter { background: transparent; color: #a8a8a8; border: 1px solid rgba(255,255,255,.14); padding: 10px 18px; font-family: Inter, sans-serif; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; transition: color .25s, border-color .25s, background .25s; }
+        .real-filter:hover { color: var(--white); border-color: rgba(255,255,255,.4); }
+        .real-filter[aria-pressed="true"] { background: var(--white); color: var(--black); border-color: var(--white); }
+        .real-count { color: var(--gray); font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; }
+        .real-count span { color: var(--white); font-weight: 600; }
+
+        .real-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 46px 30px; grid-auto-flow: dense; }
+        .real-card { display: block; color: inherit; text-decoration: none; }
+        .real-card[hidden] { display: none; }
+        .real-card.featured { grid-column: span 2; }
+        .real-card figure { position: relative; margin: 0 0 18px; aspect-ratio: 16 / 10; overflow: hidden; background: #111; border: 1px solid rgba(255,255,255,.06); }
+        .real-card.featured figure { aspect-ratio: 16 / 8.6; }
+        .real-card img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.35) brightness(.85); transform: scale(1.001); transition: transform .8s cubic-bezier(.2,.6,.2,1), filter .6s ease; }
+        .real-card:hover img, .real-card:focus-visible img { filter: none; transform: scale(1.045); }
+        .real-play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: var(--red); opacity: 0; transform: scale(.7); transition: opacity .35s, transform .35s; }
+        .real-play::after { content: ""; position: absolute; left: 26px; top: 21px; border-left: 16px solid #fff; border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+        .real-card:hover .real-play, .real-card:focus-visible .real-play { opacity: 1; transform: scale(1); }
+        .real-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .real-tag { font-size: .7rem; letter-spacing: .25em; text-transform: uppercase; color: var(--red); }
+        .real-num { font-family: 'Clash Display', sans-serif; font-size: .8rem; color: var(--gray); letter-spacing: .1em; }
+        .real-card h3 { font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: 1.45rem; line-height: 1.2; margin-bottom: 6px; transition: color .3s; }
+        .real-card.featured h3 { font-size: 2rem; }
+        .real-card:hover h3 { color: var(--red); }
+        .real-card p { color: #a8a8a8; font-size: .95rem; line-height: 1.6; }
+
+        .real-shorts { padding-top: 90px; padding-bottom: 100px; border-top: 1px solid rgba(255,255,255,.08); }
+        .real-h2 { font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: clamp(2rem, 4.5vw, 3.4rem); line-height: 1.05; margin-bottom: 16px; }
+        .shorts-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 44px; }
+        .short-card { position: relative; display: block; width: 100%; padding: 0; border: 1px solid rgba(255,255,255,.08); background: #111; aspect-ratio: 9 / 16; overflow: hidden; cursor: pointer; text-align: left; color: var(--white); font-family: Inter, sans-serif; }
+        .short-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.75); transition: transform .8s cubic-bezier(.2,.6,.2,1), filter .5s; }
+        .short-card:hover img, .short-card:focus-visible img { transform: scale(1.05); filter: brightness(.95); }
+        .short-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.85), transparent 55%); }
+        .short-info { position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 1; display: flex; flex-direction: column; gap: 6px; }
+        .short-info strong { font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: 1.05rem; line-height: 1.25; }
+        .short-time { position: absolute; right: 0; top: -24px; font-size: .75rem; color: #ccc; }
+        .short-time::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--red); margin-right: 8px; vertical-align: 1px; }
+
+        .real-cta { padding-top: 90px; padding-bottom: 120px; text-align: center; border-top: 1px solid rgba(255,255,255,.08); }
+        .real-cta .real-label { justify-content: center; }
+        .real-cta .real-intro { margin: 0 auto; }
+        .real-cta-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
+        .real-btn { display: inline-flex; align-items: center; padding: 18px 34px; background: var(--red); color: var(--white); font-size: .85rem; letter-spacing: .15em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--red); transition: background .3s, color .3s, border-color .3s; }
+        .real-btn:hover { background: var(--red-dark, #b71c1c); border-color: var(--red-dark, #b71c1c); }
+        .real-btn.ghost { background: transparent; border-color: rgba(255,255,255,.35); }
+        .real-btn.ghost:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+
+        .short-modal { margin: auto; border: none; padding: 0; background: transparent; max-width: min(420px, 92vw); width: 100%; overflow: visible; }
+        .short-modal::backdrop { background: rgba(0,0,0,.92); }
+        .short-modal video { display: block; width: 100%; max-height: 86vh; aspect-ratio: 9 / 16; object-fit: cover; background: #000; }
+        .short-modal-close { position: absolute; top: -48px; right: 0; width: 40px; height: 40px; background: transparent; border: 1px solid rgba(255,255,255,.4); color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+
+        .real-card:focus-visible, .short-card:focus-visible, .real-filter:focus-visible, .real-btn:focus-visible { outline: 2px solid var(--white); outline-offset: 4px; }
+
+        @media (max-width: 1000px) {
+            .real-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .shorts-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 640px) {
+            .real-hero, .real-list, .real-shorts, .real-cta { padding-left: 20px; padding-right: 20px; }
+            .real-hero { padding-top: 150px; }
+            .real-grid { grid-template-columns: 1fr; gap: 38px; }
+            .real-card.featured { grid-column: auto; }
+            .real-card.featured figure { aspect-ratio: 16 / 10; }
+            .real-card.featured h3 { font-size: 1.6rem; }
+            .real-filters { flex-wrap: nowrap; overflow-x: auto; margin: 0 -20px; padding: 0 20px 6px; scrollbar-width: none; }
+            .real-filter { flex: 0 0 auto; }
+            .shorts-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 30px -20px 0; padding: 0 20px 10px; gap: 14px; scrollbar-width: none; }
+            .short-card { flex: 0 0 62%; scroll-snap-align: start; }
+            .real-shorts, .real-cta { padding-top: 60px; padding-bottom: 70px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .real-card img, .short-card img, .real-play { transition: none; }
+        }
+    </style>
+
+    <!-- Favicons et icones (kit HUMAN REC) -->
+    <link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
+    <link rel="icon" href="/favicons/favicon.svg?v=2" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png?v=2">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/css/mobile.css?v=3">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Aller au contenu</a>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="../" class="logo">
+            <img src="../images/human-rec-logo.svg" alt="HUMAN REC - Production audiovisuelle Avignon" class="logo-img" width="314" height="160">
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../services/">Services</a></li>
+            <li><a href="/#portfolio">Réalisations</a></li>
+            <li><a href="../services/photographe-avignon">Photo</a></li>
+                <li><a href="/blog/">Blog</a></li>
+            <li><a href="../qui-sommes-nous">L'équipe</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="tel:+33783832507" class="nav-phone">07 83 83 25 07</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../">Accueil</a>
+        <a href="../services/">Services</a>
+        <a href="/#portfolio">Réalisations</a>
+        <a href="../services/photographe-avignon">Photo</a>
+        <a href="../qui-sommes-nous">L'équipe</a>
+        <a href="/#contact">Contact</a>
+        <a href="tel:+33783832507" class="mobile-phone-link"
+            style="color: var(--red); font-weight: 600; margin-top: 20px;">📞 07 83 83 25 07</a>
+    </div>
+
+    <main id="main">
+
+        <div class="breadcrumb">
+            <ol class="breadcrumb-list">
+                <li><a href="../">Accueil</a></li>
+                <li><span class="current">Réalisations</span></li>
+            </ol>
+        </div>
+
+        <!-- EN-TÊTE -->
+        <section class="real-hero">
+            <div class="real-label">Réalisations</div>
+            <h1 class="real-title">Les films<br><span class="outline">qu'on a</span> <span class="red">tournés.</span></h1>
+            <p class="real-intro">
+                Publicités, vidéos d'hôtels, soirées privées, fiction. Pour chaque film, on raconte le brief,
+                les choix et ce qu'on a laissé exister dans le cadre.
+            </p>
+            <ul class="real-facts" aria-label="En chiffres">
+                <li><strong>9</strong><span>films détaillés</span></li>
+                <li><strong>4</strong><span>formats courts</span></li>
+                <li><strong>De Saint-Tropez</strong><span>à la Suisse</span></li>
+            </ul>
+        </section>
+
+        <!-- FILMS -->
+        <section class="real-list" aria-labelledby="real-films-title">
+            <div class="real-list-head">
+                <h2 id="real-films-title" class="sr-only">Tous les films</h2>
+                <div class="real-filters" role="group" aria-label="Filtrer les réalisations">
+                    <button type="button" class="real-filter" data-filter="all" aria-pressed="true">Tout</button>
+                    <button type="button" class="real-filter" data-filter="pub" aria-pressed="false">Publicité</button>
+                    <button type="button" class="real-filter" data-filter="promo" aria-pressed="false">Promotionnel</button>
+                    <button type="button" class="real-filter" data-filter="hotel" aria-pressed="false">Hôtellerie</button>
+                    <button type="button" class="real-filter" data-filter="event" aria-pressed="false">Événementiel</button>
+                    <button type="button" class="real-filter" data-filter="art" aria-pressed="false">Fiction et art</button>
+                </div>
+                <p class="real-count" aria-live="polite"><span id="realCount">9</span> films</p>
+            </div>
+
+            <div class="real-grid">
+                <a href="../projets/film-promotionnel-zerod" class="real-card featured" data-cat="pub">
+                    <figure><img src="../images/realisations/zerod.webp" alt="Vignette du film publicitaire Z3ROD, marque française de triathlon" width="960" height="673" loading="eager" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Film publicitaire</span><span class="real-num">01</span></div>
+                    <h3>Z3ROD</h3>
+                    <p>Marque française de triathlon. 30 secondes, 3 jours de tournage, 14 techniciens.</p>
+                </a>
+                <a href="../projets/film-promotionnel-la-bastide-des-salins" class="real-card" data-cat="promo hotel">
+                    <figure><img src="../images/realisations/bastide-des-salins.webp" alt="Vignette de la vidéo de La Bastide des Salins, hôtel 4 étoiles à Saint-Tropez" width="960" height="540" loading="lazy" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Vidéo d'hôtel</span><span class="real-num">02</span></div>
+                    <h3>La Bastide des Salins</h3>
+                    <p>Hôtel 4 étoiles à Saint-Tropez. Un film pour le site, un autre pour les réseaux.</p>
+                </a>
+                <a href="../projets/film-promotionnel-la-maizon" class="real-card" data-cat="pub hotel">
+                    <figure><img src="../images/realisations/la-maizon.webp" alt="Vignette du film de La Maizon, maison d'hôtes au pied du Ventoux" width="960" height="624" loading="lazy" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Film publicitaire</span><span class="real-num">03</span></div>
+                    <h3>La Maizon</h3>
+                    <p>Maison d'hôtes au pied du Ventoux. Deux films d'une minute, un jour et demi de tournage.</p>
+                </a>
+                <a href="../projets/film-promotionnel-athletic-fitness-club" class="real-card" data-cat="promo">
+                    <figure><img src="../images/realisations/athletic-fitness-club.webp" alt="Vignette de la vidéo promotionnelle Athletic Fitness Club, salle de sport à Montpellier" width="960" height="540" loading="lazy" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Vidéo promotionnelle</span><span class="real-num">04</span></div>
+                    <h3>Athletic Fitness Club</h3>
+                    <p>Salle de sport à Montpellier. Deux jours, grue, slider et drone sur le rooftop.</p>
+                </a>
+                <a href="../projets/film-evenementiel-deliceshow" class="real-card" data-cat="event">
+                    <figure><img src="../images/realisations/delice-show.webp" alt="Vignette de l'aftermovie Delice Show, soirée privée au Circé à Beaulieu-sur-Mer" width="960" height="623" loading="lazy" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Soirée privée</span><span class="real-num">05</span></div>
+                    <h3>Delice Show</h3>
+                    <p>Anniversaire privé au Circé, Beaulieu-sur-Mer. Deux films et trois capsules Reels.</p>
+                </a>
+                <a href="../projets/film-evenementiel-game-of-prod" class="real-card" data-cat="event">
+                    <figure><img src="../images/realisations/game-of-prod.webp" alt="Vignette de l'aftermovie Game of Prod, plage privatisée à Cannes" width="960" height="540" loading="lazy" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Aftermovie</span><span class="real-num">06</span></div>
+                    <h3>Game of Prod</h3>
+                    <p>Une plage privatisée à Cannes. L'installation, les coulisses, puis la soirée.</p>
+                </a>
+                <a href="../projets/film-evenementiel-iceshow" class="real-card" data-cat="event">
+                    <figure><img src="../images/realisations/ice-show.webp" alt="Vignette de l'aftermovie Ice Show by Delice Show, spectacle sur glace" width="960" height="640" loading="lazy" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Spectacle</span><span class="real-num">07</span></div>
+                    <h3>Ice Show by Delice Show</h3>
+                    <p>Spectacle sur glace à Walibi et tournée en France. Six shows, deux caméras.</p>
+                </a>
+                <a href="../projets/film-teaser-triplevisage" class="real-card" data-cat="art">
+                    <figure><img src="../images/realisations/triple-visage.webp" alt="Vignette du teaser de fiction Triple Visage, Succession" width="960" height="475" loading="lazy" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Fiction</span><span class="real-num">08</span></div>
+                    <h3>Triple Visage, Succession</h3>
+                    <p>Un teaser de 3 minutes pour lancer un comédien. Un mois de préparation, un jour de tournage.</p>
+                </a>
+                <a href="../projets/film-artistique" class="real-card" data-cat="art">
+                    <figure><img src="../images/realisations/volare.webp" alt="Vignette de Volare, film artistique en noir et blanc" width="960" height="583" loading="lazy" decoding="async"><span class="real-play" aria-hidden="true"></span></figure>
+                    <div class="real-meta"><span class="real-tag">Film artistique</span><span class="real-num">09</span></div>
+                    <h3>Volare</h3>
+                    <p>Une patineuse aérienne, un ruban, un noir et blanc contrasté. Un film d'auteur.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- FORMATS COURTS -->
+        <section class="real-shorts" aria-labelledby="real-shorts-title">
+            <div class="real-label">Formats courts</div>
+            <h2 id="real-shorts-title" class="real-h2">Pensés pour <span class="red">le téléphone.</span></h2>
+            <p class="real-intro">Des films verticaux de 30 à 45 secondes, pour Instagram, TikTok et les stories.</p>
+            <div class="shorts-row">
+                <button type="button" class="short-card" data-video="../videos/hotel-le-mirador.mp4" data-cat="hotel">
+                    <img src="../images/realisations/hotel-le-mirador.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+                    <span class="short-info"><span class="real-tag">Hôtel · Suisse</span><strong>Hôtel Le Mirador</strong><span class="short-time">0:30</span></span>
+                </button>
+                <button type="button" class="short-card" data-video="../videos/la-croix-des-pins-mardis-accordes.mp4" data-cat="event">
+                    <img src="../images/realisations/mardis-accordes-la-croix-des-pins.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+                    <span class="short-info"><span class="real-tag">Aftermovie</span><strong>Mardis Accordés, Château La Croix des Pins</strong><span class="short-time">0:38</span></span>
+                </button>
+                <button type="button" class="short-card" data-video="../videos/borelis-summer-wine-party.mp4" data-cat="event">
+                    <img src="../images/realisations/summer-wine-party-borelis.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+                    <span class="short-info"><span class="real-tag">Aftermovie</span><strong>Summer Wine Party, cave Borélis</strong><span class="short-time">0:42</span></span>
+                </button>
+                <button type="button" class="short-card" data-video="../videos/short1.mp4" data-cat="event">
+                    <img src="../images/realisations/showcase-naps.webp" alt="" width="540" height="960" loading="lazy" decoding="async">
+                    <span class="short-info"><span class="real-tag">Concert</span><strong>Showcase de Naps</strong><span class="short-time">0:30</span></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- APPEL -->
+        <section class="real-cta">
+            <p class="real-label">Le prochain film</p>
+            <h2 class="real-h2">Et si c'était <span class="red">le vôtre ?</span></h2>
+            <p class="real-intro">Dites-nous où vous en êtes. On s'occupe du reste.</p>
+            <div class="real-cta-btns">
+                <a href="/#contact" class="real-btn" data-cta="quote">Parler de votre projet</a>
+                <a href="tel:+33783832507" class="real-btn ghost">07 83 83 25 07</a>
+            </div>
+        </section>
+
+        <dialog class="short-modal" id="shortModal" aria-label="Lecture du format court">
+            <button type="button" class="short-modal-close" aria-label="Fermer la vidéo">×</button>
+            <video id="shortVideo" controls playsinline preload="none"></video>
+        </dialog>
+    </main>
+
+    <script>
+        (function () {
+            // Filtres
+            var buttons = document.querySelectorAll('.real-filter');
+            var cards = document.querySelectorAll('.real-card');
+            var count = document.getElementById('realCount');
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var f = btn.getAttribute('data-filter');
+                    buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+                    var n = 0;
+                    cards.forEach(function (c) {
+                        var show = f === 'all' || (' ' + c.getAttribute('data-cat') + ' ').indexOf(' ' + f + ' ') !== -1;
+                        c.hidden = !show;
+                        c.classList.toggle('featured', show && f === 'all' && c === cards[0]);
+                        if (show) n++;
+                    });
+                    count.textContent = n;
+                });
+            });
+
+            // Formats courts : lecture dans une fenêtre
+            var modal = document.getElementById('shortModal');
+            var video = document.getElementById('shortVideo');
+            if (!modal || typeof modal.showModal !== 'function') return;
+            function close() { video.pause(); video.removeAttribute('src'); video.load(); modal.close(); }
+            document.querySelectorAll('.short-card').forEach(function (card) {
+                card.addEventListener('click', function () {
+                    video.src = card.getAttribute('data-video');
+                    modal.showModal();
+                    var p = video.play(); if (p && p.catch) p.catch(function () { });
+                });
+            });
+            modal.querySelector('.short-modal-close').addEventListener('click', close);
+            modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+            modal.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
+        })();
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="service-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../" class="logo">
+                        <img src="../images/human-rec-logo.svg" alt="HUMAN REC" class="logo-img" width="314" height="160">
+                    </a>
+                    <p>Production audiovisuelle basée à Avignon. Nous créons des films publicitaires,
+                        promotionnels et événementiels qui marquent les esprits.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/human_rec/" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/103476613/" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@humanrec-prod" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="../">Accueil</a></li>
+                        <li><a href="../services/">Services</a></li>
+                        <li><a href="/#portfolio">Réalisations</a></li>
+                        <li><a href="../qui-sommes-nous">L'équipe</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../services/film-publicitaire-avignon">Film Publicitaire</a></li>
+                        <li><a href="../services/video-promotionnelle-avignon">Vidéo Promotionnelle</a></li>
+                        <li><a href="../services/captation-evenementielle-avignon">Captation Événementielle</a></li>
+                        <li><a href="../services/captation-drone-avignon">Captation Drone</a></li>
+                        <li><a href="../services/photographe-avignon">Photographe à Avignon</a></li>
+                        <li><a href="../photos">Galerie photo</a></li>
+                        <li><a href="../services/creation-fiction-clip-podcast">Création originale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Projets</h4>
+                    <ul>
+                        <li><a href="../projets/film-promotionnel-zerod">Z3ROD - Triathlon</a></li>
+                        <li><a href="../projets/film-promotionnel-la-maizon">La Maizon</a></li>
+                        <li><a href="../projets/film-promotionnel-athletic-fitness-club">Athletic Fitness
+                                Club</a></li>
+                        <li><a href="../projets/film-evenementiel-deliceshow">Delice Show</a></li>
+                        <li><a href="../projets/film-evenementiel-iceshow">Ice Show</a></li>
+                        <li><a href="../projets/film-evenementiel-game-of-prod">Game of Prod</a></li>
+                        <li><a href="../projets/film-artistique">Film Artistique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+33783832507">07 83 83 25 07</a></li>
+                        <li><a href="mailto:contact@humanrec.fr">contact@humanrec.fr</a></li>
+                        <li><span style="color: var(--gray);">Avignon, Vaucluse</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 HUMAN REC. Tous droits réservés.</p>
+                <p><a href="../mentions-legales">Mentions légales</a> · <a
+                        href="../politique-confidentialite">Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Fade in on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Menu Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', function () {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function () {
+                    menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+    <script src="/js/reveal.js" defer></script>
+
+
+    <!-- WHATSAPP FLOTTANT -->
+    <a href="https://wa.me/33783832507?text=Bonjour%20HUMAN%20REC%2C%20j%27ai%20un%20projet%20vid%C3%A9o%20dont%20j%27aimerais%20discuter."
+        class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Discuter sur WhatsApp"
+        style="position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 99; box-shadow: 0 4px 15px rgba(0,0,0,.4); transition: transform .3s ease;"
+        onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <svg viewBox="0 0 24 24" style="width: 26px; height: 26px; fill: #fff;" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+
+    <!-- BARRE CTA MOBILE -->
+    <style>
+        .mobile-cta-bar { display: none; }
+        @media (max-width: 768px) {
+            .mobile-cta-bar {
+                display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+                position: fixed; top: auto; bottom: 0; left: 0; right: 0; padding: 0; z-index: 1000;
+                box-shadow: 0 -4px 20px rgba(0,0,0,.45);
+            }
+            .mobile-cta-bar a {
+                display: flex; align-items: center; justify-content: center; gap: 9px;
+                padding: 15px 8px; font-family: 'Inter', sans-serif; font-size: .85rem;
+                font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+            }
+            .mobile-cta-bar .cta-call { background: #141414; color: #f5f5f5; border-top: 1px solid rgba(255,255,255,.12); }
+            .mobile-cta-bar .cta-quote { background: #e63946; color: #fff; }
+            .mobile-cta-bar svg { width: 17px; height: 17px; }
+            body { padding-bottom: 54px; }
+            .whatsapp-btn { bottom: 70px !important; }
+            .back-to-top { bottom: 70px !important; }
+        }
+    </style>
+    <nav class="mobile-cta-bar" aria-label="Contact rapide">
+        <a href="tel:+33783832507" class="cta-call" data-cta="call-sticky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Appeler</a>
+        <a href="/#contact" class="cta-quote" data-cta="quote-sticky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Devis gratuit</a>
+    </nav>
+
+    <script src="/js/analytics.js" defer></script>
+    <script src="/js/mobile-nav.js" defer></script>
+</body>
+
+</html>

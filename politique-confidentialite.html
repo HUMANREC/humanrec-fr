@@ -14,10 +14,9 @@
     <meta name="theme-color" content="#0a0a0a">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/clash-display-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/fonts/fonts.css">
 
     <link rel="stylesheet" href="global.min.css?v=2">
     <style>
@@ -385,7 +384,7 @@ body {
     <link rel="icon" href="/favicons/favicon.svg?v=2" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png?v=2">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="/css/mobile.css?v=2">
+    <link rel="stylesheet" href="/css/mobile.css?v=3">
 </head>
 
 <body>
@@ -517,6 +516,15 @@ body {
             <li><strong>Formspree</strong> : gestion des formulaires de contact</li>
             <li><strong>Google Analytics</strong> : analyse du trafic (si vous avez accepté les cookies)</li>
         </ul>
+        <p>
+            Netlify et Formspree sont établis aux États-Unis, et Google peut y traiter les données de mesure
+            d'audience. Les données confiées à ces prestataires peuvent donc être transférées hors de l'Union
+            européenne, dans les conditions décrites par la politique de confidentialité de chacun d'eux.
+        </p>
+        <p>
+            Votre choix concernant les cookies de mesure d'audience est conservé six mois, puis vous est
+            demandé de nouveau.
+        </p>
 
         <div class="highlight-box">
             <p>

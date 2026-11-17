@@ -48,11 +48,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("*.html");
     eleventyConfig.addPassthroughCopy("services");
     eleventyConfig.addPassthroughCopy("projets");
+    eleventyConfig.addPassthroughCopy("realisations");
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("img"); // images a URL stable (signature mail, etc.)
     eleventyConfig.addPassthroughCopy("videos");
     eleventyConfig.addPassthroughCopy("js");
     eleventyConfig.addPassthroughCopy("favicons");
+    eleventyConfig.addPassthroughCopy("fonts");
     eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.addPassthroughCopy("*.css");
     eleventyConfig.addPassthroughCopy("css");

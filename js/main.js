@@ -1,3 +1,13 @@
+// Consentement cookies : redemandé au bout de 6 mois (recommandation CNIL)
+(function () {
+    try {
+        var d = +localStorage.getItem('cookies_date');
+        if (localStorage.getItem('cookies') && (!d || Date.now() - d > 15552e6)) {
+            localStorage.removeItem('cookies');
+            localStorage.removeItem('cookies_date');
+        }
+    } catch (e) { }
+})();
 // ===== SERVICE → PORTFOLIO HIGHLIGHT =====
 document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('click', function () {
@@ -288,6 +298,14 @@ document.getElementById('contactForm').addEventListener('submit', async function
             const pt = this.querySelector('[name="project_type"]');
             const bg = this.querySelector('[name="budget"]');
             document.dispatchEvent(new CustomEvent('hr:lead', { detail: { project_type: pt ? pt.value : '', budget: bg ? bg.value : '' } }));
+            // Page de remerciement : prénom et type de projet gardés dans l'onglet (jamais dans l'URL)
+            try {
+                const nm = this.querySelector('[name="name"]');
+                const prenom = (nm && nm.value || '').trim().split(/\s+/)[0].slice(0, 30);
+                const projet = pt && pt.selectedIndex > 0 ? pt.options[pt.selectedIndex].text : '';
+                sessionStorage.setItem('hr_lead', JSON.stringify({ prenom: prenom, projet: projet }));
+            } catch (err) { }
+            setTimeout(() => { location.href = '/merci'; }, 450);
             btn.innerHTML = 'Message envoyé ✓';
             btn.style.background = '#27ae60';
             btn.style.opacity = '1';
@@ -657,12 +675,14 @@ function loadGA() {
 // COOKIES
 function acceptCookies() {
     localStorage.setItem('cookies', 'accepted');
+    localStorage.setItem('cookies_date', String(Date.now()));
     document.getElementById('cookieBanner').classList.remove('show');
     loadGA();
 }
 
 function declineCookies() {
     localStorage.setItem('cookies', 'declined');
+    localStorage.setItem('cookies_date', String(Date.now()));
     document.getElementById('cookieBanner').classList.remove('show');
 }
 

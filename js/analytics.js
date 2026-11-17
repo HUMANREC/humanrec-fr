@@ -48,12 +48,21 @@
 
     // ---- Bannière de consentement (RGPD) ----
     var choice = null;
-    try { choice = localStorage.getItem('cookies'); } catch (err) { }
+    try {
+        choice = localStorage.getItem('cookies');
+        // Choix redemandé au bout de 6 mois (recommandation CNIL)
+        var since = +localStorage.getItem('cookies_date');
+        if (choice && (!since || Date.now() - since > 15552e6)) {
+            localStorage.removeItem('cookies');
+            localStorage.removeItem('cookies_date');
+            choice = null;
+        }
+    } catch (err) { }
 
     if (choice === 'accepted') { loadGA(); return; }
     if (choice === 'declined') { return; }
 
-    function persist(val) { try { localStorage.setItem('cookies', val); } catch (err) { } }
+    function persist(val) { try { localStorage.setItem('cookies', val); localStorage.setItem('cookies_date', String(Date.now())); } catch (err) { } }
 
     function showBanner() {
         if (document.getElementById('hr-cookie-banner')) return;
