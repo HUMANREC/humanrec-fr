@@ -2,7 +2,7 @@
 
 {% set isBlog = true %}
 {% set canonical = "https://humanrec.fr/blog/" + slug + "/" %}
-{% set pageTitle = title + " | Blog HUMAN REC" %}
+{% set pageTitle = seoTitle or (title + " | Blog HUMAN REC") %}
 {% set ogType = "article" %}
 {% set ogImage = "https://humanrec.fr" + image %}
 

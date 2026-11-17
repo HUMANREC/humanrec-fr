@@ -285,6 +285,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
         if (response.ok) {
             // Succès
+            const pt = this.querySelector('[name="project_type"]');
+            const bg = this.querySelector('[name="budget"]');
+            document.dispatchEvent(new CustomEvent('hr:lead', { detail: { project_type: pt ? pt.value : '', budget: bg ? bg.value : '' } }));
             btn.innerHTML = 'Message envoyé ✓';
             btn.style.background = '#27ae60';
             btn.style.opacity = '1';
@@ -796,12 +799,15 @@ if (backToTopBtn) {
             track('outbound_click', { destination: 'google_reviews' });
         }
     }, true);
-    // Envoi du formulaire de contact
-    var form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', function () {
-            var t = form.querySelector('[name="project_type"]');
-            track('generate_lead', { form: 'contact', project_type: t ? t.value : '' });
-        });
+    // Envoi du formulaire de contact : compté seulement quand Formspree confirme
+    // la réception (événement "hr:lead" émis par le gestionnaire du formulaire).
+    document.addEventListener('hr:lead', function (e) {
+        var d = (e && e.detail) || {};
+        track('generate_lead', { form: 'contact', project_type: d.project_type || '', budget: d.budget || '' });
+    });
+    // Page d'origine du formulaire (URL, paramètres UTM, site référent)
+    var origine = document.getElementById('page-origine');
+    if (origine) {
+        origine.value = location.pathname + location.search + (document.referrer ? ' | ref: ' + document.referrer : '');
     }
 })();

@@ -41,13 +41,10 @@
             track('outbound_click', { destination: 'google_reviews' });
         }
     }, true);
-    document.addEventListener('submit', function (e) {
-        var f = e.target;
-        if (f && f.id === 'contactForm') {
-            var t = f.querySelector('[name="project_type"]');
-            track('generate_lead', { form: 'contact', project_type: t ? t.value : '' });
-        }
-    }, true);
+    document.addEventListener('hr:lead', function (e) {
+        var d = (e && e.detail) || {};
+        track('generate_lead', { form: 'contact', project_type: d.project_type || '', budget: d.budget || '' });
+    });
 
     // ---- Bannière de consentement (RGPD) ----
     var choice = null;

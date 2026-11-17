@@ -40,3 +40,6 @@ humanrec-studio/
 # Dossiers hors site (conserves dans ~/Desktop/HUMANREC-hors-site)
 mockups/
 backup/
+
+# Rapport d audit (document de travail, ne doit pas etre publie sur le site)
+AUDIT-SEO-HUMANREC.md

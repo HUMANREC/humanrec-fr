@@ -220,4 +220,31 @@
         </video:video>
     </url>
 
+    <url>
+        <loc>https://humanrec.fr/projets/film-teaser-triplevisage</loc>
+        <video:video>
+            <video:thumbnail_loc>https://humanrec.fr/images/Hero-TripleVisage.webp</video:thumbnail_loc>
+            <video:title>Teaser Triple Visage, Succession : court métrage de fiction</video:title>
+            <video:description>Premier épisode d'une série de trois teasers de fiction consacrés aux visages d'Abdel. Un homme, une carrière interdite, une mallette enterrée sous le sable. Réalisation HUMAN REC.</video:description>
+            <video:content_loc>https://humanrec.fr/videos/TRIPLEVISAGE-JOUR1.mp4</video:content_loc>
+            <video:duration>191</video:duration>
+            <video:publication_date>2026-07-01</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+        </video:video>
+    </url>
+    <url>
+        <loc>https://humanrec.fr/services/captation-drone-avignon</loc>
+        <video:video>
+            <video:thumbnail_loc>https://i.ytimg.com/vi/vdIBTeq-CMQ/hqdefault.jpg</video:thumbnail_loc>
+            <video:title>Showreel drone HUMAN REC : captation aérienne à Avignon et en Vaucluse</video:title>
+            <video:description>Montage de prises de vue aériennes par drone réalisées par HUMAN REC : hôtels, domaines, événements et lieux filmés vus du ciel en 4K, à Avignon, dans le Vaucluse et partout en France.</video:description>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/vdIBTeq-CMQ</video:player_loc>
+            <video:publication_date>2026-07-23</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:requires_subscription>no</video:requires_subscription>
+            <video:live>no</video:live>
+        </video:video>
+    </url>
 </urlset>

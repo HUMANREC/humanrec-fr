@@ -41,6 +41,12 @@ collections:
         widget: "string"
         hint: "Titre principal de l'article — apparaît en H1 et dans le SERP Google. Vise 50-65 caractères."
 
+      - label: "Titre SEO (optionnel)"
+        name: "seoTitle"
+        widget: "string"
+        required: false
+        hint: "Remplace la balise title si le titre est trop long. 60 caractères maximum, finir par | HUMAN REC."
+
       - label: "Slug URL"
         name: "slug"
         widget: "string"

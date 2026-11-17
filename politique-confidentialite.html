@@ -499,9 +499,16 @@ body {
 
         <h3>4.3 Gestion des cookies</h3>
         <p>
-            Vous pouvez modifier vos préférences de cookies à tout moment via le bandeau cookies
-            qui s'affiche lors de votre première visite, ou en configurant votre navigateur.
+            Vous pouvez modifier votre choix à tout moment : <a href="#" id="hr-reset-cookies">gérer mes préférences de cookies</a>
+            (le bandeau s'affiche de nouveau). Vous pouvez aussi configurer votre navigateur pour refuser les cookies.
         </p>
+        <script>
+            document.getElementById('hr-reset-cookies').addEventListener('click', function (e) {
+                e.preventDefault();
+                try { localStorage.removeItem('cookies'); } catch (err) { }
+                location.reload();
+            });
+        </script>
 
         <h2><span class="num">5.</span> Partage des données</h2>
         <p>Vos données personnelles peuvent être partagées avec :</p>
@@ -586,7 +593,7 @@ body {
         </p>
 
         <div class="update-date">
-            <p>Dernière mise à jour : <strong>20 janvier 2026</strong></p>
+            <p>Dernière mise à jour : <strong>17 novembre 2026</strong></p>
         </div>
 
     </main>
@@ -601,6 +608,7 @@ body {
     </footer>
 
     <script src="/js/mobile-nav.js" defer></script>
+    <script src="/js/analytics.js" defer></script>
 </body>
 
 </html>

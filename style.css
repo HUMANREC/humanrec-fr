@@ -444,8 +444,7 @@ nav.scrolled {
     text-transform: uppercase;
     color: var(--red);
     margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 1.8s forwards;
+    animation: heroIn 0.5s ease 0.1s both;
 }
 
 .hero-tag::before {
@@ -481,8 +480,7 @@ nav.scrolled {
     line-height: 1.8;
     max-width: 500px;
     margin-bottom: 40px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 2.2s forwards;
+    animation: heroIn 0.5s ease 0.2s both;
 }
 
 @keyframes fadeUp {
@@ -501,8 +499,7 @@ nav.scrolled {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 2.4s forwards;
+    animation: heroIn 0.5s ease 0.3s both;
 }
 
 .btn {
@@ -559,7 +556,7 @@ nav.scrolled {
     color: rgba(255, 255, 255, 0.05);
     letter-spacing: 0.1em;
     opacity: 0;
-    animation: fadeUp 0.8s ease 2.6s forwards;
+    animation: fadeUp 0.5s ease 0.4s forwards;
 }
 
 .scroll-hint {
@@ -573,7 +570,7 @@ nav.scrolled {
     align-items: center;
     gap: 10px;
     opacity: 0;
-    animation: fadeUp 0.8s ease 2.8s forwards;
+    animation: fadeUp 0.5s ease 0.5s forwards;
 }
 
 .scroll-hint .line {
@@ -2971,4 +2968,10 @@ footer {
     .clients-marquee .clients-grid { animation: none; width: auto; flex-wrap: wrap; justify-content: center; }
     .clients-marquee .clients-grid > picture { margin-right: 35px; }
     .clients-marquee .clients-grid > picture[aria-hidden="true"] { display: none; }
+}
+
+/* Hero : le texte reste visible même si l'animation ne démarre pas */
+@keyframes heroIn {
+    from { transform: translateY(20px); }
+    to { transform: none; }
 }

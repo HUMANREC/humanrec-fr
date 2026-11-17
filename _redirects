@@ -37,6 +37,7 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 /projets/film-promotionnel-la-maizon.html                  /projets/film-promotionnel-la-maizon                       301!
 /projets/Film-institutionnel-Athletic-Fitness-Club.html    /projets/film-promotionnel-athletic-fitness-club           301!
 /projets/Film-institutionnel-Athletic-Fitness-Club         /projets/film-promotionnel-athletic-fitness-club           301!
+/projets/film-institutionnel-athletic-fitness-club         /projets/film-promotionnel-athletic-fitness-club           301!
 /projets/film-promotionnel-athletic-fitness-club.html      /projets/film-promotionnel-athletic-fitness-club           301!
 /projets/film-promotionnel-zerod.html                      /projets/film-promotionnel-zerod                           301!
 
@@ -89,6 +90,12 @@ https://www.humanrec.fr/*  https://humanrec.fr/:splat  301!
 
 # Ancienne catégorie blog "vidéo corporate" → nouvelle catégorie "vidéo promotionnelle"
 /blog/categorie/video-corporate/                    /blog/categorie/video-promotionnelle/      301!
+
+# Pages qui n'existent pas encore : renvoi provisoire vers l'accueil
+# (sans "!" : dès qu'un vrai fichier existera à ces adresses, il sera servi)
+/projets/                     /#portfolio                                               301
+/projets                      /#portfolio                                               301
+/contact                      /#contact                                                 301
 
 # Fallback 404 (rester en dernier)
 /*  /404.html  404

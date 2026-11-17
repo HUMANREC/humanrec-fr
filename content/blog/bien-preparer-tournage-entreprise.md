@@ -1,5 +1,6 @@
 ---
 layout: article.njk
+seoTitle: "Préparer un tournage d'entreprise : le guide | HUMAN REC"
 title: "Comment bien préparer son tournage d'entreprise : le guide avant le jour J"
 slug: "bien-preparer-tournage-entreprise"
 date: 2026-05-21

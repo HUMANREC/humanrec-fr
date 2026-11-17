@@ -1,5 +1,6 @@
 ---
 layout: article.njk
+seoTitle: "Filmer une conférence à Avignon : le guide | HUMAN REC"
 title: "Faire filmer une conférence à Avignon : ce qu'il faut savoir avant de choisir un prestataire"
 slug: "captation-video-conference-avignon"
 date: 2026-08-28
